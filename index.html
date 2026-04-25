@@ -397,6 +397,7 @@
     <strong style="display:block; color:#3A7AFE; font-size:13px; letter-spacing:0.08em; margin-bottom:8px; text-transform:uppercase;">TL;DR</strong>
     <ul style="margin:0; padding-left: 20px; font-size:15px; line-height:1.7;">
       <li><strong>Image Timeline</strong> — every <code>BigPictureStyle</code> attachment that comes through a notification is extracted, re-encoded as WebP, and made browsable as a grid. As far as we can tell, no other product in this category does this.</li>
+      <li><strong>Open YouTube notifications in any browser</strong> — bypass the YouTube app entirely and watch in Chrome, Firefox, or Brave. Skip the algorithm pull, keep your ad-blocker, or just stay logged out. Also a feature we haven't seen in any competing notification logger.</li>
       <li>Real noise filter — drops progress bars, foreground services, system pings, and importance-MIN pings on receipt. The archive is curated, not a dump.</li>
       <li>Filter rules and deep-link mappings are grounded in <strong>1,107 real notification-extras dumps across 39 apps</strong> — not guesswork.</li>
       <li>Encrypted ZIP backup that includes the image directory, so a device migration restores the full archive in one step.</li>
@@ -623,6 +624,33 @@
     <div class="callout">
       <strong>Why we don't go further:</strong> there are non-public APIs that would expose more. We don't use them. They break across OS updates, fail Play Store policy review on the wrong day, and aren't worth the maintenance cost on an app that's supposed to be about the archive, not the deep-link.
     </div>
+
+    <h3>Browser Choice for YouTube — opt out of the YouTube app entirely</h3>
+    <p>
+      Once you have a stable way to deep-link a YouTube notification back to the original video, an interesting second question opens up: <em>where</em> should it open?
+    </p>
+    <figure style="margin: 28px auto;">
+      <img src="https://i.imgur.com/uABd8H4.png" alt="YouTube notification with an Open-with chooser offering Chrome, Firefox, and Brave" style="max-width: 320px; display: block; margin: 0 auto;">
+      <figcaption>Pro feature: tapping a saved YouTube notification offers a browser chooser instead of going straight to the YouTube app. Chrome, Firefox, Brave — whichever browsers are installed on the device show up.</figcaption>
+    </figure>
+    <p>
+      The YouTube app is engineered, hard, around maximizing watch time. Open the app to view one video and the home tab, the Shorts feed, the autoplay-next behavior, the personalized recommendations, the notification re-engagement — every surface is tuned to keep you in. For a lot of users that's fine. For others, it's the reason they don't open the app casually anymore: they know what'll happen if they do.
+    </p>
+    <p>
+      The browser is a different environment. You watch the video you came for. The recommendations sidebar is there but is much weaker than the app's home tab. There's no Shorts feed bolted onto every screen. Closing the tab takes you back to whatever you were doing — not to a feed designed to pull you into the next thirty minutes.
+    </p>
+    <p style="color:var(--text-muted); font-size:15px;">
+      <strong style="color:var(--text);">In plain terms:</strong> watching a YouTube notification's video in a browser is a different experience than watching the same video in the YouTube app. The video is the same; the surrounding pull isn't. If you've ever opened the YouTube app for one thing and emerged thirty minutes later having watched five Shorts, you already know the feeling we're addressing.
+    </p>
+    <p>
+      Beyond the algorithm-pull angle, browser-side viewing also tends to be cleaner for users who run ad-blocking extensions (Brave's built-in shield, uBlock Origin in Firefox) or who simply prefer not to be logged into a Google account on the device they read notifications on. None of this works through the YouTube app, which is sandboxed away from those tools.
+    </p>
+    <p>
+      The implementation is straightforward: when a saved YouTube notification is tapped, NotiKeep constructs a regular <code>https://youtu.be/{id}</code> URL and dispatches it via <code>Intent.ACTION_VIEW</code> with a chooser. The chooser lists every browser the device has installed; the user picks one (or the system remembers the previous choice). Free tier always opens the YouTube app via the standard <code>vnd.youtube://</code> deep-link; the browser-chooser path is the Pro toggle.
+    </p>
+    <p>
+      It's a small feature in terms of code, and a meaningfully different feature in terms of how it changes the experience of having an archive of YouTube notifications. We haven't seen any other notification logger in this category offer it — the standard pattern is to fire whatever <code>contentIntent</code> the source app provided, which always points to the source app.
+    </p>
   </section>
 
   <section id="privacy">
@@ -687,6 +715,12 @@
         </tr>
         <tr>
           <td data-label="Feature">Image Timeline (browsable image grid)</td>
+          <td class="highlight" data-label="NotiKeep"><span class="check">✓</span> Pro</td>
+          <td data-label="Built-in"><span class="cross">✗</span></td>
+          <td data-label="Free logger"><span class="cross">✗</span> Not seen in any tested</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Open YouTube notifications in any browser</td>
           <td class="highlight" data-label="NotiKeep"><span class="check">✓</span> Pro</td>
           <td data-label="Built-in"><span class="cross">✗</span></td>
           <td data-label="Free logger"><span class="cross">✗</span> Not seen in any tested</td>
@@ -782,13 +816,13 @@
           <h4>Pros</h4>
           <ul>
             <li><strong>Image Timeline</strong> — the only product in this category that extracts notification image bitmaps and presents them as a browsable grid</li>
+            <li><strong>Open YouTube notifications in any browser</strong> — bypass the YouTube app's algorithm pull entirely, also unique in this category</li>
             <li>Filter actually drops the obvious noise — progress, foreground services, system pings, low-importance pings</li>
             <li>Filtering rules and deep-link mappings grounded in real notification analysis (1,107 dumps, 39 apps)</li>
             <li>Encrypted ZIP backup including images, mute lists, and bookmarks — full-state device migration</li>
             <li>No ads, no analytics SDKs, no trackers on any tier</li>
             <li>Permission list fits on one screen — only Notification Access and INTERNET (for billing)</li>
             <li>30-day in-app trial, no auto-conversion at the end</li>
-            <li>YouTube deep-link works reliably; LINE is in progress</li>
             <li>Localized into 12 languages</li>
           </ul>
         </div>
