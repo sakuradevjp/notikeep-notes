@@ -1,9 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sakuradevjp.github.io/notikeep-notes/</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/ja/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/ko/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/zh-CN/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/zh-TW/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/es/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/pt-BR/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/fr/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/de/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/ru/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/ar/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+  </url>
+  <url>
+    <loc>https://sakuradevjp.github.io/notikeep-notes/hi/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/"/>
   </url>
 </urlset>

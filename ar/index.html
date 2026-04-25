@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
+<title>NotiKeep — هاتفك ينسى. NotiKeep يتذكّر.</title>
+<meta name="description" content="أرشيف الإشعارات الذي يحتفظ بكل صورة ويفلتر الضوضاء ويفتح إشعارات YouTube في أي متصفح. تجربة مجانية 30 يومًا، بلا إعلانات، كل البيانات على الجهاز.">
+<meta property="og:title" content="NotiKeep — هاتفك ينسى. NotiKeep يتذكّر.">
+<meta property="og:description" content="يحفظ كل إشعار بما في ذلك الصور. يفلتر الضوضاء. يفتح إشعارات YouTube في المتصفح الذي تختاره. تجربة مجانية 30 يومًا.">
+<meta property="og:image" content="https://i.imgur.com/d6YL7La.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://sakuradevjp.github.io/notikeep-notes/ar/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/">
+<link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">
+<link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">
+<link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">
+<link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/">
+<link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/">
+<link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/">
+<link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/">
+<link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#5a5a6e;
+  --accent:#6750A4;
+  --accent-strong:#4F378B;
+  --accent-soft:#F0E7FF;
+  --pain:#FFE8E8;
+  --pain-fg:#A03030;
+  --card:#FAF8FB;
+  --border:#E6E0EC;
+  --shadow:0 8px 24px rgba(103,80,164,.08);
+  --shadow-strong:0 12px 32px rgba(103,80,164,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14111A;
+    --fg:#ECE6F0;
+    --fg-soft:#B0AABA;
+    --accent:#B69DF8;
+    --accent-strong:#D0BCFF;
+    --accent-soft:#2E1F47;
+    --pain:#3A1D22;
+    --pain-fg:#FFB4A6;
+    --card:#1D1A23;
+    --border:#2D2734;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+    --shadow-strong:0 12px 32px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC","Noto Sans TC","Noto Sans Arabic","Noto Sans Devanagari",Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+.lang-switcher{text-align:center;font-size:.85rem;color:var(--fg-soft);padding:.5rem 0 1.25rem;line-height:2}
+.lang-switcher a{color:var(--fg-soft);margin:0 .25rem;text-decoration:none;border-bottom:1px solid transparent}
+.lang-switcher a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.lang-switcher strong{color:var(--accent);margin:0 .25rem}
+header.hero{text-align:center;padding:3rem 0 2.5rem}
+header.hero h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.2;margin:0 0 .85rem;letter-spacing:-.02em;font-weight:800}
+header.hero h1 .accent{color:var(--accent)}
+header.hero .tagline{font-size:1.2rem;color:var(--fg-soft);margin:0 0 1.75rem;max-width:560px;margin-left:auto;margin-right:auto}
+.hero-media{margin:2rem auto;max-width:340px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-strong)}
+.hero-media img{display:block;width:100%;height:auto}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:1rem 2rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:1.05rem;margin:.5rem .25rem;transition:transform .15s ease,box-shadow .15s ease,background .15s;box-shadow:0 6px 18px rgba(103,80,164,.3)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(103,80,164,.42);background:var(--accent-strong)}
+.trial-note{display:block;margin-top:.85rem;color:var(--fg-soft);font-size:.95rem}
+h2{font-size:clamp(1.5rem,3.2vw,1.85rem);margin:3.5rem 0 1.25rem;letter-spacing:-.01em;position:relative;padding-left:1rem;font-weight:700}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
+h3{font-size:1.2rem;margin:2rem 0 .75rem;font-weight:700}
+p{margin:.85rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
+li{margin:.45rem 0}
+
+.pain-points{background:var(--pain);color:var(--pain-fg);border-radius:16px;padding:1.5rem 1.75rem;margin:1.5rem 0;border:1px solid rgba(160,48,48,.18)}
+@media (prefers-color-scheme: dark){.pain-points{border-color:rgba(255,180,166,.2)}}
+.pain-points ul{margin:.5rem 0;list-style:none;padding-left:0}
+.pain-points li{margin:.7rem 0;position:relative;padding-left:1.6rem;font-size:1rem}
+.pain-points li::before{content:"😩";position:absolute;left:0;top:-.05em}
+[dir="rtl"] .pain-points li{padding-left:0;padding-right:1.6rem}
+[dir="rtl"] .pain-points li::before{left:auto;right:0}
+.pain-points p{margin:1.1rem 0 0;color:var(--fg);font-weight:500}
+
+.step{background:var(--card);border-radius:16px;padding:1.5rem 1.75rem;margin:1.25rem 0;border:1px solid var(--border)}
+.step h3{margin-top:0;display:flex;align-items:center;gap:.7rem;font-size:1.25rem}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;background:var(--accent);color:#fff;border-radius:50%;font-weight:800;font-size:1.05rem;flex-shrink:0;box-shadow:0 4px 10px rgba(103,80,164,.3)}
+.step img{width:100%;max-width:280px;display:block;margin:1.1rem auto;border-radius:12px;box-shadow:var(--shadow)}
+.step p{margin:.6rem 0 0;color:var(--fg-soft)}
+
+.showcase{background:var(--accent-soft);border-radius:20px;padding:2rem 1.75rem;margin:2rem 0;text-align:center;position:relative}
+.showcase .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1rem}
+.showcase h3{margin:0 0 .6rem;font-size:1.55rem;color:var(--fg)}
+.showcase p.lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.5rem;max-width:560px;margin-left:auto;margin-right:auto}
+.showcase img{width:100%;max-width:300px;border-radius:14px;box-shadow:var(--shadow-strong);display:block;margin:0 auto}
+.showcase figcaption{margin-top:1rem;color:var(--fg-soft);font-size:.92rem;font-style:italic}
+
+/* Image Timeline 3D stage */
+.imt-stage{position:relative;perspective:1400px;margin:2.5rem auto 1rem;display:flex;align-items:center;justify-content:center;min-height:480px;max-width:600px}
+.imt-phone{position:relative;transform:rotateY(-22deg) rotateX(6deg);transform-style:preserve-3d;z-index:2;filter:drop-shadow(0 25px 45px rgba(103,80,164,.4))}
+.imt-phone img{display:block;width:240px;max-width:none;border-radius:22px;margin:0;box-shadow:none;background:#121212}
+.imt-card{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 12px 30px rgba(0,0,0,.22),inset 0 0 0 3px rgba(255,255,255,.9);opacity:0;animation:imt-fly 1.4s cubic-bezier(.2,.8,.25,1) forwards;z-index:3}
+.imt-c1{background:linear-gradient(135deg,#ff8a65,#ff5252);--tx:200px;--ty:-150px;--rot:-10deg;animation-delay:.3s}
+.imt-c2{background:linear-gradient(135deg,#ffa726,#fb8c00);--tx:240px;--ty:30px;--rot:8deg;animation-delay:.55s}
+.imt-c3{background:linear-gradient(135deg,#66bb6a,#2e7d32);--tx:190px;--ty:180px;--rot:-5deg;animation-delay:.8s}
+.imt-c4{background:linear-gradient(135deg,#42a5f5,#1565c0);--tx:-210px;--ty:-110px;--rot:12deg;animation-delay:1.05s}
+.imt-c5{background:linear-gradient(135deg,#ab47bc,#6a1b9a);--tx:-220px;--ty:150px;--rot:-8deg;animation-delay:1.3s}
+@keyframes imt-fly{
+  0%{opacity:0;transform:translate(0,0) rotate(0deg) scale(.3)}
+  60%{opacity:1}
+  100%{opacity:1;transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1)}
+}
+@media (max-width:720px){
+  .imt-stage{min-height:400px}
+  .imt-phone img{width:200px}
+  .imt-card{width:78px;height:78px;margin:-39px 0 0 -39px;font-size:2rem;border-radius:12px}
+  .imt-c1{--tx:135px;--ty:-115px}
+  .imt-c2{--tx:155px;--ty:20px}
+  .imt-c3{--tx:125px;--ty:135px}
+  .imt-c4{--tx:-145px;--ty:-85px}
+  .imt-c5{--tx:-145px;--ty:115px}
+}
+@media (prefers-reduced-motion:reduce){
+  .imt-card{animation:none;opacity:1;transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1)}
+}
+
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
+.feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
+.feature strong{display:block;margin-bottom:.35rem;font-size:1.05rem}
+.feature p{margin:0;color:var(--fg-soft);font-size:.94rem}
+
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem 1.25rem;text-align:center;position:relative;transition:transform .15s,box-shadow .15s}
+.price:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.price.highlight{border-color:var(--accent);border-width:2px;background:var(--bg);box-shadow:var(--shadow-strong)}
+.price.highlight::before{content:"⭐ الأفضل قيمة";position:absolute;top:-.7rem;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.75rem;font-weight:700;white-space:nowrap}
+.price .label{font-weight:600;font-size:1.05rem;margin-bottom:.5rem;color:var(--fg-soft)}
+.price .amount{font-size:2.2rem;font-weight:800;color:var(--accent);margin:.6rem 0 .3rem;line-height:1}
+.price .amount span{font-size:1rem;color:var(--fg-soft);font-weight:600}
+.price .note{color:var(--fg-soft);font-size:.88rem;margin-top:.4rem}
+
+.trial-banner{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0;text-align:center;font-size:1rem}
+.trial-banner strong{color:var(--accent)}
+
+.tier-table{width:100%;border-collapse:collapse;margin:1.5rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);font-size:.95rem;background:var(--card)}
+.tier-table th,.tier-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:middle}
+[dir="rtl"] .tier-table th,[dir="rtl"] .tier-table td{text-align:right}
+.tier-table thead th{background:var(--accent-soft);color:var(--fg);font-weight:700;font-size:.92rem;letter-spacing:.02em}
+.tier-table thead th.pro-col{background:var(--accent);color:#fff}
+.tier-table tr:last-child td{border-bottom:none}
+.tier-table td.pro-col{background:rgba(103,80,164,.05);font-weight:600}
+@media (prefers-color-scheme: dark){.tier-table td.pro-col{background:rgba(182,157,248,.08)}}
+.check{color:#10B981;font-weight:bold}
+.cross{color:#EF4444}
+
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.5rem 0}
+.fit>div{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.5rem}
+.fit h3{margin-top:0;font-size:1.15rem}
+.fit ul{margin:.5rem 0 0;padding-left:1.1rem}
+.fit li{margin:.5rem 0;color:var(--fg-soft);font-size:.96rem}
+
+details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin:.6rem 0;transition:background .15s}
+details[open]{background:var(--bg);border-color:var(--accent)}
+details summary{cursor:pointer;font-weight:600;list-style:none;outline:none;font-size:1rem}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"＋ ";color:var(--accent);font-weight:700;display:inline-block;width:1.4rem}
+details[open] summary::before{content:"− "}
+details p{margin:.7rem 0 0;color:var(--fg-soft);padding-left:1.4rem}
+[dir="rtl"] details p{padding-left:0;padding-right:1.4rem}
+
+.changelog{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.5rem;margin:1.5rem 0}
+.changelog ul{list-style:none;padding:0;margin:0}
+.changelog li{padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.95rem;color:var(--fg-soft)}
+.changelog li:last-child{border-bottom:none}
+.changelog code{background:var(--accent-soft);color:var(--accent-strong);padding:.15rem .55rem;border-radius:6px;font-weight:700;margin-right:.6rem;font-size:.85rem}
+
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+
+.final-cta{text-align:center;margin:3rem 0 1rem;padding:2.5rem 1.5rem;background:linear-gradient(135deg,var(--accent-soft),var(--bg));border-radius:20px;border:1px solid var(--border)}
+.final-cta h2{margin:0 0 .5rem;padding:0;font-size:1.75rem}
+.final-cta h2::before{display:none}
+.final-cta p{margin:0 0 1.5rem;color:var(--fg-soft);font-size:1.05rem}
+
+footer{text-align:center;color:var(--fg-soft);font-size:.88rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer p{margin:.4rem 0}
+footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lang-switcher">🌐 <a href="https://sakuradevjp.github.io/notikeep-notes/">English</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ja/">日本語</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ko/">한국어</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">简体中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">繁體中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/es/">Español</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">Português (BR)</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/fr/">Français</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/de/">Deutsch</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ru/">Русский</a> · <strong>العربية</strong> · <a href="https://sakuradevjp.github.io/notikeep-notes/hi/">हिन्दी</a></nav>
+
+<header class="hero">
+  <h1>هاتفك ينسى. NotiKeep <span class="accent">يتذكّر</span>.</h1>
+  <p class="tagline">صور، رموز، رسائل — محفوظة طوال المدة التي تريدها.</p>
+  <div class="hero-media">
+    <img src="https://i.imgur.com/d6YL7La.png" alt="NotiKeep — الشاشة الرئيسية تعرض إشعارات WhatsApp وInstagram وYouTube وGmail والمزيد">
+  </div>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ احصل على NotiKeep من Google Play</a>
+  <span class="trial-note">تجربة مجانية 30 يومًا · بلا إعلانات · بلا متعقّبات</span>
+</header>
+
+<h2>تلك المتاعب الصغيرة التي تستفزّ الجميع</h2>
+<div class="pain-points">
+<ul>
+  <li>تلك الصورة التي أرسلها صديق على LINE — اختفت لحظة سحبك للإشعار</li>
+  <li>رمز التوصيل من الأمس — سجل الإشعارات الافتراضي في Android لا يحتفظ سوى بـ24 ساعة</li>
+  <li>شريطك مكدّس بـ«جارٍ التحميل…» و«التطبيق يعمل في الخلفية» مما لم تكن تريد رؤيته</li>
+  <li>تلك الرسالة الخاصة التي مررت عليها وأنت نصف نائم — والآن لا تجدها في أي مكان</li>
+</ul>
+<p>يحتفظ NotiKeep بما يهم، يتخلّص من الضوضاء، ويعيد إليك الإشعارات التي نسيها هاتفك.</p>
+</div>
+
+<h2>آلية العمل</h2>
+
+<div class="step">
+  <h3><span class="num">1</span>ثبّت ومنح صلاحية الوصول إلى الإشعارات</h3>
+  <p>إعداد لمرة واحدة. الوصول إلى الإشعارات هو واجهة Android القياسية التي تتيح للتطبيق رؤية الإشعارات. لا يستخدمها NotiKeep لأي شيء آخر.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>استخدم هاتفك بشكل طبيعي</h3>
+  <img src="https://i.imgur.com/enijnOq.png" alt="العرض الرئيسي لأرشيف NotiKeep مع التحكم بالجرس لكل تطبيق">
+  <p>يراقب NotiKeep في الخلفية. الإشعارات المفيدة تُؤرشف مع صورها. أشرطة التقدم وإشعارات النظام تُفلتر تلقائيًا — فلا تزدحم في الأرشيف.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span>اعثر على أي شيء في أي وقت</h3>
+  <img src="https://i.imgur.com/fgK2s48.png" alt="سحب إشعار لأرشفته في NotiKeep">
+  <p>ابحث في الأرشيف، اسحب للتنظيم، أضف نجمة للمهم. الإشعار الذي احتجته قبل ثلاثة أيام موجود تمامًا — بدلاً من الضياع للأبد.</p>
+</div>
+
+<h2>ميزتان تُميّزان NotiKeep</h2>
+
+<div class="showcase">
+  <span class="badge">Only in NotiKeep</span>
+  <h3>🖼 الصور في سطر زمني</h3>
+  <p class="lead">كل صورة وصلت ضمن إشعار — صور مصغّرة من قنوات YouTube التي تتابعها، ذكريات «في مثل هذا اليوم» من Google Photos، صور طعام أرسلها أصدقاء عبر LINE، صور مصغّرة لمقالات إخبارية، تأكيدات تسليم الطرود، منشور Instagram عرضي — كلها في شبكة واحدة قابلة للتصفح. حتى بعد سحبك للإشعار الأصلي.</p>
+  <div class="imt-stage" role="img" aria-label="هاتف مائل جانبيًا تتطاير منه بطاقات صور من شاشة الصور في سطر زمني">
+    <div class="imt-phone">
+      <img src="https://i.imgur.com/0tomcw6.png" alt="">
+    </div>
+    <div class="imt-card imt-c1" aria-hidden="true">🌅</div>
+    <div class="imt-card imt-c2" aria-hidden="true">🍱</div>
+    <div class="imt-card imt-c3" aria-hidden="true">🐈</div>
+    <div class="imt-card imt-c4" aria-hidden="true">🏔</div>
+    <div class="imt-card imt-c5" aria-hidden="true">📸</div>
+  </div>
+  <figcaption>تصفّح الشبكة بصريًا، انقر على ما يلفت انتباهك. بالنسبة لـYouTube هذا يعني صورة مصغّرة للفيديو ← نقرة ← تشغيل مباشر (في المتصفح الذي تختاره مع <a href="#browser-choice" style="color:inherit;text-decoration:underline;">الميزة في الأسفل</a>). ميزة Pro.</figcaption>
+</div>
+
+<div class="showcase" id="browser-choice">
+  <span class="badge">Only in NotiKeep</span>
+  <h3>🌐 إشعارات YouTube، في متصفحك</h3>
+  <p class="lead">انقر على إشعار YouTube محفوظ، شاهده في Chrome أو Firefox أو Brave. لا انجراف لخلاصة Shorts بعد الآن. لا جذب من خوارزمية تطبيق YouTube بعد الآن.</p>
+  <img src="https://i.imgur.com/uABd8H4.png" alt="إشعار YouTube مع مربّع حوار اختيار المتصفح يعرض Chrome وFirefox وBrave">
+  <figcaption>اختر أي متصفح مثبّت كعارض YouTube. ميزة Pro.</figcaption>
+</div>
+
+<h2>ما تحصل عليه</h2>
+<div class="feature-grid">
+  <div class="feature"><span class="icon">🖼</span><strong>الصور في سطر زمني</strong><p>تصفّح كل صورة وصلت ضمن إشعار، مرتّبة حسب التاريخ.</p></div>
+  <div class="feature"><span class="icon">🌐</span><strong>YouTube في أي متصفح</strong><p>افتح إشعارات YouTube في المتصفح الذي تختاره.</p></div>
+  <div class="feature"><span class="icon">🔇</span><strong>فلتر ضوضاء ذكي</strong><p>أشرطة التقدم وخدمات الواجهة وإشعارات النظام — تُسقط تلقائيًا.</p></div>
+  <div class="feature"><span class="icon">⭐</span><strong>المفضّلة</strong><p>ضع نجمة على الإشعارات المهمة. لا تنتهي صلاحية المفضّلة حتى في الخطة المجانية.</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>نسخة احتياطية مشفّرة</strong><p>ملف ZIP واحد مع الأرشيف والصور. غيّر الهاتف خلال ثوانٍ.</p></div>
+  <div class="feature"><span class="icon">🎨</span><strong>ثيمات مخصّصة</strong><p>ثلاث خانات لتركيبات ألوانك. لتناسب أسلوبك.</p></div>
+  <div class="feature"><span class="icon">🔔</span><strong>تحكّم بالجرس لكل تطبيق</strong><p>اكتم التطبيقات التي لا تريد سماعها — مع أرشفة إشعاراتها بصمت.</p></div>
+  <div class="feature"><span class="icon">🔍</span><strong>بحث نص كامل</strong><p>اعثر على أي إشعار حسب المحتوى. مجاني: 30 يومًا. Pro: للأبد.</p></div>
+  <div class="feature"><span class="icon">🌍</span><strong>12 لغة</strong><p>الإنجليزية، 日本語، 한국어، 中文، Español، Français، Deutsch وغيرها.</p></div>
+</div>
+
+<h2>الأسعار</h2>
+<div class="pricing">
+  <div class="price">
+    <div class="label">شهري</div>
+    <div class="amount">$0.99<span>/شهر</span></div>
+    <div class="note">إلغاء في أي وقت</div>
+  </div>
+  <div class="price highlight">
+    <div class="label">سنوي</div>
+    <div class="amount">$9.99<span>/سنة</span></div>
+    <div class="note">أرخص بنحو 16% من الشهري</div>
+  </div>
+  <div class="price">
+    <div class="label">مدى الحياة</div>
+    <div class="amount">$19.99</div>
+    <div class="note">دفعة واحدة، بلا اشتراك</div>
+  </div>
+</div>
+<p class="trial-banner">كل تثبيت يبدأ بـ<strong>تجربة مجانية 30 يومًا</strong> لجميع ميزات Pro. لا تحويل تلقائي في النهاية — تبقى على الخطة المجانية ما لم تختر خطة بنفسك.</p>
+
+<h3>Free مقابل Pro بنظرة واحدة</h3>
+<table class="tier-table">
+  <thead>
+    <tr><th>الميزة</th><th>Free</th><th class="pro-col">Pro</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>أرشيف الإشعارات</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>حفظ الصور (في عرض التفاصيل)</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>فلتر ضوضاء ذكي</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>مدة الحفظ</td><td>30 يومًا (ثابت)</td><td class="pro-col">قابل للضبط · 30 يومًا → غير محدود</td></tr>
+    <tr><td>البحث</td><td>آخر 30 يومًا</td><td class="pro-col">كامل الأرشيف</td></tr>
+    <tr><td>المفضّلة · الكتم · حظر التطبيقات</td><td>5 لكل منها</td><td class="pro-col">غير محدود</td></tr>
+    <tr><td>🖼 الصور في سطر زمني (شبكة قابلة للتصفح)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>🌐 فتح YouTube في أي متصفح</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 نسخة احتياطية مشفّرة بالصور</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>🎨 ثيمات مخصّصة</td><td><span class="cross">—</span></td><td class="pro-col">3 خانات</td></tr>
+  </tbody>
+</table>
+
+<p style="text-align:center;margin:2rem 0"><a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ جرّب NotiKeep مجانًا 30 يومًا</a></p>
+
+<h2>هل NotiKeep يناسبك؟</h2>
+<div class="fit">
+  <div>
+    <h3>✅ مناسب جدًا إذا كنت…</h3>
+    <ul>
+      <li>سحبت يومًا إشعارًا تحتاجه ثم ندمت فورًا</li>
+      <li>تريد الاحتفاظ بالصور التي يرسلها الأصدقاء عبر تطبيقات المراسلة</li>
+      <li>تحتاج سجلات بلا اتصال لإشعارات LINE وWhatsApp وSMS أو Gmail</li>
+      <li>سئمت من أن يجرّك تطبيق YouTube إلى Shorts كل مرة تنقر فيها على إشعار</li>
+      <li>تهتم ببقاء بياناتك على الجهاز لا في سحابة شخص آخر</li>
+    </ul>
+  </div>
+  <div>
+    <h3>⏭ تجاوز إذا كنت…</h3>
+    <ul>
+      <li>راضيًا عن سجل إشعارات Android المدمج لمدة 24 ساعة</li>
+      <li>لا تريد منح صلاحية الوصول إلى الإشعارات لتطبيق طرف ثالث</li>
+      <li>تحتاج عكس الإشعارات للحاسوب فوريًا (فئة مختلفة — جرّب KDE Connect)</li>
+      <li>تستخدم فقط تطبيقات تشفير من طرف إلى طرف لا تتضمن إشعاراتها معاينة نص</li>
+    </ul>
+  </div>
+</div>
+
+<h2>الأسئلة الشائعة</h2>
+<details><summary>هل يستطيع NotiKeep رؤية الإشعارات التي وصلت <em>قبل</em> تثبيته؟</summary><p><strong>لا.</strong> يحفظ NotiKeep فقط الإشعارات التي تصل <em>بعد</em> التثبيت ومنح صلاحية الوصول إلى الإشعارات. لا يمنح Android أي تطبيق وصولاً إلى الإشعارات السابقة — لذا ثبّته قبل أن تحتاج لاسترجاع شيء. الخبر السار: حالما يعمل، لا يفلت أي إشعار جديد.</p></details>
+<details><summary>ما إصدارات Android المدعومة؟</summary><p>Android 9.0 (Pie) فما فوق. تم اختباره من Pixel 4a إلى Pixel 9 Pro. أحدث Android 15 و16 مدعومة كذلك.</p></details>
+<details><summary>كم من المساحة يستخدم NotiKeep؟</summary><p>إشعارات النص صغيرة جدًا — بضعة ميغابايت تغطي شهورًا من الأرشيف. ما يستهلك المساحة هو الصور: تُعاد كل صورة محفوظة بترميز WebP بحجم 20–80 كيلوبايت تقريبًا. مستخدم كثيف بألف إشعار بصور شهريًا يستخدم نحو 30–80 ميغابايت. تظهر الاستخدام الدقيق في الإعدادات، ويمكن مسح كل الصور في أي وقت.</p></details>
+<details><summary>ماذا يحدث لبياناتي إذا أزلت التطبيق؟</summary><p>كل بيانات NotiKeep — الإشعارات والصور والتفضيلات والمفضّلة — تُخزَّن في المجلد الخاص بالتطبيق، الذي يمسحه Android تلقائيًا عند الإزالة. إذا أردت الاحتفاظ بأرشيفك عبر إعادة التثبيت أو هاتف جديد، خذ نسخة احتياطية مشفّرة أولًا (ميزة Pro).</p></details>
+<details><summary>ما الصلاحيات التي يحتاجها NotiKeep؟</summary><p>اثنتان فقط: الوصول إلى الإشعارات (يحتاجها أي تطبيق من هذه الفئة) و INTERNET (تُستخدم فقط من Google Play Billing لشراء Pro). لا شيء آخر — لا موقع، لا جهات اتصال، لا أدوات تحليل، لا متعقّبات.</p></details>
+<details><summary>هل يعمل NotiKeep مع تطبيقات مشفّرة مثل Signal؟</summary><p>تطبيقات التشفير تسلّم Android نصًا نائبًا مثل «رسالة جديدة» — لا يوجد محتوى معاينة لأي مسجّل لالتقاطه، مشفّرًا كان أم لا. يحفظ NotiKeep ما يسلّمه النظام؛ إذا حصل النظام على نائب، فهذا ما يُؤرشف.</p></details>
+<details><summary>هل يمكنني تصدير بياناتي؟</summary><p>نعم. ينشئ Pro ملف ZIP مشفّرًا يحوي قاعدة البيانات وكل الصور المحفوظة والمفضّلة وقوائم الكتم والإعدادات. الاستعادة على هاتف جديد بخطوة واحدة. التصدير يذهب إلى المسار الذي تختاره — لا مزامنة سحابية تلقائية.</p></details>
+<details><summary>ماذا يحدث في نهاية تجربة الـ30 يومًا؟</summary><p>تعود إلى الخطة المجانية. لا فاتورة، لا تحويل تلقائي. للاستمرار في استخدام ميزات Pro، اختر خطة بفاعلية في شاشة الترقية. هذا الخيار الافتراضي لأن لا أحد يحب أن يُحاسب بالخطأ في نهاية تجربة.</p></details>
+<details><summary>هل يستهلك البطارية أو يبطئ الهاتف؟</summary><p>مستمع إشعارات Android مبني على الأحداث — بلا استطلاع. يعمل NotiKeep فقط عند وصول إشعار. تأثير البطارية ضئيل جدًا في اختباراتنا على Pixel 7a وPixel 9 Pro.</p></details>
+<details><summary>هل يرفع NotiKeep إشعاراتي إلى أي مكان؟</summary><p>لا. كل شيء يُخزّن على الجهاز في المجلد الخاص بـNotiKeep. النسخ الاحتياطية تذهب إلى مسار تختاره — لا مزامنة سحابية تلقائية، لا تتبّع «phone home»، لا تحليلات عن بُعد.</p></details>
+
+<h2>آخر التحديثات</h2>
+<div class="changelog">
+<ul>
+  <li><code>v1.2.7</code> إيقاف كتابة دامبات إشعارات التطوير في التخزين الداخلي ضمن إصدارات release؛ تُمسح الدامبات الحالية تلقائيًا عند الترقية</li>
+  <li><code>v1.2.6</code> تعمل كل اللغات الـ12 الآن بشكل موثوق بعد التثبيت من Google Play بصرف النظر عن لغة النظام</li>
+  <li><code>v1.2.5</code> اختيار اللغة يبقى متّسقًا في كل التطبيق — لا شاشات مختلطة بعد الآن</li>
+  <li><code>v1.2.4</code> استعادة نسخة احتياطية مأخوذة من هاتف بلغة مختلفة لم تعد تكسر الواجهة</li>
+  <li><code>v1.2.3</code> تظل تسميات الإعدادات بلغتك المختارة بعد تغيير اللغة</li>
+</ul>
+<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">محطات سابقة</p>
+<ul>
+  <li><code>🖼</code> الصور في سطر زمني — تصفّح كل صورة وصلت ضمن إشعار</li>
+  <li><code>🌐</code> اختيار متصفح YouTube — افتح إشعارات YouTube المحفوظة في Chrome أو Firefox أو Brave</li>
+  <li><code>📦</code> النسخ الاحتياطي والاستعادة المشفّرة — ملف ZIP واحد يحمل الأرشيف الكامل بالصور</li>
+  <li><code>🌍</code> تعريب 12 لغة — الإنجليزية، 日本語، 한국어، 中文 (简/繁)، Español، Français، Deutsch، Italiano، Português، Русский وغيرها</li>
+  <li><code>🔇</code> فلتر ضوضاء ذكي — تُسقط أشرطة التقدم وخدمات الواجهة وإشعارات النظام تلقائيًا</li>
+</ul>
+</div>
+
+<div class="final-cta">
+  <h2>دع NotiKeep يتذكّر عنك.</h2>
+  <p>جرّبه مجانًا 30 يومًا. بلا بطاقة، بلا تجديد تلقائي.</p>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ احصل على NotiKeep من Google Play</a>
+</div>
+
+<footer>
+  <p>NotiKeep من تطوير sakura.dev.jp</p>
+  <p>
+    <a href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">التطبيق على Google Play ↗</a>
+    &nbsp;·&nbsp;
+    <a href="https://sites.google.com/view/notikeep">سياسة الخصوصية ↗</a>
+    &nbsp;·&nbsp;
+    <a href="https://sites.google.com/view/notikeep">الدعم ↗</a>
+  </p>
+  <p class="disclosure">تنويه: هذه الصفحة من تأليف المطوّر — اقرأها مع شيء من التحفظ.</p>
+</footer>
+
+</div>
+</body>
+</html>

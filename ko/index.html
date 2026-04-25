@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
+<title>NotiKeep — 폰은 잊어도 NotiKeep은 기억합니다</title>
+<meta name="description" content="모든 알림을 사진까지 포함해 보관. 노이즈는 자동 필터링. YouTube 알림을 원하는 브라우저에서 열기. 30일 무료 체험, 광고 없음, 모든 데이터는 기기 내에만.">
+<meta property="og:title" content="NotiKeep — 폰은 잊어도 NotiKeep은 기억합니다">
+<meta property="og:description" content="모든 알림을 사진까지 보관. 노이즈는 자동 제거. YouTube 알림을 원하는 브라우저에서. 30일 무료 체험.">
+<meta property="og:image" content="https://i.imgur.com/d6YL7La.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://sakuradevjp.github.io/notikeep-notes/ko/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/">
+<link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">
+<link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">
+<link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">
+<link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/">
+<link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/">
+<link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/">
+<link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/">
+<link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#5a5a6e;
+  --accent:#6750A4;
+  --accent-strong:#4F378B;
+  --accent-soft:#F0E7FF;
+  --pain:#FFE8E8;
+  --pain-fg:#A03030;
+  --card:#FAF8FB;
+  --border:#E6E0EC;
+  --shadow:0 8px 24px rgba(103,80,164,.08);
+  --shadow-strong:0 12px 32px rgba(103,80,164,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14111A;
+    --fg:#ECE6F0;
+    --fg-soft:#B0AABA;
+    --accent:#B69DF8;
+    --accent-strong:#D0BCFF;
+    --accent-soft:#2E1F47;
+    --pain:#3A1D22;
+    --pain-fg:#FFB4A6;
+    --card:#1D1A23;
+    --border:#2D2734;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+    --shadow-strong:0 12px 32px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC","Noto Sans TC","Noto Sans Arabic","Noto Sans Devanagari",Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+.lang-switcher{text-align:center;font-size:.85rem;color:var(--fg-soft);padding:.5rem 0 1.25rem;line-height:2}
+.lang-switcher a{color:var(--fg-soft);margin:0 .25rem;text-decoration:none;border-bottom:1px solid transparent}
+.lang-switcher a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.lang-switcher strong{color:var(--accent);margin:0 .25rem}
+header.hero{text-align:center;padding:3rem 0 2.5rem}
+header.hero h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.2;margin:0 0 .85rem;letter-spacing:-.02em;font-weight:800}
+header.hero h1 .accent{color:var(--accent)}
+header.hero .tagline{font-size:1.2rem;color:var(--fg-soft);margin:0 0 1.75rem;max-width:560px;margin-left:auto;margin-right:auto}
+.hero-media{margin:2rem auto;max-width:340px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-strong)}
+.hero-media img{display:block;width:100%;height:auto}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:1rem 2rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:1.05rem;margin:.5rem .25rem;transition:transform .15s ease,box-shadow .15s ease,background .15s;box-shadow:0 6px 18px rgba(103,80,164,.3)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(103,80,164,.42);background:var(--accent-strong)}
+.trial-note{display:block;margin-top:.85rem;color:var(--fg-soft);font-size:.95rem}
+h2{font-size:clamp(1.5rem,3.2vw,1.85rem);margin:3.5rem 0 1.25rem;letter-spacing:-.01em;position:relative;padding-left:1rem;font-weight:700}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
+h3{font-size:1.2rem;margin:2rem 0 .75rem;font-weight:700}
+p{margin:.85rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
+li{margin:.45rem 0}
+
+.pain-points{background:var(--pain);color:var(--pain-fg);border-radius:16px;padding:1.5rem 1.75rem;margin:1.5rem 0;border:1px solid rgba(160,48,48,.18)}
+@media (prefers-color-scheme: dark){.pain-points{border-color:rgba(255,180,166,.2)}}
+.pain-points ul{margin:.5rem 0;list-style:none;padding-left:0}
+.pain-points li{margin:.7rem 0;position:relative;padding-left:1.6rem;font-size:1rem}
+.pain-points li::before{content:"😩";position:absolute;left:0;top:-.05em}
+[dir="rtl"] .pain-points li{padding-left:0;padding-right:1.6rem}
+[dir="rtl"] .pain-points li::before{left:auto;right:0}
+.pain-points p{margin:1.1rem 0 0;color:var(--fg);font-weight:500}
+
+.step{background:var(--card);border-radius:16px;padding:1.5rem 1.75rem;margin:1.25rem 0;border:1px solid var(--border)}
+.step h3{margin-top:0;display:flex;align-items:center;gap:.7rem;font-size:1.25rem}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;background:var(--accent);color:#fff;border-radius:50%;font-weight:800;font-size:1.05rem;flex-shrink:0;box-shadow:0 4px 10px rgba(103,80,164,.3)}
+.step img{width:100%;max-width:280px;display:block;margin:1.1rem auto;border-radius:12px;box-shadow:var(--shadow)}
+.step p{margin:.6rem 0 0;color:var(--fg-soft)}
+
+.showcase{background:var(--accent-soft);border-radius:20px;padding:2rem 1.75rem;margin:2rem 0;text-align:center;position:relative}
+.showcase .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1rem}
+.showcase h3{margin:0 0 .6rem;font-size:1.55rem;color:var(--fg)}
+.showcase p.lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.5rem;max-width:560px;margin-left:auto;margin-right:auto}
+.showcase img{width:100%;max-width:300px;border-radius:14px;box-shadow:var(--shadow-strong);display:block;margin:0 auto}
+.showcase figcaption{margin-top:1rem;color:var(--fg-soft);font-size:.92rem;font-style:italic}
+
+/* Image Timeline 3D stage */
+.imt-stage{position:relative;perspective:1400px;margin:2.5rem auto 1rem;display:flex;align-items:center;justify-content:center;min-height:480px;max-width:600px}
+.imt-phone{position:relative;transform:rotateY(-22deg) rotateX(6deg);transform-style:preserve-3d;z-index:2;filter:drop-shadow(0 25px 45px rgba(103,80,164,.4))}
+.imt-phone img{display:block;width:240px;max-width:none;border-radius:22px;margin:0;box-shadow:none;background:#121212}
+.imt-card{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 12px 30px rgba(0,0,0,.22),inset 0 0 0 3px rgba(255,255,255,.9);opacity:0;animation:imt-fly 1.4s cubic-bezier(.2,.8,.25,1) forwards;z-index:3}
+.imt-c1{background:linear-gradient(135deg,#ff8a65,#ff5252);--tx:200px;--ty:-150px;--rot:-10deg;animation-delay:.3s}
+.imt-c2{background:linear-gradient(135deg,#ffa726,#fb8c00);--tx:240px;--ty:30px;--rot:8deg;animation-delay:.55s}
+.imt-c3{background:linear-gradient(135deg,#66bb6a,#2e7d32);--tx:190px;--ty:180px;--rot:-5deg;animation-delay:.8s}
+.imt-c4{background:linear-gradient(135deg,#42a5f5,#1565c0);--tx:-210px;--ty:-110px;--rot:12deg;animation-delay:1.05s}
+.imt-c5{background:linear-gradient(135deg,#ab47bc,#6a1b9a);--tx:-220px;--ty:150px;--rot:-8deg;animation-delay:1.3s}
+@keyframes imt-fly{
+  0%{opacity:0;transform:translate(0,0) rotate(0deg) scale(.3)}
+  60%{opacity:1}
+  100%{opacity:1;transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1)}
+}
+@media (max-width:720px){
+  .imt-stage{min-height:400px}
+  .imt-phone img{width:200px}
+  .imt-card{width:78px;height:78px;margin:-39px 0 0 -39px;font-size:2rem;border-radius:12px}
+  .imt-c1{--tx:135px;--ty:-115px}
+  .imt-c2{--tx:155px;--ty:20px}
+  .imt-c3{--tx:125px;--ty:135px}
+  .imt-c4{--tx:-145px;--ty:-85px}
+  .imt-c5{--tx:-145px;--ty:115px}
+}
+@media (prefers-reduced-motion:reduce){
+  .imt-card{animation:none;opacity:1;transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1)}
+}
+
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
+.feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
+.feature strong{display:block;margin-bottom:.35rem;font-size:1.05rem}
+.feature p{margin:0;color:var(--fg-soft);font-size:.94rem}
+
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem 1.25rem;text-align:center;position:relative;transition:transform .15s,box-shadow .15s}
+.price:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.price.highlight{border-color:var(--accent);border-width:2px;background:var(--bg);box-shadow:var(--shadow-strong)}
+.price.highlight::before{content:"⭐ 추천";position:absolute;top:-.7rem;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.75rem;font-weight:700;white-space:nowrap}
+.price .label{font-weight:600;font-size:1.05rem;margin-bottom:.5rem;color:var(--fg-soft)}
+.price .amount{font-size:2.2rem;font-weight:800;color:var(--accent);margin:.6rem 0 .3rem;line-height:1}
+.price .amount span{font-size:1rem;color:var(--fg-soft);font-weight:600}
+.price .note{color:var(--fg-soft);font-size:.88rem;margin-top:.4rem}
+
+.trial-banner{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0;text-align:center;font-size:1rem}
+.trial-banner strong{color:var(--accent)}
+
+.tier-table{width:100%;border-collapse:collapse;margin:1.5rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);font-size:.95rem;background:var(--card)}
+.tier-table th,.tier-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:middle}
+[dir="rtl"] .tier-table th,[dir="rtl"] .tier-table td{text-align:right}
+.tier-table thead th{background:var(--accent-soft);color:var(--fg);font-weight:700;font-size:.92rem;letter-spacing:.02em}
+.tier-table thead th.pro-col{background:var(--accent);color:#fff}
+.tier-table tr:last-child td{border-bottom:none}
+.tier-table td.pro-col{background:rgba(103,80,164,.05);font-weight:600}
+@media (prefers-color-scheme: dark){.tier-table td.pro-col{background:rgba(182,157,248,.08)}}
+.check{color:#10B981;font-weight:bold}
+.cross{color:#EF4444}
+
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.5rem 0}
+.fit>div{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.5rem}
+.fit h3{margin-top:0;font-size:1.15rem}
+.fit ul{margin:.5rem 0 0;padding-left:1.1rem}
+.fit li{margin:.5rem 0;color:var(--fg-soft);font-size:.96rem}
+
+details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin:.6rem 0;transition:background .15s}
+details[open]{background:var(--bg);border-color:var(--accent)}
+details summary{cursor:pointer;font-weight:600;list-style:none;outline:none;font-size:1rem}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"＋ ";color:var(--accent);font-weight:700;display:inline-block;width:1.4rem}
+details[open] summary::before{content:"− "}
+details p{margin:.7rem 0 0;color:var(--fg-soft);padding-left:1.4rem}
+[dir="rtl"] details p{padding-left:0;padding-right:1.4rem}
+
+.changelog{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.5rem;margin:1.5rem 0}
+.changelog ul{list-style:none;padding:0;margin:0}
+.changelog li{padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.95rem;color:var(--fg-soft)}
+.changelog li:last-child{border-bottom:none}
+.changelog code{background:var(--accent-soft);color:var(--accent-strong);padding:.15rem .55rem;border-radius:6px;font-weight:700;margin-right:.6rem;font-size:.85rem}
+
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+
+.final-cta{text-align:center;margin:3rem 0 1rem;padding:2.5rem 1.5rem;background:linear-gradient(135deg,var(--accent-soft),var(--bg));border-radius:20px;border:1px solid var(--border)}
+.final-cta h2{margin:0 0 .5rem;padding:0;font-size:1.75rem}
+.final-cta h2::before{display:none}
+.final-cta p{margin:0 0 1.5rem;color:var(--fg-soft);font-size:1.05rem}
+
+footer{text-align:center;color:var(--fg-soft);font-size:.88rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer p{margin:.4rem 0}
+footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lang-switcher">🌐 <a href="https://sakuradevjp.github.io/notikeep-notes/">English</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ja/">日本語</a> · <strong>한국어</strong> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">简体中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">繁體中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/es/">Español</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">Português (BR)</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/fr/">Français</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/de/">Deutsch</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ru/">Русский</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ar/">العربية</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/hi/">हिन्दी</a></nav>
+
+<header class="hero">
+  <h1>폰은 잊어도, NotiKeep은 <span class="accent">기억합니다</span></h1>
+  <p class="tagline">사진, 인증 코드, 메시지 — 원하는 기간만큼 보관됩니다</p>
+  <div class="hero-media">
+    <img src="https://i.imgur.com/d6YL7La.png" alt="NotiKeep 메인 화면 — WhatsApp, Instagram, YouTube, Gmail 등의 알림 표시">
+  </div>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Play에서 받기</a>
+  <span class="trial-note">30일 무료 체험 · 광고 없음 · 트래커 없음</span>
+</header>
+
+<h2>이런 사소한 짜증, 있으셨죠</h2>
+<div class="pain-points">
+<ul>
+  <li>친구가 보낸 LINE 사진 — 알림을 스와이프한 순간 사라짐</li>
+  <li>어제 받은 배송 코드 — Android 기본 알림 기록은 24시간만 보관</li>
+  <li>「업로드 중…」「백그라운드에서 실행 중」 등 보고 싶지 않았던 알림으로 가득한 알림창</li>
+  <li>반쯤 졸면서 흘려 본 DM — 지금 찾으려 해도 어디에도 없음</li>
+</ul>
+<p>NotiKeep은 중요한 알림은 남기고 노이즈는 버리며, 폰이 이미 잊어버린 알림을 되찾아 줍니다.</p>
+</div>
+
+<h2>사용 방법</h2>
+
+<div class="step">
+  <h3><span class="num">1</span>설치 후 알림 접근 권한 부여</h3>
+  <p>최초 1회 설정. 알림 접근은 앱이 알림을 읽을 수 있게 하는 Android 표준 API입니다. NotiKeep은 그 외 용도로는 사용하지 않습니다.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>평소처럼 폰을 사용</h3>
+  <img src="https://i.imgur.com/enijnOq.png" alt="NotiKeep 메인 화면, 앱별 벨 제어">
+  <p>NotiKeep은 백그라운드에서 동작합니다. 유용한 알림은 사진과 함께 보관됩니다. 진행 표시줄과 시스템 알림은 자동으로 필터링되어 보관함을 어지럽히지 않습니다.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span>언제든 무엇이든 검색</h3>
+  <img src="https://i.imgur.com/fgK2s48.png" alt="NotiKeep에서 알림을 스와이프해 보관">
+  <p>보관함에서 검색, 스와이프로 정리, 중요한 것은 북마크. 3일 전에 본 알림도 사라지지 않고 그대로 남아 있습니다.</p>
+</div>
+
+<h2>NotiKeep만의 두 가지 특징</h2>
+
+<div class="showcase">
+  <span class="badge">Only in NotiKeep</span>
+  <h3>🖼 Image Timeline</h3>
+  <p class="lead">알림에 포함되었던 모든 사진을 — 구독 채널의 YouTube 썸네일, Google Photos의 「몇 년 전 오늘」 메모리, LINE 으로 받은 음식 사진, 뉴스 기사 썸네일, 배송 완료 확인 사진, 가끔 오는 Instagram 게시물까지 — 하나의 그리드에서 한눈에. 원본 알림을 스와이프해 지운 뒤에도.</p>
+  <div class="imt-stage" role="img" aria-label="Image Timeline 화면에서 사진 카드가 날아 나오는 3D로 기울어진 폰">
+    <div class="imt-phone">
+      <img src="https://i.imgur.com/0tomcw6.png" alt="">
+    </div>
+    <div class="imt-card imt-c1" aria-hidden="true">🌅</div>
+    <div class="imt-card imt-c2" aria-hidden="true">🍱</div>
+    <div class="imt-card imt-c3" aria-hidden="true">🐈</div>
+    <div class="imt-card imt-c4" aria-hidden="true">🏔</div>
+    <div class="imt-card imt-c5" aria-hidden="true">📸</div>
+  </div>
+  <figcaption>그리드를 시각적으로 훑고, 눈에 띄는 것을 탭. YouTube라면 동영상 썸네일 → 탭 → 원하는 브라우저에서 바로 재생 (<a href="#browser-choice" style="color:inherit;text-decoration:underline;">아래 기능</a>과 함께). Pro 기능.</figcaption>
+</div>
+
+<div class="showcase" id="browser-choice">
+  <span class="badge">Only in NotiKeep</span>
+  <h3>🌐 YouTube 알림을 원하는 브라우저로</h3>
+  <p class="lead">저장한 YouTube 알림을 탭 → Chrome, Firefox, Brave 등 원하는 브라우저에서 시청. Shorts 피드에 빠질 일도, YouTube 앱의 알고리즘에 끌려갈 일도 없습니다.</p>
+  <img src="https://i.imgur.com/uABd8H4.png" alt="YouTube 알림과 브라우저 선택 대화상자 (Chrome, Firefox, Brave)">
+  <figcaption>설치된 원하는 브라우저를 선택해 YouTube 시청. Pro 기능.</figcaption>
+</div>
+
+<h2>사용 가능한 기능</h2>
+<div class="feature-grid">
+  <div class="feature"><span class="icon">🖼</span><strong>Image Timeline</strong><p>알림에 포함된 사진을 날짜별로 둘러보기.</p></div>
+  <div class="feature"><span class="icon">🌐</span><strong>YouTube를 원하는 브라우저에서</strong><p>YouTube 알림을 원하는 브라우저에서 열기.</p></div>
+  <div class="feature"><span class="icon">🔇</span><strong>스마트 노이즈 필터</strong><p>진행 표시줄, 포그라운드 서비스, 시스템 알림 — 자동 제거.</p></div>
+  <div class="feature"><span class="icon">⭐</span><strong>북마크</strong><p>중요한 알림에 별표. 무료 버전에서도 만료 없음.</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>암호화 백업</strong><p>보관함과 이미지를 ZIP 하나로. 기기 변경도 순식간.</p></div>
+  <div class="feature"><span class="icon">🎨</span><strong>커스텀 테마</strong><p>원하는 색 조합을 3개까지 저장. 당신만의 스타일로.</p></div>
+  <div class="feature"><span class="icon">🔔</span><strong>앱별 벨 제어</strong><p>원치 않는 앱은 음소거 — 그래도 알림은 조용히 보관.</p></div>
+  <div class="feature"><span class="icon">🔍</span><strong>전체 텍스트 검색</strong><p>내용으로 어떤 알림이든 찾기. 무료: 30일. Pro: 영구.</p></div>
+  <div class="feature"><span class="icon">🌍</span><strong>12개 언어 지원</strong><p>영어, 日本語, 한국어, 中文, Español, Français, Deutsch 외.</p></div>
+</div>
+
+<h2>가격</h2>
+<div class="pricing">
+  <div class="price">
+    <div class="label">월간</div>
+    <div class="amount">$0.99<span>/월</span></div>
+    <div class="note">언제든 해지 가능</div>
+  </div>
+  <div class="price highlight">
+    <div class="label">연간</div>
+    <div class="amount">$9.99<span>/년</span></div>
+    <div class="note">월간 대비 약 16% 할인</div>
+  </div>
+  <div class="price">
+    <div class="label">평생</div>
+    <div class="amount">$19.99</div>
+    <div class="note">1회 결제, 구독 없음</div>
+  </div>
+</div>
+<p class="trial-banner">모든 설치에 <strong>30일 무료 체험</strong> 포함. 체험 종료 시 자동 결제 없음 — 플랜을 능동적으로 선택하지 않으면 무료 버전으로 돌아갑니다.</p>
+
+<h3>Free vs Pro 한눈에 비교</h3>
+<table class="tier-table">
+  <thead>
+    <tr><th>기능</th><th>Free</th><th class="pro-col">Pro</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>알림 보관함</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>이미지 보관 (상세 보기)</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>스마트 노이즈 필터</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>보관 기간</td><td>30일 (고정)</td><td class="pro-col">설정 가능 · 30일 → 무제한</td></tr>
+    <tr><td>검색</td><td>최근 30일</td><td class="pro-col">전체 보관함</td></tr>
+    <tr><td>북마크 · 음소거 · 앱 차단</td><td>각 5개</td><td class="pro-col">무제한</td></tr>
+    <tr><td>🖼 Image Timeline (이미지 그리드)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>🌐 YouTube를 원하는 브라우저에서</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 이미지 포함 암호화 백업</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>🎨 커스텀 테마</td><td><span class="cross">—</span></td><td class="pro-col">3슬롯</td></tr>
+  </tbody>
+</table>
+
+<p style="text-align:center;margin:2rem 0"><a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ 30일 무료로 NotiKeep 체험</a></p>
+
+<h2>NotiKeep, 당신에게 맞을까요?</h2>
+<div class="fit">
+  <div>
+    <h3>✅ 잘 맞는 분…</h3>
+    <ul>
+      <li>필요한 알림을 실수로 스와이프해 지우고 후회한 적이 있는 분</li>
+      <li>메시징 앱으로 친구가 보낸 사진을 보관하고 싶은 분</li>
+      <li>LINE, WhatsApp, SMS, Gmail 알림을 오프라인으로 기록하고 싶은 분</li>
+      <li>YouTube 앱이 알림을 탭할 때마다 Shorts로 끌고 가는 게 지긋지긋한 분</li>
+      <li>데이터를 누군가의 클라우드가 아니라 기기 내에만 두고 싶은 분</li>
+    </ul>
+  </div>
+  <div>
+    <h3>⏭ 건너뛰셔도 좋은 분…</h3>
+    <ul>
+      <li>Android 기본 24시간 알림 기록으로 충분한 분</li>
+      <li>타사 앱에 알림 접근 권한을 주고 싶지 않은 분</li>
+      <li>PC로 알림을 실시간 미러링하고 싶은 분 (다른 카테고리 — KDE Connect 등)</li>
+      <li>프리뷰 텍스트가 없는 E2E 암호화 앱만 사용하는 분</li>
+    </ul>
+  </div>
+</div>
+
+<h2>FAQ</h2>
+<details><summary>NotiKeep은 설치 <em>이전</em>에 받은 알림도 볼 수 있나요?</summary><p><strong>아니요.</strong> NotiKeep은 설치 후 알림 접근 권한이 부여된 이후에 도착한 알림만 저장할 수 있습니다. Android는 어떤 앱에도 과거 알림 접근을 허용하지 않습니다 — 무언가 복구해야 할 상황이 오기 전에 미리 설치해 두세요. 좋은 소식: 일단 작동을 시작하면 새 알림은 하나도 놓치지 않습니다.</p></details>
+<details><summary>지원하는 Android 버전은?</summary><p>Android 9.0 (Pie) 이상. Pixel 4a부터 Pixel 9 Pro까지 실기기 테스트 완료. 최신 Android 15, 16도 지원.</p></details>
+<details><summary>저장 용량은 얼마나 사용하나요?</summary><p>텍스트 알림은 매우 작습니다 — 수 MB로 몇 달치 보관 가능. 용량을 차지하는 것은 이미지로, 각 사진을 WebP로 약 20–80 KB로 재인코딩합니다. 한 달에 이미지가 포함된 알림 1000건을 받는 헤비 유저도 약 30–80 MB 정도. 설정에서 정확한 사용량을 확인하고 언제든 모든 이미지를 삭제할 수 있습니다.</p></details>
+<details><summary>삭제하면 데이터는 어떻게 되나요?</summary><p>NotiKeep의 모든 데이터 — 알림, 이미지, 환경설정, 북마크 — 는 앱의 비공개 디렉터리에 저장되며, 삭제 시 Android가 자동으로 지웁니다. 재설치나 새 기기로 이동 시 보관함을 유지하려면 미리 암호화 백업을 받아 두세요 (Pro 기능).</p></details>
+<details><summary>어떤 권한이 필요한가요?</summary><p>두 가지뿐: 알림 접근 (이 카테고리의 모든 앱이 필요한 권한) 과 INTERNET (Pro 구매를 위한 Google Play Billing에만 사용). 그 외에는 없음 — 위치 없음, 연락처 없음, 분석 SDK 없음, 트래커 없음.</p></details>
+<details><summary>Signal 같은 암호화 앱에서도 작동하나요?</summary><p>암호화 앱은 Android에 「새 메시지」 같은 플레이스홀더 텍스트만 전달합니다 — 어떤 로거든 암호화 여부와 상관없이 가져올 미리보기 내용 자체가 없습니다. NotiKeep은 시스템이 전달하는 것을 저장합니다. 시스템이 플레이스홀더만 받았다면, 그것이 보관됩니다.</p></details>
+<details><summary>데이터를 내보낼 수 있나요?</summary><p>네. Pro 버전은 데이터베이스, 보관된 모든 이미지, 북마크, 음소거 목록, 설정을 암호화 ZIP으로 만듭니다. 새 기기에서 한 번에 복원. 내보내기 경로는 직접 선택 — 자동 클라우드 동기화 없음.</p></details>
+<details><summary>30일 체험 종료 후엔 어떻게 되나요?</summary><p>무료 버전으로 돌아갑니다. 결제 없음, 자동 갱신 없음. Pro 기능을 계속 쓰려면 업그레이드 화면에서 능동적으로 플랜을 선택하세요. 체험 종료 시 자동 결제되는 것을 싫어하는 분이 많기에 이를 기본으로 했습니다.</p></details>
+<details><summary>배터리 소모나 폰이 느려지나요?</summary><p>Android의 알림 리스너는 이벤트 기반 — 폴링 없음. NotiKeep은 알림이 도착했을 때만 동작합니다. Pixel 7a와 Pixel 9 Pro 테스트에서 배터리 영향은 무시할 수준.</p></details>
+<details><summary>알림을 어디로 업로드하나요?</summary><p>아니요. 모든 것이 기기 내 NotiKeep의 비공개 디렉터리에 저장됩니다. 백업은 직접 선택한 경로로 — 자동 클라우드 동기화 없음, 「phone home」 텔레메트리 없음, 원격 분석 없음.</p></details>
+
+<h2>최근 업데이트</h2>
+<div class="changelog">
+<ul>
+  <li><code>v1.2.7</code> 릴리스 빌드에서 개발용 알림 덤프의 내부 저장소 기록을 중단. 기존 덤프는 업그레이드 시 자동 삭제</li>
+  <li><code>v1.2.6</code> Google Play에서 설치 시 시스템 언어와 무관하게 12개 언어 모두 안정적으로 동작</li>
+  <li><code>v1.2.5</code> 언어 선택이 앱 전체에 일관되게 적용 — 혼용 화면 해결</li>
+  <li><code>v1.2.4</code> 다른 언어 기기에서 받은 백업을 복원해도 UI가 깨지지 않도록 수정</li>
+  <li><code>v1.2.3</code> 언어 변경 후에도 설정 화면 라벨이 선택한 언어로 유지</li>
+</ul>
+<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">이전의 주요 마일스톤</p>
+<ul>
+  <li><code>🖼</code> Image Timeline — 알림에 도착한 모든 사진 둘러보기</li>
+  <li><code>🌐</code> YouTube 브라우저 선택 — 저장한 YouTube 알림을 Chrome, Firefox, Brave에서 열기</li>
+  <li><code>📦</code> 암호화 백업 & 복원 — 이미지 포함 보관함 전체를 ZIP 한 개로</li>
+  <li><code>🌍</code> 12개 언어 로컬라이제이션 — 영어, 日本語, 한국어, 中文 (简/繁), Español, Français, Deutsch, Italiano, Português, Русский 외</li>
+  <li><code>🔇</code> 스마트 노이즈 필터 — 진행 표시줄, 포그라운드 서비스, 시스템 알림 자동 제거</li>
+</ul>
+</div>
+
+<div class="final-cta">
+  <h2>기억하는 일은, NotiKeep에게 맡기세요</h2>
+  <p>30일 무료 체험. 카드 등록 없음, 자동 갱신 없음.</p>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Play에서 받기</a>
+</div>
+
+<footer>
+  <p>NotiKeep은 sakura.dev.jp가 만들었습니다</p>
+  <p>
+    <a href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">Google Play에서 보기 ↗</a>
+    &nbsp;·&nbsp;
+    <a href="https://sites.google.com/view/notikeep">개인정보처리방침 ↗</a>
+    &nbsp;·&nbsp;
+    <a href="https://sites.google.com/view/notikeep">지원 ↗</a>
+  </p>
+  <p class="disclosure">참고: 이 페이지는 개발자 본인이 작성했습니다 — 다소 편향이 있을 수 있음을 감안해 주세요.</p>
+</footer>
+
+</div>
+</body>
+</html>

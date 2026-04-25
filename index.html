@@ -10,7 +10,19 @@
 <meta property="og:description" content="Keeps every notification, including the photos. Filters out the noise. Opens YouTube notifications in your browser of choice. 30-day free trial.">
 <meta property="og:image" content="https://i.imgur.com/d6YL7La.png">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://sakuradevjp.github.io/notikeep-notes/">
 <link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/notikeep-notes/ja/">
+<link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/notikeep-notes/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">
+<link rel="alternate" hreflang="zh-TW" href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">
+<link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/notikeep-notes/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">
+<link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/notikeep-notes/fr/">
+<link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/notikeep-notes/de/">
+<link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/notikeep-notes/ru/">
+<link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/notikeep-notes/ar/">
+<link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/notikeep-notes/hi/">
 <link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/">
 <style>
 :root{
@@ -45,8 +57,12 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC","Noto Sans TC","Noto Sans Arabic","Noto Sans Devanagari",Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;-webkit-font-smoothing:antialiased}
 .wrap{max-width:920px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+.lang-switcher{text-align:center;font-size:.85rem;color:var(--fg-soft);padding:.5rem 0 1.25rem;line-height:2}
+.lang-switcher a{color:var(--fg-soft);margin:0 .25rem;text-decoration:none;border-bottom:1px solid transparent}
+.lang-switcher a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.lang-switcher strong{color:var(--accent);margin:0 .25rem}
 header.hero{text-align:center;padding:3rem 0 2.5rem}
 header.hero h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.2;margin:0 0 .85rem;letter-spacing:-.02em;font-weight:800}
 header.hero h1 .accent{color:var(--accent)}
@@ -58,11 +74,14 @@ header.hero .tagline{font-size:1.2rem;color:var(--fg-soft);margin:0 0 1.75rem;ma
 .trial-note{display:block;margin-top:.85rem;color:var(--fg-soft);font-size:.95rem}
 h2{font-size:clamp(1.5rem,3.2vw,1.85rem);margin:3.5rem 0 1.25rem;letter-spacing:-.01em;position:relative;padding-left:1rem;font-weight:700}
 h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
 h3{font-size:1.2rem;margin:2rem 0 .75rem;font-weight:700}
 p{margin:.85rem 0}
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
 a:hover{border-bottom-color:var(--accent)}
 ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
 li{margin:.45rem 0}
 
 .pain-points{background:var(--pain);color:var(--pain-fg);border-radius:16px;padding:1.5rem 1.75rem;margin:1.5rem 0;border:1px solid rgba(160,48,48,.18)}
@@ -70,6 +89,8 @@ li{margin:.45rem 0}
 .pain-points ul{margin:.5rem 0;list-style:none;padding-left:0}
 .pain-points li{margin:.7rem 0;position:relative;padding-left:1.6rem;font-size:1rem}
 .pain-points li::before{content:"😩";position:absolute;left:0;top:-.05em}
+[dir="rtl"] .pain-points li{padding-left:0;padding-right:1.6rem}
+[dir="rtl"] .pain-points li::before{left:auto;right:0}
 .pain-points p{margin:1.1rem 0 0;color:var(--fg);font-weight:500}
 
 .step{background:var(--card);border-radius:16px;padding:1.5rem 1.75rem;margin:1.25rem 0;border:1px solid var(--border)}
@@ -85,10 +106,10 @@ li{margin:.45rem 0}
 .showcase img{width:100%;max-width:300px;border-radius:14px;box-shadow:var(--shadow-strong);display:block;margin:0 auto}
 .showcase figcaption{margin-top:1rem;color:var(--fg-soft);font-size:.92rem;font-style:italic}
 
-/* Image Timeline 3D stage — phone tilted, photo cards flying outward */
+/* Image Timeline 3D stage */
 .imt-stage{position:relative;perspective:1400px;margin:2.5rem auto 1rem;display:flex;align-items:center;justify-content:center;min-height:480px;max-width:600px}
 .imt-phone{position:relative;transform:rotateY(-22deg) rotateX(6deg);transform-style:preserve-3d;z-index:2;filter:drop-shadow(0 25px 45px rgba(103,80,164,.4))}
-.imt-phone img{display:block;width:240px;max-width:none;border-radius:22px;margin:0;box-shadow:none}
+.imt-phone img{display:block;width:240px;max-width:none;border-radius:22px;margin:0;box-shadow:none;background:#121212}
 .imt-card{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 12px 30px rgba(0,0,0,.22),inset 0 0 0 3px rgba(255,255,255,.9);opacity:0;animation:imt-fly 1.4s cubic-bezier(.2,.8,.25,1) forwards;z-index:3}
 .imt-c1{background:linear-gradient(135deg,#ff8a65,#ff5252);--tx:200px;--ty:-150px;--rot:-10deg;animation-delay:.3s}
 .imt-c2{background:linear-gradient(135deg,#ffa726,#fb8c00);--tx:240px;--ty:30px;--rot:8deg;animation-delay:.55s}
@@ -136,6 +157,7 @@ li{margin:.45rem 0}
 
 .tier-table{width:100%;border-collapse:collapse;margin:1.5rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);font-size:.95rem;background:var(--card)}
 .tier-table th,.tier-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:middle}
+[dir="rtl"] .tier-table th,[dir="rtl"] .tier-table td{text-align:right}
 .tier-table thead th{background:var(--accent-soft);color:var(--fg);font-weight:700;font-size:.92rem;letter-spacing:.02em}
 .tier-table thead th.pro-col{background:var(--accent);color:#fff}
 .tier-table tr:last-child td{border-bottom:none}
@@ -157,13 +179,13 @@ details summary::-webkit-details-marker{display:none}
 details summary::before{content:"＋ ";color:var(--accent);font-weight:700;display:inline-block;width:1.4rem}
 details[open] summary::before{content:"− "}
 details p{margin:.7rem 0 0;color:var(--fg-soft);padding-left:1.4rem}
+[dir="rtl"] details p{padding-left:0;padding-right:1.4rem}
 
 .changelog{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.5rem;margin:1.5rem 0}
 .changelog ul{list-style:none;padding:0;margin:0}
 .changelog li{padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.95rem;color:var(--fg-soft)}
 .changelog li:last-child{border-bottom:none}
 .changelog code{background:var(--accent-soft);color:var(--accent-strong);padding:.15rem .55rem;border-radius:6px;font-weight:700;margin-right:.6rem;font-size:.85rem}
-@media (prefers-color-scheme: dark){.changelog code{color:var(--accent-strong)}}
 
 hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
 
@@ -179,6 +201,8 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 </head>
 <body>
 <div class="wrap">
+
+<nav class="lang-switcher">🌐 <strong>English</strong> · <a href="https://sakuradevjp.github.io/notikeep-notes/ja/">日本語</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ko/">한국어</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">简体中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">繁體中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/es/">Español</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">Português (BR)</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/fr/">Français</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/de/">Deutsch</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ru/">Русский</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ar/">العربية</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/hi/">हिन्दी</a></nav>
 
 <header class="hero">
   <h1>Your phone forgets. NotiKeep <span class="accent">remembers</span>.</h1>
@@ -292,8 +316,8 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>Retention</td><td>30 days (fixed)</td><td class="pro-col">Configurable · 30 days → unlimited</td></tr>
     <tr><td>Search</td><td>Last 30 days</td><td class="pro-col">Entire archive</td></tr>
     <tr><td>Bookmarks · Mute · App block</td><td>5 each</td><td class="pro-col">Unlimited</td></tr>
-    <tr><td>🖼 Image Timeline</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>🌐 YouTube in any browser</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>🖼 Image Timeline (browsable image grid)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>🌐 Open YouTube in any browser</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>📦 Encrypted backup with images</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🎨 Custom themes</td><td><span class="cross">—</span></td><td class="pro-col">3 slots</td></tr>
   </tbody>
@@ -335,11 +359,11 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <details><summary>What happens at the end of the 30-day trial?</summary><p>You revert to Free. No charge, no auto-conversion. To keep using Pro features, you actively pick a plan from the upgrade screen. We made that the default because nobody likes accidentally getting billed at the end of a trial.</p></details>
 <details><summary>Will it drain my battery or slow my phone?</summary><p>Android's notification listener is event-driven — there's no polling. NotiKeep does its work only when a notification arrives. Battery impact is negligible in our testing on Pixel 7a and Pixel 9 Pro.</p></details>
 <details><summary>Does NotiKeep upload my notifications anywhere?</summary><p>No. Everything is stored on-device in NotiKeep's private app directory. Backups go to a path you choose — there is no automatic cloud sync, no "phone home" telemetry, no remote analytics.</p></details>
-<details><summary>What languages is it available in?</summary><p>12: English, 日本語, 한국어, 简体中文, 繁體中文, Español, Português (BR), Français, Deutsch, Italiano, Русский, العربية, हिन्दी, ไทย, Tiếng Việt.</p></details>
 
 <h2>Recent updates</h2>
 <div class="changelog">
 <ul>
+  <li><code>v1.2.7</code> Stopped writing dev-only notification dumps to internal storage on release builds; existing dumps are auto-cleaned on upgrade</li>
   <li><code>v1.2.6</code> All 12 languages now work reliably after installing from Google Play, no matter what your phone's system language is</li>
   <li><code>v1.2.5</code> Language selection now sticks across the whole app — no more mixed-language screens</li>
   <li><code>v1.2.4</code> Restoring a backup taken on a phone with a different language no longer breaks the UI</li>
