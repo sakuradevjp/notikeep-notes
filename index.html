@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
-<title>NotiKeep Review — A Notification Archive Designed Around What Android Actually Surfaces</title>
-<meta name="description" content="Developer notes on NotiKeep: a notification logger that filters out progress bars, foreground services, and system spam. Built around real notification analysis across 39 apps, with image-preserving backup and deep-link jumps back to YouTube content.">
+<title>NotiKeep Review — The Notification Archive with an Image Timeline</title>
+<meta name="description" content="Developer notes on NotiKeep: the only notification logger we know of that preserves BigPictureStyle attachments and surfaces them in a browsable Image Timeline. Plus a real noise filter, deep-link jumps back to YouTube content, and analysis grounded in 1,107 real notification dumps across 39 apps.">
 <link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/notikeep-notes/">
 <link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/notikeep-notes/">
 <style>
@@ -370,9 +370,9 @@
         <span>•</span>
         <span>~9 min read</span>
       </div>
-      <h1>NotiKeep: A notification archive designed around what Android actually surfaces</h1>
+      <h1>NotiKeep: The notification archive with an Image Timeline</h1>
       <p class="sub">
-        Most notification loggers store everything that crosses your tray — including the progress bars, foreground services, and system pings you didn't want in the first place. NotiKeep takes the opposite approach: a curated archive of the notifications worth keeping, with images preserved, deep-link jumps back to original content, and an encrypted backup for device migrations.
+        Every notification logger we tested stores text. NotiKeep is the only one that preserves the actual <em>images</em> that come with notifications — and lets you browse them as a timeline. Plus the things you'd expect from this category: a real noise filter, deep-link jumps back to original content, and an encrypted backup for device migrations.
       </p>
       <div class="hero-cta">
         <a href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep" class="cta-btn">Get on Google Play</a>
@@ -396,11 +396,11 @@
   <div class="tech-note" style="margin-top: 40px; margin-bottom: 32px; font-style: normal;">
     <strong style="display:block; color:#3A7AFE; font-size:13px; letter-spacing:0.08em; margin-bottom:8px; text-transform:uppercase;">TL;DR</strong>
     <ul style="margin:0; padding-left: 20px; font-size:15px; line-height:1.7;">
-      <li>A notification archive that filters out the obvious noise (progress, foreground services, system pings) instead of dumping everything into one big list.</li>
-      <li>Preserves notification images — large icons and BigPictureStyle attachments — alongside text. Most loggers in this category drop them.</li>
-      <li>Filtering rules and deep-link mappings are grounded in <strong>1,107 real notification-extras dumps across 39 apps</strong> — not guesswork.</li>
-      <li>Encrypted ZIP backup with images, so a device migration restores the full archive in one step.</li>
-      <li>30-day free trial, then ~$1/month or a one-time $19.99. No ads on any tier. Total APK size around 6 MB.</li>
+      <li><strong>Image Timeline</strong> — every <code>BigPictureStyle</code> attachment that comes through a notification is extracted, re-encoded as WebP, and made browsable as a grid. As far as we can tell, no other product in this category does this.</li>
+      <li>Real noise filter — drops progress bars, foreground services, system pings, and importance-MIN pings on receipt. The archive is curated, not a dump.</li>
+      <li>Filter rules and deep-link mappings are grounded in <strong>1,107 real notification-extras dumps across 39 apps</strong> — not guesswork.</li>
+      <li>Encrypted ZIP backup that includes the image directory, so a device migration restores the full archive in one step.</li>
+      <li>30-day free trial, then ~$1/month or a one-time $19.99. No ads on any tier.</li>
     </ul>
   </div>
 
@@ -409,6 +409,7 @@
     <ol>
       <li><a href="#background">Background: why the built-in notification history isn't enough</a></li>
       <li><a href="#what-is">What NotiKeep actually does</a></li>
+      <li><a href="#image-timeline">The Image Timeline — and why nothing else in this category does it</a></li>
       <li><a href="#who-for">Who this app is for (and who should skip it)</a></li>
       <li><a href="#noise">The "noise" problem — and how the filter is built</a></li>
       <li><a href="#deeplinks">Deep-linking back to content (the 1,107-dump research)</a></li>
@@ -447,8 +448,8 @@
         <figcaption>The main archive view. Per-app grouping with notification counts. Tapping the bell icon next to an app toggles whether OS-level notifications stay in the tray or get silently archived.</figcaption>
       </figure>
       <figure>
-        <img src="https://i.imgur.com/uABd8H4.png" alt="Image Timeline view showing notification images as a grid">
-        <figcaption>The Image Timeline (Pro). A separate view that surfaces only notifications with attached images — large icons and <code>BigPictureStyle</code> attachments are extracted and stored as WebP, then browsable as a grid. Most loggers in this category drop these images entirely.</figcaption>
+        <img src="https://i.imgur.com/0tomcw6.png" alt="Swipe to archive a notification">
+        <figcaption>Swipe a notification sideways to archive it. Swipe-to-archive is reversible from the snackbar — the standard one-handed gesture for sweeping through a backlog of saved notifications.</figcaption>
       </figure>
       <figure>
         <img src="https://i.imgur.com/fgK2s48.png" alt="Full-text search across saved notifications">
@@ -467,6 +468,50 @@
     </ul>
     <p>
       The retention window is the policy lever. Free tier keeps 30 days, which covers the "I dismissed something earlier today" case comfortably and a couple of weekends past that. Pro lets you set anything from 30 days to unlimited, with bookmarks always exempt either way.
+    </p>
+  </section>
+
+  <section id="image-timeline">
+    <h2>3. The Image Timeline — and why nothing else in this category does it</h2>
+    <p>
+      This is the feature we'd point at first if asked what makes NotiKeep different from every other notification logger on Google Play.
+    </p>
+    <figure style="margin: 28px auto;">
+      <img src="https://i.imgur.com/uABd8H4.png" alt="Image Timeline view — notification images shown as a browsable grid" style="max-width: 320px; display: block; margin: 0 auto;">
+      <figcaption>The Image Timeline. Every notification that arrived with an attached image — Instagram posts, news thumbnails, photos sent in messaging apps, YouTube channel art on a featured upload — surfaces here as a chronological grid. Tap any tile to jump to the full saved notification.</figcaption>
+    </figure>
+    <p>
+      Plenty of notifications carry images. Instagram and Threads ship the post thumbnail. News apps attach the article hero. Messaging apps embed the photo someone just sent you. WhatsApp Web pairing, profile-picture-changed alerts, restaurant booking confirmations with the venue photo, package-delivered confirmations with the photo of the box on the doorstep — all of these arrive as <code>BigPictureStyle</code> notifications with a real bitmap attached. And then, twenty minutes later, you swipe the notification away and the image is gone.
+    </p>
+    <p>
+      The Image Timeline is the part of NotiKeep that exists to keep those images. Not their URLs (which often expire), not the surrounding text (which the archive already has), but the actual pixels — extracted on receipt, re-encoded as WebP, and stored on the device. The dedicated view then surfaces them as a date-grouped grid you can scroll through.
+    </p>
+    <h3>Why other apps don't do this</h3>
+    <p>
+      We looked at a fair number of notification loggers before building this, and the standard pattern is to either (a) ignore images entirely and just save text, or (b) save the icon URL string and call it a day. We don't think anyone is doing actual bitmap extraction at receive-time and presenting it as a separate timeline. There are reasons for that:
+    </p>
+    <ul style="padding-left: 20px; margin-bottom: 18px;">
+      <li><strong>Notification image bitmaps are bound to the notification's lifecycle.</strong> When the user dismisses a notification (or the source app cancels it), the OS releases the image. If you want to keep it, you have to read the bitmap out of the live notification and copy it before the dismissal happens. That requires doing real work in <code>onNotificationPosted</code> rather than just serializing strings.</li>
+      <li><strong>Storage isn't free.</strong> A typical attached image is 100KB–1MB as PNG. Across a few months of notifications you can easily hit several hundred megabytes if you don't compress. NotiKeep re-encodes to WebP at a sensible quality target, which gets typical attachments down to 20–80KB while keeping them visually intact.</li>
+      <li><strong>Privacy considerations.</strong> Once you commit to keeping notification images on disk, you're also signing up for "make sure they don't leak". Backups need to bundle them as part of the encrypted ZIP. The image directory can't sit in shared external storage where another app could read it. Restoring on a new device has to remap absolute paths to the new install. There's a non-trivial amount of plumbing involved that most loggers don't sign up for.</li>
+      <li><strong>It's a niche use case.</strong> Most users don't think "I want to flip through old notification images". Until they do, and realize there's no way to get back to the photo a friend sent two weeks ago that they never saved properly. The Image Timeline isn't an everyday feature; it's a feature you remember exists exactly when you need it.</li>
+    </ul>
+    <h3>What it's actually useful for</h3>
+    <p>
+      Use cases we've heard from users (and ones we use it for ourselves):
+    </p>
+    <ul style="padding-left: 20px; margin-bottom: 18px;">
+      <li>Recovering a photo a friend sent in a messaging app you don't otherwise back up</li>
+      <li>Looking up the venue/dish/product image from a confirmation notification when you forgot to bookmark the order itself</li>
+      <li>Browsing news app thumbnails by date — surprisingly useful for "what was the headline last Tuesday?"</li>
+      <li>Catching screenshot images shared via apps that delete content after viewing</li>
+      <li>Visual scanning for that specific notification when you can't quite remember the sender's name but you remember what the photo looked like</li>
+    </ul>
+    <div class="tech-note">
+      The Image Timeline isn't a feature most users will open every day. It's the feature that makes the difference <em>the one time it matters</em> — and it's the one part of NotiKeep we couldn't find in any competing notification logger we tested.
+    </div>
+    <p>
+      The Image Timeline is part of the Pro tier (along with unlimited retention and full backup). The reasoning is straightforward: the work that goes into preserving images — bitmap extraction, WebP encoding, secure storage, backup integration — is meaningfully more than text-only logging, and the storage footprint over time is real. Free tier still preserves the images attached to individual notifications and shows them in the detail view; the timeline view itself is what unlocks with Pro.
     </p>
   </section>
 
@@ -501,7 +546,7 @@
   </section>
 
   <section id="noise">
-    <h2>3. The "noise" problem — and how the filter is built</h2>
+    <h2>4. The "noise" problem — and how the filter is built</h2>
     <p>
       A typical Android user receives somewhere between 50 and 200 notifications a day. Of those, a substantial fraction is structurally not worth saving:
     </p>
@@ -547,7 +592,7 @@
   </section>
 
   <section id="deeplinks">
-    <h2>4. Deep-linking back to content — the 1,107-dump research</h2>
+    <h2>5. Deep-linking back to content — the 1,107-dump research</h2>
     <p>
       An archive that just holds text is useful. An archive that lets you tap an entry and jump <em>back</em> to the original post in the source app is more useful, and it's what most loggers don't do.
     </p>
@@ -585,7 +630,7 @@
   </section>
 
   <section id="privacy">
-    <h2>5. Permissions and privacy</h2>
+    <h2>6. Permissions and privacy</h2>
     <p>
       The one permission this category cannot avoid is <strong>Notification Access</strong> (<code>BIND_NOTIFICATION_LISTENER_SERVICE</code>). It's the API that makes the whole thing possible. The tradeoff is real: granting it means the app sees every notification the system delivers. There is no notification logger of any kind on Android without this grant.
     </p>
@@ -610,7 +655,7 @@
   </section>
 
   <section id="compare">
-    <h2>6. How we compare to other notification loggers</h2>
+    <h2>7. How we compare to other notification loggers</h2>
     <p>
       The category breaks down into three rough buckets:
     </p>
@@ -643,6 +688,12 @@
           <td class="highlight" data-label="NotiKeep"><span class="check">✓</span> Large icon + BigPicture</td>
           <td data-label="Built-in"><span class="cross">✗</span> Text only</td>
           <td data-label="Free logger"><span class="cross">✗</span> Usually text only</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Image Timeline (browsable image grid)</td>
+          <td class="highlight" data-label="NotiKeep"><span class="check">✓</span> Pro</td>
+          <td data-label="Built-in"><span class="cross">✗</span></td>
+          <td data-label="Free logger"><span class="cross">✗</span> Not seen in any tested</td>
         </tr>
         <tr>
           <td data-label="Feature">Noise filter</td>
@@ -696,7 +747,7 @@
   </section>
 
   <section id="pricing">
-    <h2>7. Pricing</h2>
+    <h2>8. Pricing</h2>
     <p>
       The free tier is meant to be useful, not a demo. Core archiving, the noise filter, search across the last 30 days, image preservation, and 5 bookmark slots all work without paying.
     </p>
@@ -724,7 +775,7 @@
   </section>
 
   <section id="verdict">
-    <h2>8. Summary — who this is for</h2>
+    <h2>9. Summary — who this is for</h2>
     <div class="verdict">
       <h3>Who is this for? <span class="grade">Honest take</span></h3>
       <p style="margin-top: 12px;">
@@ -734,8 +785,8 @@
         <div class="pros">
           <h4>Pros</h4>
           <ul>
+            <li><strong>Image Timeline</strong> — the only product in this category that extracts notification image bitmaps and presents them as a browsable grid</li>
             <li>Filter actually drops the obvious noise — progress, foreground services, system pings, low-importance pings</li>
-            <li>Notification images preserved as WebP — most loggers in this category drop them</li>
             <li>Filtering rules and deep-link mappings grounded in real notification analysis (1,107 dumps, 39 apps)</li>
             <li>Encrypted ZIP backup including images, mute lists, and bookmarks — full-state device migration</li>
             <li>No ads, no analytics SDKs, no trackers on any tier</li>
