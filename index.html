@@ -396,13 +396,13 @@
 
 <article class="content container">
 
-  <div class="tech-note" style="margin-top: 40px; margin-bottom: 32px; font-style: normal;">
-    <strong style="display:block; color:#3A7AFE; font-size:13px; letter-spacing:0.08em; margin-bottom:8px; text-transform:uppercase;">TL;DR</strong>
-    <ul style="margin:0; padding-left: 20px; font-size:15px; line-height:1.7;">
-      <li><strong>Image Timeline</strong> — extract <code>BigPictureStyle</code> notification images, re-encode as WebP, browse them as a grid. We haven't seen this in any other notification logger.</li>
-      <li><strong>Open YouTube notifications in any browser</strong> — bypass the YouTube app entirely. Skip the algorithm pull, keep your ad-blocker, stay logged out. Also unique to NotiKeep among the loggers we tested.</li>
-      <li><strong>Ad-free, no analytics SDKs, all data on-device.</strong> 30-day free trial, then ~$1/month or $19.99 one-time.</li>
-    </ul>
+  <div class="tech-note" style="margin-top: 40px; margin-bottom: 32px; font-style: normal; padding-top: 26px; padding-bottom: 26px;">
+    <strong style="display:block; color:#3A7AFE; font-size:14px; letter-spacing:0.08em; margin-bottom:14px; text-transform:uppercase;">NotiKeep in 3 lines</strong>
+    <ol style="margin:0; padding-left: 28px; font-size:16px; line-height:1.85;">
+      <li><strong>Image Timeline</strong> — every notification's photo is preserved and browsable as a grid. Unique to NotiKeep among the notification loggers we've tested.</li>
+      <li><strong>Open YouTube notifications in any browser</strong> — bypass the YouTube app, skip the algorithm pull. Also unique to NotiKeep.</li>
+      <li><strong>Ad-free, no analytics, all data on-device.</strong> 30-day free trial, then ~$1/month or $19.99 one-time.</li>
+    </ol>
   </div>
 
   <div class="toc">
@@ -572,6 +572,11 @@
       <strong style="color:var(--text);">Still interested?</strong> The rest of this article covers the technical side — what the filter actually drops, how the deep-linking research was done, and how the privacy footprint compares to typical loggers in this category.
     </p>
   </section>
+
+  <div style="margin: 56px auto 0; max-width: 720px; padding: 18px 24px; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 8px; text-align: center; font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+    <strong style="display:block; color:var(--text); font-size:13px; letter-spacing:0.08em; text-transform:uppercase; margin-bottom: 6px;">↓ Behind the scenes</strong>
+    The next section gets technical — it's the research and methodology behind how NotiKeep handles YouTube deep-linking. Skip ahead to <a href="#privacy" style="color: var(--primary);">§6 Permissions and privacy</a> if you just want to know how the app behaves day-to-day.
+  </div>
 
   <section id="deeplinks">
     <h2>5. Deep-linking back to content — the 1,107-dump research</h2>
