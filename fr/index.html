@@ -277,7 +277,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <div class="feature"><span class="icon">🌐</span><strong>YouTube dans n'importe quel navigateur</strong><p>Ouvrez les notifications YouTube dans le navigateur de votre choix.</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>Filtre de bruit intelligent</strong><p>Barres de progression, services en avant-plan, pings système — automatiquement écartés.</p></div>
   <div class="feature"><span class="icon">⭐</span><strong>Favoris</strong><p>Étoilez les notifications importantes. Les favoris n'expirent jamais, même en gratuit.</p></div>
-  <div class="feature"><span class="icon">📦</span><strong>Sauvegarde chiffrée</strong><p>Un ZIP avec votre archive et les images. Changez de téléphone en quelques secondes.</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>Sauvegarde avec images</strong><p>Un ZIP avec votre archive et les images. Changez de téléphone en quelques secondes.</p></div>
   <div class="feature"><span class="icon">🎨</span><strong>Thèmes personnalisés</strong><p>Trois emplacements pour vos combinaisons de couleurs. Selon votre style.</p></div>
   <div class="feature"><span class="icon">🔔</span><strong>Cloche par application</strong><p>Mettez en sourdine les apps que vous ne voulez pas entendre — mais archivez leurs notifications en silence.</p></div>
   <div class="feature"><span class="icon">🔍</span><strong>Recherche plein texte</strong><p>Trouvez n'importe quelle notification par son contenu. Gratuit : 30 jours. Pro : pour toujours.</p></div>
@@ -318,7 +318,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>Favoris · Sourdine · Blocage</td><td>5 chacun</td><td class="pro-col">Illimité</td></tr>
     <tr><td>🖼 Chronologie d'images (grille parcourable)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🌐 Ouvrir YouTube dans n'importe quel navigateur</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>📦 Sauvegarde chiffrée avec images</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 Sauvegarde avec images</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🎨 Thèmes personnalisés</td><td><span class="cross">—</span></td><td class="pro-col">3 emplacements</td></tr>
   </tbody>
 </table>
@@ -352,32 +352,13 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <details><summary>NotiKeep peut-il voir les notifications reçues <em>avant</em> son installation ?</summary><p><strong>Non.</strong> NotiKeep ne peut enregistrer que les notifications qui arrivent <em>après</em> l'installation et l'octroi de l'Accès aux notifications. Android n'autorise aucune app à accéder aux notifications passées — installez-le donc avant d'avoir besoin de récupérer quelque chose. Bonne nouvelle : une fois lancé, plus aucune nouvelle notification ne vous échappe.</p></details>
 <details><summary>Quelles versions d'Android sont prises en charge ?</summary><p>Android 9.0 (Pie) et plus récent. Testé du Pixel 4a au Pixel 9 Pro. Les versions récentes Android 15 et 16 sont également supportées.</p></details>
 <details><summary>Combien d'espace utilise NotiKeep ?</summary><p>Les notifications texte sont minuscules — quelques Mo couvrent des mois d'archive. Ce qui prend de la place, ce sont les images : chaque photo conservée est ré-encodée en WebP autour de 20–80 Ko. Un usage intensif avec mille notifications avec image par mois représente environ 30–80 Mo. Vous voyez l'utilisation exacte dans Réglages et pouvez tout effacer à tout moment.</p></details>
-<details><summary>Que devient mon archive si je désinstalle ?</summary><p>Toutes les données de NotiKeep — notifications, images, préférences, favoris — sont stockées dans le répertoire privé de l'app, qu'Android efface automatiquement à la désinstallation. Pour conserver votre archive lors d'une réinstallation ou d'un nouveau téléphone, faites d'abord une sauvegarde chiffrée (fonction Pro).</p></details>
+<details><summary>Que devient mon archive si je désinstalle ?</summary><p>Toutes les données de NotiKeep — notifications, images, préférences, favoris — sont stockées dans le répertoire privé de l'app, qu'Android efface automatiquement à la désinstallation. Pour conserver votre archive lors d'une réinstallation ou d'un nouveau téléphone, faites d'abord une sauvegarde (fonction Pro).</p></details>
 <details><summary>Quelles autorisations NotiKeep demande-t-il ?</summary><p>Seulement deux : Accès aux notifications (n'importe quelle app de cette catégorie en a besoin) et INTERNET (utilisée uniquement par Google Play Billing pour les achats Pro). Rien d'autre — pas de localisation, pas de contacts, pas de SDK d'analytique, pas de traceur.</p></details>
 <details><summary>NotiKeep fonctionne-t-il avec les apps chiffrées comme Signal ?</summary><p>Les apps chiffrées livrent à Android un texte d'attente comme « Nouveau message » — il n'y a pas de contenu d'aperçu qu'un logger pourrait capturer, chiffré ou non. NotiKeep enregistre ce que le système livre ; si le système reçoit un placeholder, c'est ce qui sera archivé.</p></details>
-<details><summary>Puis-je exporter mes données ?</summary><p>Oui. La version Pro crée un ZIP chiffré contenant la base de données, toutes les images conservées, vos favoris, listes de sourdines et réglages. Restauration en un pas sur un nouveau téléphone. L'export va vers le chemin que vous choisissez — pas de synchronisation cloud automatique.</p></details>
+<details><summary>Puis-je exporter mes données ?</summary><p>Oui. La version Pro crée un ZIP contenant la base de données, toutes les images conservées, vos favoris, listes de sourdines et réglages. Restauration en un pas sur un nouveau téléphone. L'export va vers le chemin que vous choisissez — pas de synchronisation cloud automatique.</p></details>
 <details><summary>Que se passe-t-il à la fin de l'essai de 30 jours ?</summary><p>Vous repassez sur Free. Pas de débit, pas de conversion automatique. Pour continuer à utiliser les fonctions Pro, choisissez activement un plan dans l'écran de mise à niveau. C'est le défaut parce que personne n'aime être facturé par accident en fin d'essai.</p></details>
 <details><summary>Cela vide-t-il la batterie ou ralentit-il le téléphone ?</summary><p>Le listener de notifications d'Android est piloté par événements — pas de polling. NotiKeep ne travaille que quand une notification arrive. L'impact sur la batterie est négligeable lors de nos tests sur Pixel 7a et Pixel 9 Pro.</p></details>
 <details><summary>NotiKeep envoie-t-il mes notifications quelque part ?</summary><p>Non. Tout est stocké sur l'appareil, dans le répertoire privé de NotiKeep. Les sauvegardes vont vers un chemin que vous choisissez — pas de synchronisation cloud automatique, pas de télémétrie « phone home », pas d'analytique distante.</p></details>
-
-<h2>Mises à jour récentes</h2>
-<div class="changelog">
-<ul>
-  <li><code>v1.2.7</code> Arrêt de l'écriture des dumps de notifications de dev en stockage interne en build de release ; les dumps existants sont nettoyés automatiquement à la mise à jour</li>
-  <li><code>v1.2.6</code> Les 12 langues fonctionnent désormais de façon fiable après installation depuis Google Play, quel que soit le système</li>
-  <li><code>v1.2.5</code> La sélection de langue se maintient dans toute l'app — fini les écrans mixtes</li>
-  <li><code>v1.2.4</code> Restaurer une sauvegarde réalisée sur un téléphone d'une autre langue ne casse plus l'UI</li>
-  <li><code>v1.2.3</code> Les libellés de Réglages restent dans la langue choisie après changement de langue</li>
-</ul>
-<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">Étapes antérieures</p>
-<ul>
-  <li><code>🖼</code> Chronologie d'images — parcourez chaque photo arrivée dans une notification</li>
-  <li><code>🌐</code> Choix de navigateur YouTube — ouvrez les notifications YouTube enregistrées dans Chrome, Firefox ou Brave</li>
-  <li><code>📦</code> Sauvegarde et restauration chiffrées — un ZIP transporte toute l'archive avec les images</li>
-  <li><code>🌍</code> Localisation en 12 langues — Anglais, 日本語, 한국어, 中文 (简/繁), Español, Français, Deutsch, Italiano, Português, Русский et plus</li>
-  <li><code>🔇</code> Filtre de bruit intelligent — barres de progression, services en avant-plan et pings système écartés automatiquement</li>
-</ul>
-</div>
 
 <div class="final-cta">
   <h2>Laissez NotiKeep se souvenir pour vous.</h2>

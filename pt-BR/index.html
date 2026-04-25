@@ -277,7 +277,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <div class="feature"><span class="icon">🌐</span><strong>YouTube em qualquer navegador</strong><p>Abra notificações do YouTube no navegador da sua escolha.</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>Filtro de ruído inteligente</strong><p>Barras de progresso, serviços em primeiro plano, pings do sistema — descartados automaticamente.</p></div>
   <div class="feature"><span class="icon">⭐</span><strong>Favoritos</strong><p>Marque notificações importantes. Os favoritos não expiram, mesmo no plano gratuito.</p></div>
-  <div class="feature"><span class="icon">📦</span><strong>Backup criptografado</strong><p>Um ZIP com seu arquivo mais imagens. Troque de celular em segundos.</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>Backup com imagens</strong><p>Um ZIP com seu arquivo mais imagens. Troque de celular em segundos.</p></div>
   <div class="feature"><span class="icon">🎨</span><strong>Temas personalizados</strong><p>Três espaços para suas combinações de cor. Combine com seu estilo.</p></div>
   <div class="feature"><span class="icon">🔔</span><strong>Controle de sino por app</strong><p>Silencie os apps que você não quer ouvir — mas arquive as notificações em silêncio.</p></div>
   <div class="feature"><span class="icon">🔍</span><strong>Pesquisa por texto completo</strong><p>Encontre qualquer notificação por conteúdo. Free: 30 dias. Pro: para sempre.</p></div>
@@ -318,7 +318,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>Favoritos · Silenciar · Bloquear</td><td>5 cada</td><td class="pro-col">Ilimitado</td></tr>
     <tr><td>🖼 Linha do tempo de imagens (grade navegável)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🌐 Abrir YouTube em qualquer navegador</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>📦 Backup criptografado com imagens</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 Backup com imagens</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🎨 Temas personalizados</td><td><span class="cross">—</span></td><td class="pro-col">3 espaços</td></tr>
   </tbody>
 </table>
@@ -352,32 +352,13 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <details><summary>O NotiKeep consegue ver as notificações que recebi <em>antes</em> de instalá-lo?</summary><p><strong>Não.</strong> O NotiKeep só salva notificações que chegam <em>depois</em> da instalação e da concessão do Acesso a Notificações. O Android não dá a nenhum app acesso às notificações passadas — então instale antes de precisar recuperar algo. Boa notícia: rodando, nenhuma notificação nova escapa.</p></details>
 <details><summary>Quais versões do Android o NotiKeep suporta?</summary><p>Android 9.0 (Pie) e superiores. Testado do Pixel 4a até o Pixel 9 Pro. As versões mais recentes Android 15 e 16 também são suportadas.</p></details>
 <details><summary>Quanto armazenamento o NotiKeep usa?</summary><p>Notificações de texto são minúsculas — alguns MB cobrem meses de arquivo. Quem ocupa espaço são as imagens: cada foto preservada é recodificada para WebP em torno de 20–80 KB. Um usuário pesado com mil notificações com imagem por mês usa cerca de 30–80 MB. Você vê o uso exato em Configurações e pode limpar todas as imagens a qualquer momento.</p></details>
-<details><summary>O que acontece com meus dados se eu desinstalar?</summary><p>Todos os dados do NotiKeep — notificações, imagens, preferências, favoritos — ficam no diretório privado do app, que o Android limpa automaticamente ao desinstalar. Para manter seu arquivo numa reinstalação ou novo aparelho, faça primeiro um backup criptografado (recurso Pro).</p></details>
+<details><summary>O que acontece com meus dados se eu desinstalar?</summary><p>Todos os dados do NotiKeep — notificações, imagens, preferências, favoritos — ficam no diretório privado do app, que o Android limpa automaticamente ao desinstalar. Para manter seu arquivo numa reinstalação ou novo aparelho, faça primeiro um backup (recurso Pro).</p></details>
 <details><summary>Que permissões o NotiKeep precisa?</summary><p>Só duas: Acesso a Notificações (qualquer app dessa categoria precisa) e INTERNET (usada apenas pelo Google Play Billing para compras Pro). Nada mais — sem localização, sem contatos, sem SDKs de analytics, sem rastreadores.</p></details>
 <details><summary>O NotiKeep funciona com apps criptografados como o Signal?</summary><p>Apps criptografados entregam ao Android um texto reservado como "Nova mensagem" — não há conteúdo de prévia para nenhum logger capturar, criptografado ou não. O NotiKeep guarda o que o sistema entrega; se o sistema recebe um marcador, é isso que vai pro arquivo.</p></details>
-<details><summary>Posso exportar meus dados?</summary><p>Sim. A versão Pro cria um ZIP criptografado com o banco de dados, todas as imagens preservadas, seus favoritos, listas de silenciados e configurações. Restaura em um celular novo num passo só. A exportação vai para o caminho que você escolher — sem sincronização em nuvem automática.</p></details>
+<details><summary>Posso exportar meus dados?</summary><p>Sim. A versão Pro cria um ZIP com o banco de dados, todas as imagens preservadas, seus favoritos, listas de silenciados e configurações. Restaura em um celular novo num passo só. A exportação vai para o caminho que você escolher — sem sincronização em nuvem automática.</p></details>
 <details><summary>O que acontece no fim do teste de 30 dias?</summary><p>Você volta para o Free. Sem cobrança, sem conversão automática. Para continuar usando recursos Pro, escolha ativamente um plano na tela de upgrade. Deixamos assim porque ninguém gosta de ser cobrado por engano no fim de um teste.</p></details>
 <details><summary>Vai gastar bateria ou deixar o celular lento?</summary><p>O listener de notificações do Android é orientado a eventos — sem polling. O NotiKeep só trabalha quando uma notificação chega. O impacto na bateria é desprezível em nossos testes no Pixel 7a e Pixel 9 Pro.</p></details>
 <details><summary>O NotiKeep envia minhas notificações para algum lugar?</summary><p>Não. Tudo fica no aparelho, no diretório privado do NotiKeep. Os backups vão para um caminho que você escolhe — sem sincronização em nuvem automática, sem telemetria "phone home", sem analytics remoto.</p></details>
-
-<h2>Atualizações recentes</h2>
-<div class="changelog">
-<ul>
-  <li><code>v1.2.7</code> Paramos de gravar despejos de notificação de dev no armazenamento interno em builds de release; despejos existentes são limpos automaticamente na atualização</li>
-  <li><code>v1.2.6</code> Os 12 idiomas funcionam de forma confiável após instalação pelo Google Play, independentemente do idioma do sistema</li>
-  <li><code>v1.2.5</code> A seleção de idioma se mantém em todo o app — chega de telas mistas</li>
-  <li><code>v1.2.4</code> Restaurar um backup feito em um celular com idioma diferente não quebra mais a UI</li>
-  <li><code>v1.2.3</code> Rótulos de Configurações mantêm o idioma escolhido após troca de idioma</li>
-</ul>
-<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">Marcos anteriores</p>
-<ul>
-  <li><code>🖼</code> Linha do tempo de imagens — navegue por cada foto que chegou em uma notificação</li>
-  <li><code>🌐</code> Escolha de navegador para YouTube — abra notificações salvas do YouTube no Chrome, Firefox ou Brave</li>
-  <li><code>📦</code> Backup & restauração criptografados — um ZIP carrega o arquivo todo com imagens</li>
-  <li><code>🌍</code> Localização em 12 idiomas — Inglês, 日本語, 한국어, 中文 (简/繁), Español, Français, Deutsch, Italiano, Português, Русский e mais</li>
-  <li><code>🔇</code> Filtro de ruído inteligente — barras de progresso, serviços em primeiro plano e pings do sistema descartados automaticamente</li>
-</ul>
-</div>
 
 <div class="final-cta">
   <h2>Deixe o NotiKeep lembrar por você.</h2>

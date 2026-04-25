@@ -277,7 +277,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <div class="feature"><span class="icon">🌐</span><strong>YouTubeを好きなブラウザで</strong><p>YouTube通知を任意のブラウザで開く。</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>スマートノイズフィルタ</strong><p>進捗バー、常駐通知、システム通知は自動で除外。</p></div>
   <div class="feature"><span class="icon">⭐</span><strong>ブックマーク</strong><p>大事な通知に⭐を。無料版でも期限なしで残せます。</p></div>
-  <div class="feature"><span class="icon">📦</span><strong>暗号化バックアップ</strong><p>アーカイブと画像をまとめてZIPに。機種変もすぐ。</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>画像付きバックアップ</strong><p>アーカイブと画像をまとめてZIPに。機種変もすぐ。</p></div>
   <div class="feature"><span class="icon">🎨</span><strong>カスタムテーマ</strong><p>好きな配色を3つまで保存。</p></div>
   <div class="feature"><span class="icon">🔔</span><strong>アプリ別ベル制御</strong><p>うるさいアプリは音だけミュート、通知はサイレントに保存。</p></div>
   <div class="feature"><span class="icon">🔍</span><strong>全文検索</strong><p>通知の中身からキーワード検索。無料: 30日、Pro: 全期間。</p></div>
@@ -318,7 +318,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>ブックマーク・ミュート・ブロック</td><td>各5件</td><td class="pro-col">無制限</td></tr>
     <tr><td>🖼 Image Timeline（画像グリッド）</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🌐 YouTubeを好きなブラウザで</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>📦 暗号化バックアップ（画像付き）</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 バックアップ（画像付き）</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🎨 カスタムテーマ</td><td><span class="cross">—</span></td><td class="pro-col">3スロット</td></tr>
   </tbody>
 </table>
@@ -352,32 +352,13 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <details><summary>インストール<em>前</em>の通知も見られますか？</summary><p><strong>見られません。</strong>NotiKeepはインストール後＋通知アクセス許可後に届いた通知だけを保存します。Androidは過去の通知へのアクセスをどんなアプリにも許可していません。何かを取り戻したくなる前に入れておいてください。一度動き出したら、新しい通知は1件も逃しません。</p></details>
 <details><summary>対応Androidバージョンは？</summary><p>Android 9.0（Pie）以降。Pixel 4aからPixel 9 Proまで実機テスト済み。最新のAndroid 15・16にも対応しています。</p></details>
 <details><summary>ストレージはどのくらい使いますか？</summary><p>テキスト通知は非常に小さく、数MBで何ヶ月分も保存できます。容量を使うのは画像で、保存される写真はWebPで20〜80KB程度に再エンコード。月に画像付き通知が1000件来るヘビーユーザーで30〜80MBくらいです。設定画面で正確な使用量が確認でき、画像はいつでも一括削除できます。</p></details>
-<details><summary>アンインストールしたらデータは？</summary><p>通知、画像、設定、ブックマークなどNotiKeepのデータはアプリ専用のプライベート領域に保存され、アンインストールでAndroidが自動削除します。再インストールや機種変更でも残しておきたい場合は、先に暗号化バックアップ（Pro機能）を取っておいてください。</p></details>
+<details><summary>アンインストールしたらデータは？</summary><p>通知、画像、設定、ブックマークなどNotiKeepのデータはアプリ専用のプライベート領域に保存され、アンインストールでAndroidが自動削除します。再インストールや機種変更でも残しておきたい場合は、先に画像付きバックアップ（Pro機能）を取っておいてください。</p></details>
 <details><summary>必要な権限は？</summary><p>2つだけです。通知アクセス（このカテゴリのアプリは全部必要）と、INTERNET（Google Play BillingでのPro購入用のみ）。位置情報、連絡先、分析SDK、トラッカーなどは一切なし。</p></details>
 <details><summary>Signalみたいな暗号化アプリでも動きますか？</summary><p>暗号化アプリはAndroidに「新着メッセージ」のような仮テキストしか渡しません。暗号化していてもしていなくても、どんなロガーでも読み取れる本文がそもそも来ません。NotiKeepはシステムが渡してくるものをそのまま保存するので、仮テキストだけ届けばそれが保存されます。</p></details>
-<details><summary>データはエクスポートできますか？</summary><p>Proで暗号化ZIPを作成できます。データベース、保存済み画像、ブックマーク、ミュートリスト、設定をまとめて。新しい端末でもワンステップで復元できます。書き出し先はあなたが選んだパスに保存され、勝手にクラウドへ同期することはありません。</p></details>
+<details><summary>データはエクスポートできますか？</summary><p>ProでZIPを作成できます。データベース、保存済み画像、ブックマーク、ミュートリスト、設定をまとめて。新しい端末でもワンステップで復元できます。書き出し先はあなたが選んだパスに保存され、勝手にクラウドへ同期することはありません。</p></details>
 <details><summary>30日トライアルが終わったら？</summary><p>Freeに戻ります。請求もないし、自動更新もありません。Proを続けるには、アップグレード画面でプランを自分で選んでください。「気がついたら課金されてた」がない設計にしてあります。</p></details>
 <details><summary>バッテリーや動作への影響は？</summary><p>Androidの通知リスナーはイベント駆動なのでポーリングしません。NotiKeepは通知が届いた瞬間だけ動きます。Pixel 7a / Pixel 9 Proでのテストではバッテリーへの影響はほぼゼロでした。</p></details>
 <details><summary>通知をどこかに送ったりしてますか？</summary><p>していません。すべて端末内のNotiKeepのプライベート領域に保存。バックアップもあなたが指定したパスに書き出されるだけで、自動クラウド同期、「phone home」、リモート分析、いずれもありません。</p></details>
-
-<h2>最近のアップデート</h2>
-<div class="changelog">
-<ul>
-  <li><code>v1.2.7</code> リリース版での開発用通知ダンプの書き出しを停止。既存ダンプはアップグレード時に自動削除</li>
-  <li><code>v1.2.6</code> Google Playからインストール時、システム言語に関係なく12言語が安定動作するように修正</li>
-  <li><code>v1.2.5</code> 言語の選択がアプリ全体で一貫するよう改善（混在表示を解消）</li>
-  <li><code>v1.2.4</code> 別言語の端末で取ったバックアップを復元してもUIが崩れない</li>
-  <li><code>v1.2.3</code> 言語切替後の設定画面ラベルが、選んだ言語のままで維持されるように</li>
-</ul>
-<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">それ以前の主なマイルストーン</p>
-<ul>
-  <li><code>🖼</code> Image Timeline — 通知に届いた写真をぜんぶ振り返り</li>
-  <li><code>🌐</code> YouTubeブラウザ選択 — 保存したYouTube通知をChrome、Firefox、Braveで</li>
-  <li><code>📦</code> 暗号化バックアップ＆復元 — 画像も含めて1つのZIPで持ち運べる</li>
-  <li><code>🌍</code> 12言語対応 — 英語、日本語、한국어、中文 (简/繁)、Español、Français、Deutsch、Italiano、Português、Русскийほか</li>
-  <li><code>🔇</code> スマートノイズフィルタ — 進捗バー、常駐通知、システム通知を自動で除外</li>
-</ul>
-</div>
 
 <div class="final-cta">
   <h2>覚えておくのは、NotiKeepに任せて</h2>

@@ -277,7 +277,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <div class="feature"><span class="icon">🌐</span><strong>YouTube in any browser</strong><p>Open YouTube notifications in the browser of your choice.</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>Smart noise filter</strong><p>Progress bars, foreground services, system pings — automatically dropped.</p></div>
   <div class="feature"><span class="icon">⭐</span><strong>Bookmarks</strong><p>Star important notifications. Bookmarks never expire, even on Free.</p></div>
-  <div class="feature"><span class="icon">📦</span><strong>Encrypted backup</strong><p>One ZIP with your archive plus images. Move phones in seconds.</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>Backup with images</strong><p>One ZIP with your archive plus images. Move phones in seconds.</p></div>
   <div class="feature"><span class="icon">🎨</span><strong>Custom themes</strong><p>Three slots for your own color combinations. Match your style.</p></div>
   <div class="feature"><span class="icon">🔔</span><strong>Per-app bell control</strong><p>Mute the apps you don't want hearing from — but still archive their notifications silently.</p></div>
   <div class="feature"><span class="icon">🔍</span><strong>Full-text search</strong><p>Find any notification by content. Free: 30 days. Pro: forever.</p></div>
@@ -318,7 +318,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>Bookmarks · Mute · App block</td><td>5 each</td><td class="pro-col">Unlimited</td></tr>
     <tr><td>🖼 Image Timeline (browsable image grid)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🌐 Open YouTube in any browser</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>📦 Encrypted backup with images</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 Backup with images</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🎨 Custom themes</td><td><span class="cross">—</span></td><td class="pro-col">3 slots</td></tr>
   </tbody>
 </table>
@@ -352,32 +352,13 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <details><summary>Can NotiKeep see notifications I received <em>before</em> I installed it?</summary><p><strong>No.</strong> NotiKeep can only save notifications that arrive <em>after</em> it's installed and Notification Access is granted. Android doesn't give any app access to past notifications — so please install NotiKeep before you need to recover something. The good news: once it's running, nothing new slips through.</p></details>
 <details><summary>Which Android versions does NotiKeep support?</summary><p>Android 9.0 (Pie) and newer. Tested on everything from Pixel 4a up through Pixel 9 Pro. Latest Android 15 and 16 are both supported.</p></details>
 <details><summary>How much storage does NotiKeep use?</summary><p>Text notifications are tiny — megabytes of text covers months of archive. The storage footprint comes from images: each preserved photo is re-encoded to WebP at around 20–80 KB. A heavy user with a thousand image-carrying notifications per month uses roughly 30–80 MB. You can see the exact usage in Settings, and you can clear all images at any time.</p></details>
-<details><summary>What happens to my data if I uninstall?</summary><p>All NotiKeep data — notifications, images, preferences, bookmarks — is stored in the app's private directory, which Android wipes automatically on uninstall. If you want to keep your archive across a reinstall or a new phone, take an encrypted backup first (Pro feature).</p></details>
+<details><summary>What happens to my data if I uninstall?</summary><p>All NotiKeep data — notifications, images, preferences, bookmarks — is stored in the app's private directory, which Android wipes automatically on uninstall. If you want to keep your archive across a reinstall or a new phone, take an backup first (Pro feature).</p></details>
 <details><summary>What permissions does NotiKeep need?</summary><p>Just two: Notification Access (so it can see notifications — every app in this category needs this) and INTERNET (only used by Google Play Billing for Pro purchases). Nothing else — no location, no contacts, no analytics SDKs, no trackers.</p></details>
 <details><summary>Does NotiKeep work with encrypted apps like Signal?</summary><p>Encrypted apps deliver "New message" placeholder text to Android — there's no preview content for any logger to capture, encrypted or otherwise. NotiKeep saves what the system delivers; if the system gets a placeholder, that's what's archived.</p></details>
-<details><summary>Can I export my data?</summary><p>Yes. Pro tier creates an encrypted ZIP with the database, all preserved images, your bookmarks, mute lists, and settings. Restore on a new phone in one step. The export goes to a path you pick — no automatic cloud sync.</p></details>
+<details><summary>Can I export my data?</summary><p>Yes. Pro tier creates an ZIP archive with the database, all preserved images, your bookmarks, mute lists, and settings. Restore on a new phone in one step. The export goes to a path you pick — no automatic cloud sync.</p></details>
 <details><summary>What happens at the end of the 30-day trial?</summary><p>You revert to Free. No charge, no auto-conversion. To keep using Pro features, you actively pick a plan from the upgrade screen. We made that the default because nobody likes accidentally getting billed at the end of a trial.</p></details>
 <details><summary>Will it drain my battery or slow my phone?</summary><p>Android's notification listener is event-driven — there's no polling. NotiKeep does its work only when a notification arrives. Battery impact is negligible in our testing on Pixel 7a and Pixel 9 Pro.</p></details>
 <details><summary>Does NotiKeep upload my notifications anywhere?</summary><p>No. Everything is stored on-device in NotiKeep's private app directory. Backups go to a path you choose — there is no automatic cloud sync, no "phone home" telemetry, no remote analytics.</p></details>
-
-<h2>Recent updates</h2>
-<div class="changelog">
-<ul>
-  <li><code>v1.2.7</code> Stopped writing dev-only notification dumps to internal storage on release builds; existing dumps are auto-cleaned on upgrade</li>
-  <li><code>v1.2.6</code> All 12 languages now work reliably after installing from Google Play, no matter what your phone's system language is</li>
-  <li><code>v1.2.5</code> Language selection now sticks across the whole app — no more mixed-language screens</li>
-  <li><code>v1.2.4</code> Restoring a backup taken on a phone with a different language no longer breaks the UI</li>
-  <li><code>v1.2.3</code> Settings labels stay in your chosen language after you switch languages</li>
-</ul>
-<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">Earlier milestones</p>
-<ul>
-  <li><code>🖼</code> Image Timeline — browse every photo that ever arrived in a notification</li>
-  <li><code>🌐</code> YouTube browser choice — open saved YouTube notifications in Chrome, Firefox, or Brave</li>
-  <li><code>📦</code> Encrypted backup &amp; restore — one ZIP carries the full archive including images</li>
-  <li><code>🌍</code> 12-language localization — English, 日本語, 한국어, 中文 (简/繁), Español, Français, Deutsch, Italiano, Português, Русский and more</li>
-  <li><code>🔇</code> Smart noise filter — progress bars, foreground services, and system pings dropped automatically</li>
-</ul>
-</div>
 
 <div class="final-cta">
   <h2>Let NotiKeep do the remembering.</h2>

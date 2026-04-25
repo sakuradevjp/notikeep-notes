@@ -277,7 +277,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <div class="feature"><span class="icon">🌐</span><strong>YouTube 任意瀏覽器</strong><p>在你選擇的瀏覽器中開啟 YouTube 通知。</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>智慧雜訊過濾</strong><p>進度條、前景服務、系統通知 — 自動丟棄。</p></div>
   <div class="feature"><span class="icon">⭐</span><strong>書籤</strong><p>為重要通知加星。免費版書籤也永不過期。</p></div>
-  <div class="feature"><span class="icon">📦</span><strong>加密備份</strong><p>封存加圖片打包成一個 ZIP。換機只需幾秒。</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>含圖片備份</strong><p>封存加圖片打包成一個 ZIP。換機只需幾秒。</p></div>
   <div class="feature"><span class="icon">🎨</span><strong>自訂主題</strong><p>三個槽位儲存你的配色。配合你的風格。</p></div>
   <div class="feature"><span class="icon">🔔</span><strong>依應用程式控制鈴聲</strong><p>靜音不想聽到的應用 — 但通知仍靜默封存。</p></div>
   <div class="feature"><span class="icon">🔍</span><strong>全文搜尋</strong><p>依內容尋找任何通知。免費:30 天。Pro:永久。</p></div>
@@ -318,7 +318,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>書籤 · 靜音 · 封鎖</td><td>各 5 個</td><td class="pro-col">無限</td></tr>
     <tr><td>🖼 圖片時間軸(可瀏覽圖片網格)</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🌐 在任意瀏覽器開啟 YouTube</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>📦 含圖片的加密備份</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
+    <tr><td>📦 含圖片備份</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>🎨 自訂主題</td><td><span class="cross">—</span></td><td class="pro-col">3 個槽位</td></tr>
   </tbody>
 </table>
@@ -352,32 +352,13 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <details><summary>NotiKeep 能看到我安裝<em>之前</em>收到的通知嗎?</summary><p><strong>不能。</strong>NotiKeep 只能儲存安裝並取得通知存取權限<em>之後</em>到達的通知。Android 不允許任何應用程式存取過去的通知 — 所以請在需要恢復某則通知之前先安裝好。好消息:一旦運作,新通知一則都不會漏。</p></details>
 <details><summary>支援哪些 Android 版本?</summary><p>Android 9.0 (Pie) 及更新版本。從 Pixel 4a 到 Pixel 9 Pro 實機測試。最新的 Android 15 和 16 都支援。</p></details>
 <details><summary>NotiKeep 占用多少儲存?</summary><p>文字通知非常小 — 數 MB 文字可涵蓋數月封存。占空間的是圖片:每張保留的相片重新編碼為 WebP,約 20–80 KB。每月有上千則帶圖通知的重度使用者大約用 30–80 MB。設定中可看到精確用量,隨時可清空所有圖片。</p></details>
-<details><summary>解除安裝後資料怎麼辦?</summary><p>NotiKeep 所有資料 — 通知、圖片、偏好、書籤 — 都存在應用程式的私有目錄中,解除安裝時 Android 會自動清空。如要在重裝或換機後保留封存,請先做加密備份(Pro 功能)。</p></details>
+<details><summary>解除安裝後資料怎麼辦?</summary><p>NotiKeep 所有資料 — 通知、圖片、偏好、書籤 — 都存在應用程式的私有目錄中,解除安裝時 Android 會自動清空。如要在重裝或換機後保留封存,請先做含圖片備份(Pro 功能)。</p></details>
 <details><summary>NotiKeep 需要什麼權限?</summary><p>只有兩個:通知存取(此類應用都需要)和 INTERNET(僅用於 Google Play Billing 的 Pro 購買)。其他都不要 — 無位置、無聯絡人、無分析 SDK、無追蹤器。</p></details>
 <details><summary>對 Signal 這類加密應用有效嗎?</summary><p>加密應用只向 Android 傳送「新訊息」之類的占位文字 — 無論加密與否,任何記錄器都沒有可截取的預覽內容。NotiKeep 儲存系統提供的內容;如果系統拿到的是占位符,那封存的也就是占位符。</p></details>
-<details><summary>可以匯出資料嗎?</summary><p>可以。Pro 版會建立包含資料庫、所有保留圖片、書籤、靜音清單和設定的加密 ZIP。一步在新機上還原。匯出到你選擇的路徑 — 無自動雲端同步。</p></details>
+<details><summary>可以匯出資料嗎?</summary><p>可以。Pro 版會建立包含資料庫、所有保留圖片、書籤、靜音清單和設定的ZIP。一步在新機上還原。匯出到你選擇的路徑 — 無自動雲端同步。</p></details>
 <details><summary>30 天試用結束後怎麼辦?</summary><p>回到免費版。不收費,不自動續訂。要繼續用 Pro 功能,需在升級頁面主動選擇方案。我們把這設為預設,因為沒人喜歡試用結束就被自動扣款。</p></details>
 <details><summary>會耗電或拖慢手機嗎?</summary><p>Android 的通知監聽器是事件驅動的 — 不輪詢。NotiKeep 只在通知到達時工作。Pixel 7a 和 Pixel 9 Pro 的測試中電池影響可忽略。</p></details>
 <details><summary>NotiKeep 會上傳我的通知嗎?</summary><p>不會。一切都存在裝置本機 NotiKeep 的私有目錄。備份去往你選定的路徑 — 無自動雲端同步、無「phone home」遙測、無遠端分析。</p></details>
-
-<h2>最近更新</h2>
-<div class="changelog">
-<ul>
-  <li><code>v1.2.7</code> 停止在發布版中向內部儲存寫入開發用通知傾印;升級時自動清理已存在的傾印</li>
-  <li><code>v1.2.6</code> 從 Google Play 安裝後,12 種語言均能穩定運作,與系統語言無關</li>
-  <li><code>v1.2.5</code> 語言選擇在整個應用中保持一致 — 不再有混合語言介面</li>
-  <li><code>v1.2.4</code> 在不同語言手機上做的備份還原後 UI 不再損壞</li>
-  <li><code>v1.2.3</code> 切換語言後設定標籤保持你選擇的語言</li>
-</ul>
-<p style="margin:1.2rem 0 .4rem;font-weight:700;color:var(--fg-soft);font-size:.95rem;">更早的里程碑</p>
-<ul>
-  <li><code>🖼</code> 圖片時間軸 — 瀏覽通知中出現的每張圖片</li>
-  <li><code>🌐</code> YouTube 瀏覽器選擇 — 在 Chrome、Firefox、Brave 中開啟已儲存的 YouTube 通知</li>
-  <li><code>📦</code> 加密備份 & 還原 — 一個 ZIP 攜帶含圖片的完整封存</li>
-  <li><code>🌍</code> 12 種語言在地化 — 英文、日文、한국어、中文 (簡/繁)、Español、Français、Deutsch、Italiano、Português、Русский 等</li>
-  <li><code>🔇</code> 智慧雜訊過濾 — 進度條、前景服務、系統通知自動丟棄</li>
-</ul>
-</div>
 
 <div class="final-cta">
   <h2>記得的事,交給 NotiKeep</h2>
