@@ -191,17 +191,17 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <p>Search across the archive, swipe to organize, bookmark the keepers. The notification you needed three days ago is right there — instead of gone forever.</p>
 </div>
 
-<h2>Two things you won't find anywhere else</h2>
+<h2>Two features that set NotiKeep apart</h2>
 
 <div class="showcase">
   <span class="badge">Only in NotiKeep</span>
   <h3>🖼 Image Timeline</h3>
-  <p class="lead">Every photo that arrived in a notification — Instagram posts, food photos friends sent you, news thumbnails — all in one browsable grid. Even after you swiped the original notification away.</p>
+  <p class="lead">Every photo that arrived in a notification — YouTube video thumbnails from the channels you follow, Google Photos "on this day" memories, food photos friends sent on LINE, news article thumbnails, delivery-complete confirmations, the occasional Instagram post — all in one browsable grid. Even after you swiped the original notification away.</p>
   <img src="https://i.imgur.com/0tomcw6.png" alt="Image Timeline view showing notification photos as a grid">
-  <figcaption>Tap any photo to jump to the saved notification. Pro feature.</figcaption>
+  <figcaption>Scan the grid visually, tap the one that catches your eye. For YouTube, that means video thumbnails → tap → straight into playback (in the browser of your choice, with <a href="#browser-choice" style="color:inherit;text-decoration:underline;">the feature below</a>). Pro feature.</figcaption>
 </div>
 
-<div class="showcase">
+<div class="showcase" id="browser-choice">
   <span class="badge">Only in NotiKeep</span>
   <h3>🌐 YouTube notifications, your browser</h3>
   <p class="lead">Tap a saved YouTube notification, watch it in Chrome, Firefox, or Brave. No more falling into the Shorts feed. No more YouTube app's algorithm pull.</p>
@@ -251,7 +251,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <tr><td>Notification archive</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>Image preservation (in detail view)</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
     <tr><td>Smart noise filter</td><td><span class="check">✓</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
-    <tr><td>Retention</td><td>30 days</td><td class="pro-col">Up to unlimited</td></tr>
+    <tr><td>Retention</td><td>30 days (fixed)</td><td class="pro-col">Configurable · 30 days → unlimited</td></tr>
     <tr><td>Search</td><td>Last 30 days</td><td class="pro-col">Entire archive</td></tr>
     <tr><td>Bookmarks · Mute · App block</td><td>5 each</td><td class="pro-col">Unlimited</td></tr>
     <tr><td>🖼 Image Timeline</td><td><span class="cross">—</span></td><td class="pro-col"><span class="check">✓</span></td></tr>
@@ -287,6 +287,10 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>Can NotiKeep see notifications I received <em>before</em> I installed it?</summary><p><strong>No.</strong> NotiKeep can only save notifications that arrive <em>after</em> it's installed and Notification Access is granted. Android doesn't give any app access to past notifications — so please install NotiKeep before you need to recover something. The good news: once it's running, nothing new slips through.</p></details>
+<details><summary>Which Android versions does NotiKeep support?</summary><p>Android 9.0 (Pie) and newer. Tested on everything from Pixel 4a up through Pixel 9 Pro. Latest Android 15 and 16 are both supported.</p></details>
+<details><summary>How much storage does NotiKeep use?</summary><p>Text notifications are tiny — megabytes of text covers months of archive. The storage footprint comes from images: each preserved photo is re-encoded to WebP at around 20–80 KB. A heavy user with a thousand image-carrying notifications per month uses roughly 30–80 MB. You can see the exact usage in Settings, and you can clear all images at any time.</p></details>
+<details><summary>What happens to my data if I uninstall?</summary><p>All NotiKeep data — notifications, images, preferences, bookmarks — is stored in the app's private directory, which Android wipes automatically on uninstall. If you want to keep your archive across a reinstall or a new phone, take an encrypted backup first (Pro feature).</p></details>
 <details><summary>What permissions does NotiKeep need?</summary><p>Just two: Notification Access (so it can see notifications — every app in this category needs this) and INTERNET (only used by Google Play Billing for Pro purchases). Nothing else — no location, no contacts, no analytics SDKs, no trackers.</p></details>
 <details><summary>Does NotiKeep work with encrypted apps like Signal?</summary><p>Encrypted apps deliver "New message" placeholder text to Android — there's no preview content for any logger to capture, encrypted or otherwise. NotiKeep saves what the system delivers; if the system gets a placeholder, that's what's archived.</p></details>
 <details><summary>Can I export my data?</summary><p>Yes. Pro tier creates an encrypted ZIP with the database, all preserved images, your bookmarks, mute lists, and settings. Restore on a new phone in one step. The export goes to a path you pick — no automatic cloud sync.</p></details>
@@ -298,10 +302,10 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <h2>Recent updates</h2>
 <div class="changelog">
 <ul>
-  <li><code>v1.2.6</code> Disabled AAB language splits — all 12 supported languages now work reliably regardless of system language</li>
-  <li><code>v1.2.5</code> Better handling of locale changes across activities</li>
-  <li><code>v1.2.4</code> Fixed locale mismatch when restoring a backup taken on a different system locale</li>
-  <li><code>v1.2.3</code> Settings labels stay in your chosen language across all locale changes</li>
+  <li><code>v1.2.6</code> All 12 languages now work reliably after installing from Google Play, no matter what your phone's system language is</li>
+  <li><code>v1.2.5</code> Language selection now sticks across the whole app — no more mixed-language screens</li>
+  <li><code>v1.2.4</code> Restoring a backup taken on a phone with a different language no longer breaks the UI</li>
+  <li><code>v1.2.3</code> Settings labels stay in your chosen language after you switch languages</li>
   <li><code>v1.2.x</code> earlier — Image Timeline, YouTube browser choice, encrypted backup with images, 12-language localization</li>
 </ul>
 </div>
@@ -313,7 +317,14 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 </div>
 
 <footer>
-  <p>NotiKeep is made by sakura.dev.jp · <a href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">App on Google Play ↗</a></p>
+  <p>NotiKeep is made by sakura.dev.jp</p>
+  <p>
+    <a href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">App on Google Play ↗</a>
+    &nbsp;·&nbsp;
+    <a href="#TODO-privacy-policy-url">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:#TODO-support-email">Contact support</a>
+  </p>
   <p class="disclosure">Self-disclosure: this page is written by NotiKeep's developer.</p>
 </footer>
 
