@@ -150,6 +150,27 @@
     padding: 0 12px;
   }
 
+  /* Section lede — one-line summary right after h2 */
+  .lede {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text);
+    background: #F8FAFC;
+    border-left: 3px solid var(--primary);
+    padding: 12px 18px;
+    margin: 0 0 24px;
+    border-radius: 0 4px 4px 0;
+  }
+  .lede strong {
+    font-style: normal;
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+
   /* Callout */
   .callout {
     background: #fefce8; border-left: 4px solid #eab308;
@@ -424,6 +445,7 @@
 
   <section id="background">
     <h2>1. Background: why the built-in notification history isn't enough</h2>
+    <p class="lede"><strong>In 1 line</strong>Android's built-in notification history caps at 24 hours, no search, no images. NotiKeep is built to fill the gap beyond that.</p>
     <p>
       Android 11 added an opt-in <strong>Notification history</strong> screen buried under <em>Settings → Notifications</em>. It works, but it's intentionally minimal: it keeps the last <strong>24 hours</strong>, has no search, no filter, no images, and no way to mark anything as important. Once a notification ages out, it's gone.
     </p>
@@ -440,6 +462,7 @@
 
   <section id="what-is">
     <h2>2. What NotiKeep actually does</h2>
+    <p class="lede"><strong>In 1 line</strong>An archive that filters noise on receipt and preserves notification text plus images, with bookmarks, mute, and backup on top.</p>
     <p>
       NotiKeep is an Android <code>NotificationListenerService</code>-based archive. Notifications come in, go through a filter that drops the obvious noise, and the survivors are written to a local Room database with their images attached. From there you can search, bookmark, mute by title, block by app, and tap a saved notification to jump back to the original content where the source app supports it.
     </p>
@@ -471,6 +494,7 @@
 
   <section id="image-timeline">
     <h2>3. The Image Timeline — and why nothing else in this category does it</h2>
+    <p class="lede"><strong>In 1 line</strong>Notification photos are extracted at receive-time and presented as a browsable grid. Unique to NotiKeep among the loggers we've tested.</p>
     <p>
       This is the feature we'd point at first if asked what makes NotiKeep different from every other notification logger on Google Play.
     </p>
@@ -515,6 +539,7 @@
 
   <section id="browser-choice">
     <h2>4. Open YouTube notifications in any browser</h2>
+    <p class="lede"><strong>In 1 line</strong>Tap a saved YouTube notification and open it in your browser of choice — bypass the YouTube app and skip the algorithm pull entirely.</p>
     <p>
       The second feature we'd point at is also one we haven't found in any other notification logger: when you tap a saved YouTube notification, you can choose to open it in your browser instead of the YouTube app.
     </p>
@@ -580,18 +605,22 @@
 
   <section id="deeplinks">
     <h2>5. Deep-linking back to content — the 1,107-dump research</h2>
+    <p class="lede"><strong>In 1 line</strong>"Tap to jump back to the original post" works for some apps and not others. We dumped 1,107 real notifications across 39 apps to figure out which is which.</p>
     <p>
       An archive that just holds text is useful. An archive that lets you tap an entry and jump <em>back</em> to the original post in the source app is more useful, and it's what most loggers don't do.
     </p>
+    <h3>The standard approach: source-app PendingIntent (and why it fails)</h3>
     <p>
       The standard approach is to fire the notification's <code>contentIntent</code> (a <code>PendingIntent</code> the source app provided). This works when the source app is well-behaved, but it has known failure modes: cached PendingIntents that resolve to stale content, Android 14+ background-activity-launch restrictions, cold-start cases where the source process has died and the deep-link metadata went with it. For some apps — Instagram is currently the worst offender — a saved PendingIntent fired even seconds later silently lands on the home feed instead of the original post.
     </p>
+    <h3>Our alternative: extract content IDs from notification extras</h3>
     <p>
       The alternative is to extract a content ID from the notification's <code>extras</code> bundle and construct an explicit <code>vnd.app://</code>-style URI. That's faster, more reliable when it works, and survives across source-app process death. The catch: every app structures its extras differently, and most of the keys aren't documented anywhere.
     </p>
     <p style="color:var(--text-muted); font-size:15px;">
       <strong style="color:var(--text);">In plain terms:</strong> we wanted to tap an old YouTube notification and go straight to that exact video, even if YouTube had been killed and restarted in between. To do that, we had to know which extras key carries the video ID — and the only way to find out was to look at real notifications.
     </p>
+    <h3>What we found across 39 apps</h3>
     <p>
       Over several months we collected and inspected <strong>1,107 notification-extras dumps across 39 apps</strong>. The dump for each notification is the entire <code>Bundle</code> — every key the source app put in, plus every standard Android key. The summary of what came out of that:
     </p>
@@ -605,6 +634,7 @@
       <li><strong>Mattermost, Google Messages, others</strong> — extras carry IDs but the deep-link schemes either aren't public or require state the notification doesn't carry (team slug, account context, etc.).</li>
       <li><strong>30+ other apps</strong> — no useful custom keys. Fall back to PendingIntent.</li>
     </ul>
+    <h3>Honest takeaway</h3>
     <p>
       The honest takeaway from that work is that <em>most</em> apps do not give you what you'd need to deep-link reliably. The marketing line "tap any notification to jump back to the original" is mostly aspirational across the Android app ecosystem. Where the data is there — YouTube being the cleanest case — we use it. Where it isn't, we fall back to the source app's PendingIntent and accept the failure modes that come with it.
     </p>
@@ -618,6 +648,7 @@
 
   <section id="privacy">
     <h2>6. Permissions and privacy</h2>
+    <p class="lede"><strong>In 1 line</strong>Notification Access is unavoidable for this category; everything else is minimal. No analytics, no ads, all data on-device.</p>
     <p>
       The one permission this category cannot avoid is <strong>Notification Access</strong> (<code>BIND_NOTIFICATION_LISTENER_SERVICE</code>). It's the API that makes the whole thing possible. The tradeoff is real: granting it means the app sees every notification the system delivers. There is no notification logger of any kind on Android without this grant.
     </p>
@@ -643,6 +674,7 @@
 
   <section id="compare">
     <h2>7. How we compare to other notification loggers</h2>
+    <p class="lede"><strong>In 1 line</strong>Built-in history is too short. Free loggers are too noisy. NotiKeep is the middle ground with the two unique features on top.</p>
     <p>
       The category breaks down into three rough buckets:
     </p>
@@ -741,6 +773,7 @@
 
   <section id="pricing">
     <h2>8. Pricing — Free vs Pro</h2>
+    <p class="lede"><strong>In 1 line</strong>Free is genuinely useful (not a demo). Pro lifts every cap and unlocks the two marquee features for ~$1/month or $19.99 lifetime.</p>
     <p>
       The free tier is meant to be useful, not a demo. Core archiving, the automatic noise filter, search across the last 30 days, image preservation in detail view, and 5 bookmark slots all work without paying. Pro lifts the caps and unlocks the two marquee features.
     </p>
@@ -823,6 +856,7 @@
 
   <section id="verdict">
     <h2>9. Summary — who this is for</h2>
+    <p class="lede"><strong>In 1 line</strong>Not for everyone. Below is an honest take on who should bother and who shouldn't, plus the full pros/cons.</p>
     <div class="verdict">
       <h3>Who is this for? <span class="grade">Honest take</span></h3>
       <p style="margin-top: 12px;">
