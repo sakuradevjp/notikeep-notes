@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
-<title>NotiKeep — 通知を、すべて記録</title>
-<meta name="description" content="すべての通知を残す。写真もそのまま。ノイズは自動でカット。YouTubeの通知は好きなブラウザで開ける。30日無料トライアル、広告なし、データは端末内だけ。">
-<meta property="og:title" content="NotiKeep — 通知を、すべて記録">
-<meta property="og:description" content="すべての通知を残す。写真もそのまま。ノイズは自動カット。YouTube通知を好きなブラウザで。30日無料トライアル。">
+<title>NotiKeep — 通知の保存に</title>
+<meta name="description" content="写真を含む通知を保存します。YouTubeの通知は好きなブラウザで開けます。30日間は無料ですべての機能をお使いいただけます。広告なし、データは端末内にのみ保存されます。">
+<meta property="og:title" content="NotiKeep — 通知の保存に">
+<meta property="og:description" content="写真を含む通知を保存。YouTubeの通知は好きなブラウザで開けます。30日間無料、広告なし、データは端末内にのみ保存。">
 <meta property="og:image" content="https://sakuradevjp.github.io/notikeep-notes/assets/ja/main.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/notikeep-notes/ja/">
@@ -197,6 +197,11 @@ hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
 footer{text-align:center;color:var(--fg-soft);font-size:.88rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
 footer p{margin:.4rem 0}
 footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
+footer .disclosure:empty{display:none}
+.trial-note:empty{display:none}
+.pain-points li:empty,.fit ul li:empty{display:none}
+.showcase figcaption:empty{display:none}
+details:has(summary:empty){display:none}
 </style>
 </head>
 <body>
@@ -205,43 +210,43 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <nav class="lang-switcher">🌐 <a href="https://sakuradevjp.github.io/notikeep-notes/">English</a> · <strong>日本語</strong> · <a href="https://sakuradevjp.github.io/notikeep-notes/ko/">한국어</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-CN/">简体中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/zh-TW/">繁體中文</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/es/">Español</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/pt-BR/">Português (BR)</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/fr/">Français</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/de/">Deutsch</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ru/">Русский</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/ar/">العربية</a> · <a href="https://sakuradevjp.github.io/notikeep-notes/hi/">हिन्दी</a></nav>
 
 <header class="hero">
-  <h1>すべての通知を、<span class="accent">NotiKeepで記録する</span></h1>
-  <p class="tagline">写真もコードもメッセージも、いつまでも残せる。</p>
+  <h1>NotiKeepで <span class="accent">記録する</span></h1>
+  <p class="tagline">写真もコードもメッセージもいつまでも残せる。</p>
   <div class="hero-media">
     <img src="../assets/ja/main.png" alt="NotiKeepのメイン画面 — WhatsApp、Instagram、YouTube、Gmailなどの通知一覧">
   </div>
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Playで手に入れる</a>
-  <span class="trial-note">30日無料 · 広告なし · トラッカーなし</span>
+  <span class="trial-note"></span>
 </header>
 
-<h2>こういうこと、ありますよね？</h2>
+<h2>こういうことはありませんか？</h2>
 <div class="pain-points">
 <ul>
-  <li>LINEで友達が送ってきた写真、スワイプした瞬間に消えた</li>
-  <li>昨日の配達コード、Android標準の通知履歴は24時間しか残らない</li>
-  <li>「アップロード中…」「バックグラウンドで実行中」、見たくもないのに通知バーがそんなんで埋まる</li>
-  <li>半分寝ながら流し見したDM、今探しても出てこない</li>
+  <li>LINEで友達が送ってきた写真がスワイプした瞬間に消えた</li>
+  <li></li>
+  <li>「アップロード中…」「バックグラウンドで実行中」、通知バーが埋まる</li>
+  <li>半分寝ながら流し見したDMが見つからない</li>
 </ul>
-<p>NotiKeepは大事な通知だけ残して、ノイズは捨てる。スマホが忘れた通知を、ちゃんと取り戻せる。</p>
+<p>NotiKeepには通知が残ってる。</p>
 </div>
 
 <h2>使い方</h2>
 
 <div class="step">
   <h3><span class="num">1</span>インストールして通知アクセスを許可</h3>
-  <p>最初の1回だけ。通知アクセスはアプリが通知を読み取るためのAndroid標準のしくみで、NotiKeepはそれ以外には使いません。</p>
+  <p>まず、通知へのアクセス許可をします。アプリが通知を読み取るために必要です。</p>
 </div>
 
 <div class="step">
   <h3><span class="num">2</span>あとは普通にスマホを使うだけ</h3>
   <img src="../assets/ja/bell.png" alt="NotiKeepのメイン画面、アプリごとのベル制御">
-  <p>NotiKeepはバックグラウンドで静かに動きます。意味のある通知は写真ごと保存、進捗バーやシステム通知は自動でフィルタ。アーカイブにゴミがたまりません。</p>
+  <p>NotiKeepはバックグラウンドで動きます。バッテリーの最適化はオフにすることを推奨します。</p>
 </div>
 
 <div class="step">
-  <h3><span class="num">3</span>あとから何でも探せる</h3>
+  <h3><span class="num">3</span>キーワードで検索</h3>
   <img src="../assets/ja/swipe.png" alt="NotiKeepで通知をスワイプしてアーカイブ">
-  <p>検索、スワイプで整理、大事なものは⭐でブックマーク。3日前のあの通知も、消えずにちゃんとそこにあります。</p>
+  <p>全文検索して大事な通知を探せます。大事なものはブックマーク、すぐに見返せます。</p>
 </div>
 
 <h2>NotiKeepだけの2つの強み</h2>
@@ -249,7 +254,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 <div class="showcase">
   <span class="badge">Only in NotiKeep</span>
   <h3>📷 Image Timeline</h3>
-  <p class="lead">通知に届いた写真を、まとめて見返せます。フォロー中チャンネルのYouTubeサムネ、Google Photosの「○年前の今日」、LINEで送られた料理写真、ニュース記事のサムネ、配達完了写真、たまに届くInstagramの投稿。元の通知を消したあとでも、ここに残っています。</p>
+  <p class="lead">通知に届いた写真を、まとめて見返せます。フォロー中チャンネルのYouTubeサムネやGoogle Photosの「○年前の今日」、LINEで送られた写真、ニュース、Instagramの投稿など、通知に写真が含まれるものは保存されます。</p>
   <div class="imt-stage" role="img" aria-label="Image Timeline画面から写真カードが飛び出す、3Dで傾いたスマホ">
     <div class="imt-phone">
       <img src="../assets/ja/imt-phone.png" alt="">
@@ -260,15 +265,15 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <div class="imt-card imt-c4" aria-hidden="true">🏔</div>
     <div class="imt-card imt-c5" aria-hidden="true">📸</div>
   </div>
-  <figcaption>グリッドを眺めて、気になったものをタップ。YouTubeならサムネ → タップ → そのまま好きなブラウザで再生できます（<a href="#browser-choice" style="color:inherit;text-decoration:underline;">Pro機能：下部</a>）。</figcaption>
+  <figcaption>YouTubeならサムネをタップ、そのまま好きなブラウザで再生できます（<a href="#browser-choice" style="color:inherit;text-decoration:underline;">Pro機能：下部</a>）。</figcaption>
 </div>
 
 <div class="showcase" id="browser-choice">
   <span class="badge">Only in NotiKeep</span>
   <h3>🌐 YouTube通知を、好きなブラウザで</h3>
-  <p class="lead">保存したYouTube通知をタップ → Chrome、Firefox、Braveで再生。Shorts沼に落ちない。アルゴリズムに引っ張られない。</p>
+  <p class="lead">保存したYouTube通知をタップ → Chrome、Firefox、Brave等、お好きなブラウザで再生できます（Pro版のみ）。</p>
   <img src="../assets/ja/yt.png" alt="YouTube通知のブラウザ選択ダイアログ（Chrome、Firefox、Brave）">
-  <figcaption>インストール済みのブラウザから好きなものを選んで再生。Pro機能。</figcaption>
+  <figcaption></figcaption>
 </div>
 
 <h2>できること</h2>
@@ -277,9 +282,9 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <div class="feature"><span class="icon">🌐</span><strong>YouTubeを好きなブラウザで</strong><p>YouTube通知を任意のブラウザで開く。</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>スマートノイズフィルタ</strong><p>進捗バー、常駐通知、システム通知は自動で除外。</p></div>
   <div class="feature"><span class="icon">⭐</span><strong>ブックマーク</strong><p>大事な通知に⭐を。無料版でも期限なしで残せます。</p></div>
-  <div class="feature"><span class="icon">📦</span><strong>画像付きバックアップ</strong><p>アーカイブと画像をまとめてZIPに。機種変もすぐ。</p></div>
-  <div class="feature"><span class="icon">🎨</span><strong>カスタムテーマ</strong><p>好きな配色を3つまで保存。</p></div>
-  <div class="feature"><span class="icon">🔔</span><strong>アプリ別ベル制御</strong><p>うるさいアプリは音だけミュート、通知はサイレントに保存。</p></div>
+  <div class="feature"><span class="icon">📦</span><strong>画像付きバックアップ</strong><p>アーカイブと画像をまとめてZIPに。機種変更しても引き継げます。</p></div>
+  <div class="feature"><span class="icon">🎨</span><strong>カスタムテーマ</strong><p>アプリ画面を好きな配色に変更できます。</p></div>
+  <div class="feature"><span class="icon">🔔</span><strong>アプリ別ベル制御</strong><p>通知はサイレントに保存。</p></div>
   <div class="feature"><span class="icon">🔍</span><strong>全文検索</strong><p>通知の中身からキーワード検索。無料: 30日、Pro: 全期間。</p></div>
   <div class="feature"><span class="icon">🌍</span><strong>12言語対応</strong><p>英語、日本語、한국어、中文、Español、Français、Deutsch ほか。</p></div>
 </div>
@@ -304,9 +309,9 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
 </div>
 <p style="text-align:center;color:var(--fg-soft);font-size:.82rem;margin:.5rem 0 1rem;opacity:.85">表示価格はUSDです。Google Playの購入画面では現地通貨に換算されて表示されます。</p>
 
-<p class="trial-banner">インストールしたら誰でも <strong>30日間すべて無料</strong>。トライアル終了時の自動課金なし。プランを自分で選ばない限り、Freeに戻るだけです。</p>
+<p class="trial-banner">まずは30日間お試し無料。トライアル終了時の課金はありません。</p>
 
-<h3>Free と Pro、ひと目で比較</h3>
+<h3>Free版とPro版の違い</h3>
 <table class="tier-table">
   <thead>
     <tr><th>機能</th><th>Free</th><th class="pro-col">Pro</th></tr>
@@ -343,33 +348,33 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     <h3>⏭ こんな人はスキップ</h3>
     <ul>
       <li>Android標準の24時間履歴で十分</li>
-      <li>サードパーティ製アプリに通知アクセスを渡したくない</li>
-      <li>PCに通知をリアルタイム転送したい（別ジャンル — KDE Connectなど）</li>
-      <li>Signalなど通知に本文プレビューが出ないアプリしか使わない</li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
   </div>
 </div>
 
 <h2>FAQ</h2>
-<details><summary>インストール<em>前</em>の通知も見られますか？</summary><p><strong>見られません。</strong>NotiKeepはインストール後＋通知アクセス許可後に届いた通知だけを保存します。Androidは過去の通知へのアクセスをどんなアプリにも許可していません。何かを取り戻したくなる前に入れておいてください。一度動き出したら、新しい通知は1件も逃しません。</p></details>
-<details><summary>対応Androidバージョンは？</summary><p>Android 9.0（Pie）以降。Pixel 4aからPixel 9 Proまで実機テスト済み。最新のAndroid 15・16にも対応しています。</p></details>
-<details><summary>ストレージはどのくらい使いますか？</summary><p>テキスト通知は非常に小さく、数MBで何ヶ月分も保存できます。容量を使うのは画像で、保存される写真はWebPで20〜80KB程度に再エンコード。月に画像付き通知が1000件来るヘビーユーザーで30〜80MBくらいです。設定画面で正確な使用量が確認でき、画像はいつでも一括削除できます。</p></details>
-<details><summary>アンインストールしたらデータは？</summary><p>通知、画像、設定、ブックマークなどNotiKeepのデータはアプリ専用のプライベート領域に保存され、アンインストールでAndroidが自動削除します。再インストールや機種変更でも残しておきたい場合は、先に画像付きバックアップ（Pro機能）を取っておいてください。</p></details>
-<details><summary>必要な権限は？</summary><p>2つだけです。通知アクセス（このカテゴリのアプリはすべて必要）と、INTERNET（Google Play BillingでのPro購入用のみ）。位置情報、連絡先、分析SDK、トラッカーなどは一切なし。</p></details>
-<details><summary>Signalみたいな暗号化アプリでも動きますか？</summary><p>暗号化アプリはAndroidに「新着メッセージ」のような仮テキストしか渡しません。暗号化していてもしていなくても、どんなロガーでも読み取れる本文がそもそも来ません。NotiKeepはシステムが渡してくるものをそのまま保存するので、仮テキストだけ届けばそれが保存されます。</p></details>
-<details><summary>データはエクスポートできますか？</summary><p>ProでZIPを作成できます。データベース、保存済み画像、ブックマーク、ミュートリスト、設定をまとめて。新しい端末でもワンステップで復元できます。書き出し先はあなたが選んだパスに保存され、勝手にクラウドへ同期することはありません。</p></details>
-<details><summary>30日トライアルが終わったら？</summary><p>Freeに戻ります。請求もないし、自動更新もありません。Proを続けるには、アップグレード画面でプランを自分で選んでください。「気がついたら課金されてた」がない設計にしてあります。</p></details>
-<details><summary>バッテリーや動作への影響は？</summary><p>Androidの通知リスナーはイベント駆動なのでポーリングしません。NotiKeepは通知が届いた瞬間だけ動きます。Pixel 7a / Pixel 9 Proでのテストではバッテリーへの影響はほぼゼロでした。</p></details>
-<details><summary>通知をどこかに送ったりしてますか？</summary><p>していません。すべて端末内のNotiKeepのプライベート領域に保存。バックアップもあなたが指定したパスに書き出されるだけで、自動クラウド同期、「phone home」、リモート分析、いずれもありません。</p></details>
+<details><summary>インストール前の通知も見られますか？</summary><p><strong>見られません。</strong> NotiKeepはインストール後＋通知アクセス許可後に届いた通知だけを保存します。</p></details>
+<details><summary>対応Androidバージョンは？</summary><p>Android 9.0に対応しています。</p></details>
+<details><summary>ストレージはどのくらい使いますか？</summary><p>テキスト通知は非常に小さく、数MBで何ヶ月分も保存できます。容量を使うのは画像で、保存される写真は20〜80KB程度、月に画像付き通知が1000件来るヘビーユーザーで30〜80MBくらいです。ストレージ容量が気になる場合は、保存日時設定を短くすれば安心です。</p></details>
+<details><summary>アンインストールしたらデータは？</summary><p>通知、画像、設定、ブックマークなどNotiKeepのデータは端末内に保存されますので、アンインストールをすると削除されます。再インストールや機種変更でも残しておきたい場合は、画像付きバックアップ（Pro機能）、復元をしてください。</p></details>
+<details><summary>必要な権限は？</summary><p>通知へのアクセスのみです。位置情報、連絡先などにはアクセスはしません。</p></details>
+<details><summary></summary><p></p></details>
+<details><summary>データはエクスポートできますか？</summary><p>ProでZIPを作成できます。データベース、保存済み画像、ブックマーク、ミュートリストなどの設定をまとめて新しい端末でもワンステップで復元できます。保存先は指定できます。</p></details>
+<details><summary>30日トライアルが終わったら？</summary><p>Freeに戻ります。自動更新はありません。Pro機能が必要な場合は、アップグレード画面からお願いします。</p></details>
+<details><summary>バッテリーや動作への影響は？</summary><p>NotiKeepは通知が届いた瞬間だけ動きます。大容量の電池を消費し続けることはありません。</p></details>
+<details><summary>通知の保存先は？</summary><p>データはすべて端末内に保存します。バックアップも、自分で選んだ保存先に置かれるだけです。</p></details>
 
 <div class="final-cta">
-  <h2>覚えておくのは、NotiKeepに任せて</h2>
-  <p>30日間無料で試せます。カード登録なし、自動更新なし。</p>
+  <h2>通知はNotiKeepに</h2>
+  <p>30日間無料で試せます。</p>
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Playで手に入れる</a>
 </div>
 
 <footer>
-  <p>NotiKeepは sakura.dev.jp が作っています</p>
+  <p>NotiKeepは <a href="https://sakura.dev.jp" style="color:inherit">sakura.dev.jp</a> が作っています</p>
   <p>
     <a href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">Google Playで見る ↗</a>
     &nbsp;·&nbsp;
@@ -377,7 +382,7 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
     &nbsp;·&nbsp;
     <a href="https://sites.google.com/view/notikeep">サポート ↗</a>
   </p>
-  <p class="disclosure">このページは開発者本人が書いています。多少バイアスがかかっている前提で読んでください。</p>
+  <p class="disclosure"></p>
 </footer>
 
 </div>
