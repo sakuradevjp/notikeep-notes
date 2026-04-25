@@ -85,6 +85,35 @@ li{margin:.45rem 0}
 .showcase img{width:100%;max-width:300px;border-radius:14px;box-shadow:var(--shadow-strong);display:block;margin:0 auto}
 .showcase figcaption{margin-top:1rem;color:var(--fg-soft);font-size:.92rem;font-style:italic}
 
+/* Image Timeline 3D stage — phone tilted, photo cards flying outward */
+.imt-stage{position:relative;perspective:1400px;margin:2.5rem auto 1rem;display:flex;align-items:center;justify-content:center;min-height:480px;max-width:600px}
+.imt-phone{position:relative;transform:rotateY(-22deg) rotateX(6deg);transform-style:preserve-3d;z-index:2;filter:drop-shadow(0 25px 45px rgba(103,80,164,.4))}
+.imt-phone img{display:block;width:240px;max-width:none;border-radius:22px;margin:0;box-shadow:none}
+.imt-card{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 12px 30px rgba(0,0,0,.22),inset 0 0 0 3px rgba(255,255,255,.9);opacity:0;animation:imt-fly 1.4s cubic-bezier(.2,.8,.25,1) forwards;z-index:3}
+.imt-c1{background:linear-gradient(135deg,#ff8a65,#ff5252);--tx:200px;--ty:-150px;--rot:-10deg;animation-delay:.3s}
+.imt-c2{background:linear-gradient(135deg,#ffa726,#fb8c00);--tx:240px;--ty:30px;--rot:8deg;animation-delay:.55s}
+.imt-c3{background:linear-gradient(135deg,#66bb6a,#2e7d32);--tx:190px;--ty:180px;--rot:-5deg;animation-delay:.8s}
+.imt-c4{background:linear-gradient(135deg,#42a5f5,#1565c0);--tx:-210px;--ty:-110px;--rot:12deg;animation-delay:1.05s}
+.imt-c5{background:linear-gradient(135deg,#ab47bc,#6a1b9a);--tx:-220px;--ty:150px;--rot:-8deg;animation-delay:1.3s}
+@keyframes imt-fly{
+  0%{opacity:0;transform:translate(0,0) rotate(0deg) scale(.3)}
+  60%{opacity:1}
+  100%{opacity:1;transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1)}
+}
+@media (max-width:720px){
+  .imt-stage{min-height:400px}
+  .imt-phone img{width:200px}
+  .imt-card{width:78px;height:78px;margin:-39px 0 0 -39px;font-size:2rem;border-radius:12px}
+  .imt-c1{--tx:135px;--ty:-115px}
+  .imt-c2{--tx:155px;--ty:20px}
+  .imt-c3{--tx:125px;--ty:135px}
+  .imt-c4{--tx:-145px;--ty:-85px}
+  .imt-c5{--tx:-145px;--ty:115px}
+}
+@media (prefers-reduced-motion:reduce){
+  .imt-card{animation:none;opacity:1;transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1)}
+}
+
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
 .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
@@ -197,7 +226,16 @@ footer .disclosure{font-style:italic;font-size:.82rem;opacity:.85}
   <span class="badge">Only in NotiKeep</span>
   <h3>🖼 Image Timeline</h3>
   <p class="lead">Every photo that arrived in a notification — YouTube video thumbnails from the channels you follow, Google Photos "on this day" memories, food photos friends sent on LINE, news article thumbnails, delivery-complete confirmations, the occasional Instagram post — all in one browsable grid. Even after you swiped the original notification away.</p>
-  <img src="https://i.imgur.com/0tomcw6.png" alt="Image Timeline view showing notification photos as a grid">
+  <div class="imt-stage" role="img" aria-label="Phone tilted to the side with photo cards flying out from the Image Timeline screen">
+    <div class="imt-phone">
+      <img src="https://i.imgur.com/0tomcw6.png" alt="">
+    </div>
+    <div class="imt-card imt-c1" aria-hidden="true">🌅</div>
+    <div class="imt-card imt-c2" aria-hidden="true">🍱</div>
+    <div class="imt-card imt-c3" aria-hidden="true">🐈</div>
+    <div class="imt-card imt-c4" aria-hidden="true">🏔</div>
+    <div class="imt-card imt-c5" aria-hidden="true">📸</div>
+  </div>
   <figcaption>Scan the grid visually, tap the one that catches your eye. For YouTube, that means video thumbnails → tap → straight into playback (in the browser of your choice, with <a href="#browser-choice" style="color:inherit;text-decoration:underline;">the feature below</a>). Pro feature.</figcaption>
 </div>
 
