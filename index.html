@@ -442,18 +442,14 @@
     <p>
       NotiKeep is an Android <code>NotificationListenerService</code>-based archive. Notifications come in, go through a filter that drops the obvious noise, and the survivors are written to a local Room database with their images attached. From there you can search, bookmark, mute by title, block by app, and tap a saved notification to jump back to the original content where the source app supports it.
     </p>
-    <div class="img-row">
+    <div class="img-row" style="grid-template-columns: 1fr 1fr;">
       <figure>
-        <img src="https://i.imgur.com/enijnOq.png" alt="NotiKeep main archive list">
+        <img src="https://i.imgur.com/enijnOq.png" alt="NotiKeep main archive list with per-app bell control">
         <figcaption>The main archive view. Per-app grouping with notification counts. Tapping the bell icon next to an app toggles whether OS-level notifications stay in the tray or get silently archived.</figcaption>
       </figure>
       <figure>
-        <img src="https://i.imgur.com/0tomcw6.png" alt="Swipe to archive a notification">
-        <figcaption>Swipe a notification sideways to archive it. Swipe-to-archive is reversible from the snackbar — the standard one-handed gesture for sweeping through a backlog of saved notifications.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://i.imgur.com/fgK2s48.png" alt="Full-text search across saved notifications">
-        <figcaption>Full-text search across the archive. Free tier searches the last 30 days; Pro searches everything.</figcaption>
+        <img src="https://i.imgur.com/fgK2s48.png" alt="Swipe to archive a notification">
+        <figcaption>Swipe a notification sideways to archive it. Reversible from the snackbar — the standard one-handed gesture for sweeping through a backlog of saved notifications.</figcaption>
       </figure>
     </div>
     <p>
@@ -477,7 +473,7 @@
       This is the feature we'd point at first if asked what makes NotiKeep different from every other notification logger on Google Play.
     </p>
     <figure style="margin: 28px auto;">
-      <img src="https://i.imgur.com/uABd8H4.png" alt="Image Timeline view — notification images shown as a browsable grid" style="max-width: 320px; display: block; margin: 0 auto;">
+      <img src="https://i.imgur.com/0tomcw6.png" alt="Image Timeline view — notification images shown as a browsable grid" style="max-width: 320px; display: block; margin: 0 auto;">
       <figcaption>The Image Timeline. Every notification that arrived with an attached image — Instagram posts, news thumbnails, photos sent in messaging apps, YouTube channel art on a featured upload — surfaces here as a chronological grid. Tap any tile to jump to the full saved notification.</figcaption>
     </figure>
     <p>
