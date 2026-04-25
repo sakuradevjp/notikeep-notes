@@ -77,8 +77,30 @@ def lang_switcher(current_subdir: str) -> str:
 
 def build():
     from _strings import STRINGS
+    import shutil
 
     template = (ROOT / "_template.html").read_text(encoding="utf-8")
+
+    # Copy per-locale screenshots from store_screenshots into assets/{lang}/
+    src_root = ROOT.parent / "notikeep" / "store_screenshots"
+    if src_root.exists():
+        for lang_key, _, _ in LOCALES:
+            dst = ROOT / "assets" / lang_key
+            dst.mkdir(parents=True, exist_ok=True)
+            mapping = {
+                "1.png": "main.png",   # Keep every notification (hero)
+                "2.png": "swipe.png",  # Swipe to organize (step 3)
+                "3.png": "imt-phone.png",  # Image timeline screen (IMT 3D inner)
+                "8.png": "bell.png",   # Control sounds (step 2)
+            }
+            lang_src = src_root / lang_key
+            for src_name, dst_name in mapping.items():
+                src = lang_src / src_name
+                if src.exists():
+                    shutil.copy2(src, dst / dst_name)
+            yt_src = src_root / "yt_v2" / f"{lang_key}.png"
+            if yt_src.exists():
+                shutil.copy2(yt_src, dst / "yt.png")
 
     for lang_key, subdir, hreflang in LOCALES:
         if lang_key not in STRINGS:
@@ -94,6 +116,16 @@ def build():
         s["HREFLANG_LINKS"] = hreflang_block()
         s["LANG_SWITCHER"] = lang_switcher(subdir)
         s["CANONICAL_URL"] = url_for(subdir)
+
+        # Asset base path: relative from the index.html location
+        # Root (en): assets/en/X.png
+        # subdir (ja, ko, etc.): ../assets/ja/X.png
+        if subdir == "":
+            s["ASSET_BASE"] = f"assets/{lang_key}/"
+        else:
+            s["ASSET_BASE"] = f"../assets/{lang_key}/"
+        # og:image needs an absolute URL for crawlers
+        s["OG_IMAGE_URL"] = f"{BASE_URL}/assets/{lang_key}/main.png"
 
         out = template
         for k, v in s.items():
