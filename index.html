@@ -370,6 +370,9 @@
         <span>•</span>
         <span>~9 min read</span>
       </div>
+      <div style="font-size:12px; color:var(--text-muted); font-style:italic; margin-top:-10px; margin-bottom:18px;">
+        Self-disclosure: written by the developer of NotiKeep. We try to be transparent about limitations — explicit cons and trade-offs are listed throughout.
+      </div>
       <h1>NotiKeep: The notification archive with an Image Timeline</h1>
       <p class="sub">
         Every notification logger we tested stores text. NotiKeep is the only one that preserves the actual <em>images</em> that come with notifications — and lets you browse them as a timeline. Plus the things you'd expect from this category: a real noise filter, deep-link jumps back to original content, and an encrypted backup for device migrations.
@@ -396,12 +399,9 @@
   <div class="tech-note" style="margin-top: 40px; margin-bottom: 32px; font-style: normal;">
     <strong style="display:block; color:#3A7AFE; font-size:13px; letter-spacing:0.08em; margin-bottom:8px; text-transform:uppercase;">TL;DR</strong>
     <ul style="margin:0; padding-left: 20px; font-size:15px; line-height:1.7;">
-      <li><strong>Image Timeline</strong> — every <code>BigPictureStyle</code> attachment that comes through a notification is extracted, re-encoded as WebP, and made browsable as a grid. As far as we can tell, no other product in this category does this.</li>
-      <li><strong>Open YouTube notifications in any browser</strong> — bypass the YouTube app entirely and watch in Chrome, Firefox, or Brave. Skip the algorithm pull, keep your ad-blocker, or just stay logged out. Also a feature we haven't seen in any competing notification logger.</li>
-      <li>Real noise filter — drops progress bars, foreground services, system pings, and importance-MIN pings on receipt. The archive is curated, not a dump.</li>
-      <li>Filter rules and deep-link mappings are grounded in <strong>1,107 real notification-extras dumps across 39 apps</strong> — not guesswork.</li>
-      <li>Encrypted ZIP backup that includes the image directory, so a device migration restores the full archive in one step.</li>
-      <li>30-day free trial, then ~$1/month or a one-time $19.99. No ads on any tier.</li>
+      <li><strong>Image Timeline</strong> — extract <code>BigPictureStyle</code> notification images, re-encode as WebP, browse them as a grid. We haven't seen this in any other notification logger.</li>
+      <li><strong>Open YouTube notifications in any browser</strong> — bypass the YouTube app entirely. Skip the algorithm pull, keep your ad-blocker, stay logged out. Also unique to NotiKeep among the loggers we tested.</li>
+      <li><strong>Ad-free, no analytics SDKs, all data on-device.</strong> 30-day free trial, then ~$1/month or $19.99 one-time.</li>
     </ul>
   </div>
 
@@ -410,13 +410,13 @@
     <ol>
       <li><a href="#background">Background: why the built-in notification history isn't enough</a></li>
       <li><a href="#what-is">What NotiKeep actually does</a></li>
-      <li><a href="#image-timeline">The Image Timeline — and why nothing else in this category does it</a></li>
+      <li><a href="#image-timeline">The Image Timeline — and why nothing else does it</a></li>
+      <li><a href="#browser-choice">Open YouTube notifications in any browser</a></li>
       <li><a href="#who-for">Who this app is for (and who should skip it)</a></li>
-      <li><a href="#noise">The "noise" problem — and how the filter is built</a></li>
       <li><a href="#deeplinks">Deep-linking back to content (the 1,107-dump research)</a></li>
       <li><a href="#privacy">Permissions and privacy</a></li>
       <li><a href="#compare">How it compares to other notification loggers</a></li>
-      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#pricing">Pricing — Free vs Pro</a></li>
       <li><a href="#verdict">Summary</a></li>
       <li><a href="#changelog">Changelog</a></li>
     </ol>
@@ -457,6 +457,7 @@
       A few details worth calling out, because they're the parts that took the most work and aren't obvious from a screenshot:
     </p>
     <ul style="padding-left: 20px; margin-bottom: 18px;">
+      <li><strong>Obvious noise gets dropped on receipt.</strong> Progress bars ("Uploading…"), foreground-service pings ("App is running in the background"), media playback controls, USB-debugging notifications — all of these are filtered out before they ever reach the archive. You don't see them in the list, you don't have to swipe them away. Most users never knew their phone was producing this much noise; the archive just stays clean.</li>
       <li><strong>Image preservation.</strong> When a notification carries a <code>largeIcon</code> or a <code>BigPictureStyle</code> attachment, NotiKeep extracts and stores it as WebP. Saved photos from messaging apps, news thumbnails, and similar imagery survive as part of the archive. The system itself drops these the moment the user dismisses the notification.</li>
       <li><strong>Per-app bell control.</strong> Two distinct modes per app: keep the OS notification visible (default behavior, NotiKeep just records), or silently archive (NotiKeep records and immediately calls <code>cancelNotification()</code> so the tray stays clean). <code>CATEGORY_CALL</code> and <code>CATEGORY_ALARM</code> are protected — the silent-archive mode never applies to those, regardless of setting.</li>
       <li><strong>Mute by title and block by app.</strong> Independent from the silent filter. Mute-by-title is for apps that legitimately ship important notifications mixed with noise — you keep the channel open but suppress specific recurring titles.</li>
@@ -512,6 +513,36 @@
     </p>
   </section>
 
+  <section id="browser-choice">
+    <h2>4. Open YouTube notifications in any browser</h2>
+    <p>
+      The second feature we'd point at is also one we haven't found in any other notification logger: when you tap a saved YouTube notification, you can choose to open it in your browser instead of the YouTube app.
+    </p>
+    <figure style="margin: 28px auto;">
+      <img src="https://i.imgur.com/uABd8H4.png" alt="YouTube notification with an Open-with chooser offering Chrome, Firefox, and Brave" style="max-width: 320px; display: block; margin: 0 auto;">
+      <figcaption>Pro feature: tapping a saved YouTube notification offers a browser chooser instead of going straight to the YouTube app. Chrome, Firefox, Brave — whichever browsers are installed on the device show up.</figcaption>
+    </figure>
+    <p>
+      The YouTube app is engineered, hard, around maximizing watch time. Open the app to view one video and the home tab, the Shorts feed, autoplay-next, personalized recommendations, notification re-engagement — every surface is tuned to keep you in. For a lot of users that's fine. For others, it's the reason they don't open the app casually anymore: they know what'll happen if they do.
+    </p>
+    <p>
+      The browser is a different environment. You watch the video you came for. The recommendations sidebar is there but is much weaker than the app's home tab. There's no Shorts feed bolted onto every screen. Closing the tab takes you back to whatever you were doing — not to a feed designed to pull you into the next thirty minutes.
+    </p>
+    <p style="color:var(--text-muted); font-size:15px;">
+      <strong style="color:var(--text);">In plain terms:</strong> watching a YouTube notification's video in a browser is a different experience than watching the same video in the YouTube app. The video is the same; the surrounding pull isn't. If you've ever opened the YouTube app for one thing and emerged thirty minutes later having watched five Shorts, you already know the feeling we're addressing.
+    </p>
+    <p>
+      Beyond the algorithm-pull angle, browser-side viewing is also cleaner for users who run ad-blocking extensions (Brave's built-in shield, uBlock Origin in Firefox), or who prefer not to be logged into a Google account on the device they read notifications on. None of this works through the YouTube app, which is sandboxed away from those tools.
+    </p>
+    <h3>Implementation</h3>
+    <p>
+      Straightforward in terms of code: when a saved YouTube notification is tapped, NotiKeep constructs a regular <code>https://youtu.be/{id}</code> URL and dispatches it via <code>Intent.ACTION_VIEW</code> with a chooser. The chooser lists every browser the device has installed. Free tier always opens the YouTube app via the standard <code>vnd.youtube://</code> deep-link; the browser-chooser path is the Pro toggle.
+    </p>
+    <p>
+      It's a small feature in terms of lines of code, and a meaningfully different feature in terms of how it changes the experience of having an archive of YouTube notifications. The reason no one else does it isn't technical — it's that the standard pattern in this category is to fire whatever <code>contentIntent</code> the source app provided, which always points to the source app. NotiKeep takes the opposite stance: the user owns their archive, and the user picks where the link opens.
+    </p>
+  </section>
+
   <section id="who-for">
     <h2>Who this app is for (and who should skip it)</h2>
     <p style="color:var(--text-muted); margin-bottom: 18px;">Before the technical sections, here's a quick fit-check so you can decide whether the rest of this article is worth your time.</p>
@@ -540,52 +571,6 @@
     <p style="margin-top: 20px; color:var(--text-muted); font-size: 15px;">
       <strong style="color:var(--text);">Still interested?</strong> The rest of this article covers the technical side — what the filter actually drops, how the deep-linking research was done, and how the privacy footprint compares to typical loggers in this category.
     </p>
-  </section>
-
-  <section id="noise">
-    <h2>4. The "noise" problem — and how the filter is built</h2>
-    <p>
-      A typical Android user receives somewhere between 50 and 200 notifications a day. Of those, a substantial fraction is structurally not worth saving:
-    </p>
-    <ul style="padding-left: 20px; margin-bottom: 18px;">
-      <li><strong>Progress notifications</strong> — file uploads, downloads, syncs, "Posting…" indicators. They update many times per second while in flight, then disappear when complete.</li>
-      <li><strong>Foreground-service notifications</strong> — the persistent "App is running in the background" pings that Android requires from any long-running service.</li>
-      <li><strong>Media playback controls</strong> — <code>CATEGORY_TRANSPORT</code> notifications from music apps. Useful while playing, meaningless in an archive.</li>
-      <li><strong>System notifications</strong> — USB debugging, Play Protect scans, OS update reminders, "Connected as a media device".</li>
-      <li><strong>IMPORTANCE_MIN pings</strong> — the lowest-importance channel, used for things the system itself considers ignorable.</li>
-    </ul>
-    <p>
-      A naive logger captures all of these. The user opens the archive, sees 200 entries, and 180 of them are progress bars and foreground services. The signal — the actual messages, codes, alerts — is buried.
-    </p>
-    <div class="tech-note">
-      Notification archives only become useful when the obvious noise is filtered out. <em>The threshold isn't whether a notification was technically posted</em> — it's whether a human reading the archive a week later would consider it worth saving.
-    </div>
-    <p>
-      NotiKeep's filter runs on every <code>onNotificationPosted</code> and applies a sequence of checks. Each check has a corresponding side effect — whether to drop silently, drop and clear the tray, or save:
-    </p>
-    <ul style="padding-left: 20px; margin-bottom: 18px;">
-      <li><code>CATEGORY_TRANSPORT</code>, <code>CATEGORY_PROGRESS</code>, <code>CATEGORY_SERVICE</code> → drop and clear</li>
-      <li><code>FLAG_FOREGROUND_SERVICE</code> → drop and clear</li>
-      <li>Has <code>progress</code> extra <em>and</em> category is null/STATUS → drop and clear (catches "X is uploading…" style)</li>
-      <li><code>CATEGORY_SYSTEM + FLAG_ONGOING</code> → drop and clear</li>
-      <li><code>FLAG_ONGOING</code> + non-important category → drop and clear</li>
-      <li>Empty title and text → drop</li>
-      <li><code>IMPORTANCE_MIN</code> → drop and clear</li>
-      <li>Same package + same title + same text within a few seconds → drop as duplicate</li>
-      <li>Otherwise → save</li>
-    </ul>
-    <p>
-      The "drop and clear" cases also call <code>cancelNotification()</code>, which removes the notification from the tray. This is the bell-off behavior: NotiKeep recognizes the notification as something the user shouldn't have to deal with at all, archives nothing, and silently sweeps it out of the way.
-    </p>
-    <p>
-      A few categories are explicitly protected from the ongoing-notification filter even when they carry <code>FLAG_ONGOING</code>: <code>MESSAGE</code>, <code>SOCIAL</code>, <code>EVENT</code>, <code>REMINDER</code>, <code>ALARM</code>, and <code>CALL</code>. An ongoing message thread or alarm is real signal — the persistence flag just reflects how the source app structures its UI.
-    </p>
-    <p>
-      One filter case that took a few iterations: progress + email category. Gmail labels new mail with <code>CATEGORY_EMAIL</code> and occasionally also sets a progress extra during sync. Initially the filter dropped these as progress notifications. The fix was to require <em>both</em> a progress extra <em>and</em> a null/STATUS category before treating it as a progress drop — if a real category is present, the progress extra is incidental and the notification gets saved.
-    </p>
-    <div class="callout">
-      <strong>What still gets through:</strong> we drop the obvious noise structurally, but app developers occasionally use <code>CATEGORY_MESSAGE</code> for non-message things (marketing pushes, "you've earned X points") and there's no automatic way to detect that. The mute-by-title list is the manual escape hatch — add a recurring title once and it stops appearing in the archive.
-    </div>
   </section>
 
   <section id="deeplinks">
@@ -624,33 +609,6 @@
     <div class="callout">
       <strong>Why we don't go further:</strong> there are non-public APIs that would expose more. We don't use them. They break across OS updates, fail Play Store policy review on the wrong day, and aren't worth the maintenance cost on an app that's supposed to be about the archive, not the deep-link.
     </div>
-
-    <h3>Browser Choice for YouTube — opt out of the YouTube app entirely</h3>
-    <p>
-      Once you have a stable way to deep-link a YouTube notification back to the original video, an interesting second question opens up: <em>where</em> should it open?
-    </p>
-    <figure style="margin: 28px auto;">
-      <img src="https://i.imgur.com/uABd8H4.png" alt="YouTube notification with an Open-with chooser offering Chrome, Firefox, and Brave" style="max-width: 320px; display: block; margin: 0 auto;">
-      <figcaption>Pro feature: tapping a saved YouTube notification offers a browser chooser instead of going straight to the YouTube app. Chrome, Firefox, Brave — whichever browsers are installed on the device show up.</figcaption>
-    </figure>
-    <p>
-      The YouTube app is engineered, hard, around maximizing watch time. Open the app to view one video and the home tab, the Shorts feed, the autoplay-next behavior, the personalized recommendations, the notification re-engagement — every surface is tuned to keep you in. For a lot of users that's fine. For others, it's the reason they don't open the app casually anymore: they know what'll happen if they do.
-    </p>
-    <p>
-      The browser is a different environment. You watch the video you came for. The recommendations sidebar is there but is much weaker than the app's home tab. There's no Shorts feed bolted onto every screen. Closing the tab takes you back to whatever you were doing — not to a feed designed to pull you into the next thirty minutes.
-    </p>
-    <p style="color:var(--text-muted); font-size:15px;">
-      <strong style="color:var(--text);">In plain terms:</strong> watching a YouTube notification's video in a browser is a different experience than watching the same video in the YouTube app. The video is the same; the surrounding pull isn't. If you've ever opened the YouTube app for one thing and emerged thirty minutes later having watched five Shorts, you already know the feeling we're addressing.
-    </p>
-    <p>
-      Beyond the algorithm-pull angle, browser-side viewing also tends to be cleaner for users who run ad-blocking extensions (Brave's built-in shield, uBlock Origin in Firefox) or who simply prefer not to be logged into a Google account on the device they read notifications on. None of this works through the YouTube app, which is sandboxed away from those tools.
-    </p>
-    <p>
-      The implementation is straightforward: when a saved YouTube notification is tapped, NotiKeep constructs a regular <code>https://youtu.be/{id}</code> URL and dispatches it via <code>Intent.ACTION_VIEW</code> with a chooser. The chooser lists every browser the device has installed; the user picks one (or the system remembers the previous choice). Free tier always opens the YouTube app via the standard <code>vnd.youtube://</code> deep-link; the browser-chooser path is the Pro toggle.
-    </p>
-    <p>
-      It's a small feature in terms of code, and a meaningfully different feature in terms of how it changes the experience of having an archive of YouTube notifications. We haven't seen any other notification logger in this category offer it — the standard pattern is to fire whatever <code>contentIntent</code> the source app provided, which always points to the source app.
-    </p>
   </section>
 
   <section id="privacy">
@@ -777,23 +735,77 @@
   </section>
 
   <section id="pricing">
-    <h2>8. Pricing</h2>
+    <h2>8. Pricing — Free vs Pro</h2>
     <p>
-      The free tier is meant to be useful, not a demo. Core archiving, the noise filter, search across the last 30 days, image preservation, and 5 bookmark slots all work without paying.
+      The free tier is meant to be useful, not a demo. Core archiving, the automatic noise filter, search across the last 30 days, image preservation in detail view, and 5 bookmark slots all work without paying. Pro lifts the caps and unlocks the two marquee features.
     </p>
-    <p>
-      Pro unlocks the rest:
-    </p>
-    <ul style="padding-left: 20px; margin-bottom: 18px;">
-      <li>Unlimited retention (configurable from 30 days up to no expiry)</li>
-      <li>Unlimited bookmarks, mute-by-title entries, and blocked apps</li>
-      <li>Full-text search across the entire archive</li>
-      <li>Backup and restore with images</li>
-      <li>Image timeline (a separate view that surfaces only notifications with attached images)</li>
-      <li>YouTube browser-mode launch (opt-in alternative for the YouTube deep-link)</li>
-      <li>Three custom theme slots</li>
-    </ul>
-    <p>
+    <div class="table-wrap"><table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Free</th>
+          <th class="highlight">Pro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Feature">Notification archive (text + filtering)</td>
+          <td data-label="Free"><span class="check">✓</span></td>
+          <td class="highlight" data-label="Pro"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Image preservation (in notification detail)</td>
+          <td data-label="Free"><span class="check">✓</span></td>
+          <td class="highlight" data-label="Pro"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Retention</td>
+          <td data-label="Free">30 days (fixed)</td>
+          <td class="highlight" data-label="Pro">30 days to unlimited (configurable)</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Full-text search</td>
+          <td data-label="Free">Last 30 days only</td>
+          <td class="highlight" data-label="Pro">Entire archive</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Bookmarks</td>
+          <td data-label="Free">5</td>
+          <td class="highlight" data-label="Pro">Unlimited</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Mute by title</td>
+          <td data-label="Free">5</td>
+          <td class="highlight" data-label="Pro">Unlimited</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">App block</td>
+          <td data-label="Free">5</td>
+          <td class="highlight" data-label="Pro">Unlimited</td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Image Timeline (browsable image grid)</td>
+          <td data-label="Free"><span class="cross">✗</span></td>
+          <td class="highlight" data-label="Pro"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Open YouTube notifications in any browser</td>
+          <td data-label="Free"><span class="cross">✗</span></td>
+          <td class="highlight" data-label="Pro"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Encrypted backup &amp; restore (with images)</td>
+          <td data-label="Free"><span class="cross">✗</span></td>
+          <td class="highlight" data-label="Pro"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td data-label="Feature">Custom themes</td>
+          <td data-label="Free"><span class="cross">✗</span></td>
+          <td class="highlight" data-label="Pro">3 slots</td>
+        </tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top: 24px;">
       Pricing options are <strong>$0.99 / month</strong>, <strong>$9.99 / year</strong>, or <strong>$19.99 one-time</strong>. Prices are USD list and subject to Google's regional pricing.
     </p>
     <p>
