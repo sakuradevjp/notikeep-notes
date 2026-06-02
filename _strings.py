@@ -11,9 +11,9 @@ STRINGS = {
 # en (English) — canonical
 # =============================================================
 "en": {
-    "TITLE": "NotiKeep — Save every notification",
+    "TITLE": "NotiKeep — Notification History Log",
     "META_DESCRIPTION": "Save your notifications, photos included. Open YouTube notifications in any browser. 30-day free trial of all features. Ad-free, all data stays on-device.",
-    "OG_TITLE": "NotiKeep — Save every notification",
+    "OG_TITLE": "NotiKeep — Notification History Log",
     "OG_DESCRIPTION": "Save your notifications, photos included. Open YouTube notifications in any browser. 30-day free trial. Ad-free, all data on-device.",
     "HERO_H1_HTML": 'Save with <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": "Photos, codes, messages — kept as long as you want.",
@@ -156,9 +156,9 @@ STRINGS = {
 # ja (Japanese)
 # =============================================================
 "ja": {
-    "TITLE": "NotiKeep — 通知の保存に",
+    "TITLE": "NotiKeep — 通知履歴",
     "META_DESCRIPTION": "写真を含む通知を保存します。YouTubeの通知は好きなブラウザで開けます。30日間は無料ですべての機能をお使いいただけます。広告なし、データは端末内にのみ保存されます。",
-    "OG_TITLE": "NotiKeep — 通知の保存に",
+    "OG_TITLE": "NotiKeep — 通知履歴",
     "OG_DESCRIPTION": "写真を含む通知を保存。YouTubeの通知は好きなブラウザで開けます。30日間無料、広告なし、データは端末内にのみ保存。",
     "HERO_H1_HTML": 'NotiKeepで <span class="accent">記録する</span>',
     "HERO_TAGLINE": "写真もコードもメッセージもいつまでも残せる。",
@@ -301,9 +301,9 @@ STRINGS = {
 # ko (Korean)
 # =============================================================
 "ko": {
-    "TITLE": 'NotiKeep — 모든 알림을 저장',
+    "TITLE": 'NotiKeep — 알림 기록',
     "META_DESCRIPTION": '사진을 포함한 알림을 저장합니다. YouTube 알림은 원하는 브라우저에서 열 수 있습니다. 30일 동안 모든 기능을 무료로 이용 가능. 광고 없음, 데이터는 기기 내에만 저장.',
-    "OG_TITLE": 'NotiKeep — 모든 알림을 저장',
+    "OG_TITLE": 'NotiKeep — 알림 기록',
     "OG_DESCRIPTION": '사진을 포함한 알림을 저장. YouTube 알림은 원하는 브라우저에서. 30일 무료, 광고 없음, 데이터는 기기 내에만.',
     "HERO_H1_HTML": 'NotiKeep과 함께 <span class="accent">저장</span>',
     "HERO_TAGLINE": '사진, 인증 코드, 메시지 — 원하는 만큼 보관할 수 있습니다.',
@@ -446,9 +446,9 @@ STRINGS = {
 # zh-CN (Simplified Chinese)
 # =============================================================
 "zh-CN": {
-    "TITLE": 'NotiKeep — 保留每条通知',
+    "TITLE": 'NotiKeep — 通知历史记录',
     "META_DESCRIPTION": '保留含图片的通知。在任意浏览器打开 YouTube 通知。30 天内免费使用全部功能。无广告,数据全部留在本地。',
-    "OG_TITLE": 'NotiKeep — 保留每条通知',
+    "OG_TITLE": 'NotiKeep — 通知历史记录',
     "OG_DESCRIPTION": '保留含图片的通知。任意浏览器打开 YouTube 通知。30 天免费,无广告,数据全部留在本地。',
     "HERO_H1_HTML": '用 NotiKeep <span class="accent">保留</span>',
     "HERO_TAGLINE": '图片、验证码、消息 — 想保留多久就保留多久。',
@@ -591,9 +591,9 @@ STRINGS = {
 # zh-TW (Traditional Chinese)
 # =============================================================
 "zh-TW": {
-    "TITLE": 'NotiKeep — 保留每則通知',
+    "TITLE": 'NotiKeep — 通知歷史記錄',
     "META_DESCRIPTION": '保留含圖片的通知。在任意瀏覽器開啟 YouTube 通知。30 天內免費使用全部功能。無廣告,資料全部留在本機。',
-    "OG_TITLE": 'NotiKeep — 保留每則通知',
+    "OG_TITLE": 'NotiKeep — 通知歷史記錄',
     "OG_DESCRIPTION": '保留含圖片的通知。任意瀏覽器開啟 YouTube 通知。30 天免費,無廣告,資料全部留在本機。',
     "HERO_H1_HTML": '用 NotiKeep <span class="accent">保留</span>',
     "HERO_TAGLINE": '圖片、驗證碼、訊息 — 想保留多久就保留多久。',
@@ -736,9 +736,9 @@ STRINGS = {
 # es (Spanish)
 # =============================================================
 "es": {
-    "TITLE": 'NotiKeep — Guarda todas tus notificaciones',
+    "TITLE": 'NotiKeep — Historial de notificaciones',
     "META_DESCRIPTION": 'Guarda tus notificaciones, fotos incluidas. Abre las notificaciones de YouTube en cualquier navegador. 30 días gratis con todas las funciones. Sin anuncios, todos los datos en el dispositivo.',
-    "OG_TITLE": 'NotiKeep — Guarda todas tus notificaciones',
+    "OG_TITLE": 'NotiKeep — Historial de notificaciones',
     "OG_DESCRIPTION": 'Guarda tus notificaciones, fotos incluidas. Abre las notificaciones de YouTube en cualquier navegador. Prueba gratis 30 días. Sin anuncios, datos en el dispositivo.',
     "HERO_H1_HTML": 'Guarda con <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": 'Fotos, códigos, mensajes — guardados todo el tiempo que quieras.',
@@ -881,9 +881,9 @@ STRINGS = {
 # pt-BR (Portuguese — Brazilian)
 # =============================================================
 "pt": {
-    "TITLE": 'NotiKeep — Salve todas as notificações',
+    "TITLE": 'NotiKeep — Histórico de notificações',
     "META_DESCRIPTION": 'Salve suas notificações, fotos inclusas. Abra notificações do YouTube em qualquer navegador. 30 dias gratuitos com todos os recursos. Sem anúncios, todos os dados no aparelho.',
-    "OG_TITLE": 'NotiKeep — Salve todas as notificações',
+    "OG_TITLE": 'NotiKeep — Histórico de notificações',
     "OG_DESCRIPTION": 'Salve suas notificações, fotos inclusas. Abra notificações do YouTube em qualquer navegador. Teste grátis 30 dias. Sem anúncios, dados no aparelho.',
     "HERO_H1_HTML": 'Salve com <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": 'Fotos, códigos, mensagens — guardados pelo tempo que você quiser.',
@@ -1026,9 +1026,9 @@ STRINGS = {
 # fr (French)
 # =============================================================
 "fr": {
-    "TITLE": 'NotiKeep — Sauvegardez chaque notification',
+    "TITLE": 'NotiKeep — Historique des notifications',
     "META_DESCRIPTION": "Sauvegardez vos notifications, photos incluses. Ouvrez les notifications YouTube dans n'importe quel navigateur. 30 jours gratuits avec toutes les fonctionnalités. Sans publicité, données sur l'appareil.",
-    "OG_TITLE": 'NotiKeep — Sauvegardez chaque notification',
+    "OG_TITLE": 'NotiKeep — Historique des notifications',
     "OG_DESCRIPTION": "Sauvegardez vos notifications, photos incluses. Ouvrez les notifications YouTube dans n'importe quel navigateur. Essai gratuit 30 jours. Sans pub, données sur l'appareil.",
     "HERO_H1_HTML": 'Sauvegardez avec <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": 'Photos, codes, messages — conservés aussi longtemps que vous le voulez.',
@@ -1171,9 +1171,9 @@ STRINGS = {
 # de (German)
 # =============================================================
 "de": {
-    "TITLE": 'NotiKeep — Speichere jede Benachrichtigung',
+    "TITLE": 'NotiKeep — Benachrichtigungsverlauf',
     "META_DESCRIPTION": 'Speichere deine Benachrichtigungen samt Bildern. Öffne YouTube-Benachrichtigungen in jedem Browser. 30 Tage kostenlos mit allen Funktionen. Keine Werbung, alle Daten auf dem Gerät.',
-    "OG_TITLE": 'NotiKeep — Speichere jede Benachrichtigung',
+    "OG_TITLE": 'NotiKeep — Benachrichtigungsverlauf',
     "OG_DESCRIPTION": 'Speichere deine Benachrichtigungen samt Bildern. YouTube-Benachrichtigungen in jedem Browser öffnen. 30 Tage kostenlos. Keine Werbung, Daten auf dem Gerät.',
     "HERO_H1_HTML": 'Speichern mit <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": 'Fotos, Codes, Nachrichten — so lange aufbewahrt, wie du willst.',
@@ -1316,9 +1316,9 @@ STRINGS = {
 # ru (Russian)
 # =============================================================
 "ru": {
-    "TITLE": 'NotiKeep — Сохраняйте каждое уведомление',
+    "TITLE": 'NotiKeep — История уведомлений',
     "META_DESCRIPTION": 'Сохраняйте уведомления вместе с фото. Открывайте уведомления YouTube в любом браузере. 30 дней бесплатно со всеми функциями. Без рекламы, все данные на устройстве.',
-    "OG_TITLE": 'NotiKeep — Сохраняйте каждое уведомление',
+    "OG_TITLE": 'NotiKeep — История уведомлений',
     "OG_DESCRIPTION": 'Сохраняйте уведомления с фото. Уведомления YouTube — в любом браузере. 30 дней бесплатно. Без рекламы, данные на устройстве.',
     "HERO_H1_HTML": 'Сохранить с <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": 'Фото, коды, сообщения — храните столько, сколько хотите.',
@@ -1461,9 +1461,9 @@ STRINGS = {
 # ar (Arabic)
 # =============================================================
 "ar": {
-    "TITLE": 'NotiKeep — احفظ كل إشعار',
+    "TITLE": 'NotiKeep — سجل الإشعارات',
     "META_DESCRIPTION": 'احفظ إشعاراتك بما فيها الصور. افتح إشعارات YouTube في أي متصفح. 30 يومًا مجانًا بكل الميزات. بلا إعلانات، كل البيانات على الجهاز.',
-    "OG_TITLE": 'NotiKeep — احفظ كل إشعار',
+    "OG_TITLE": 'NotiKeep — سجل الإشعارات',
     "OG_DESCRIPTION": 'احفظ إشعاراتك بالصور. افتح إشعارات YouTube في أي متصفح. تجربة مجانية 30 يومًا. بلا إعلانات، البيانات على الجهاز.',
     "HERO_H1_HTML": 'احفظ مع <span class="accent">NotiKeep</span>',
     "HERO_TAGLINE": 'الصور والرموز والرسائل — محفوظة طوال المدة التي تريدها.',
@@ -1606,9 +1606,9 @@ STRINGS = {
 # hi (Hindi)
 # =============================================================
 "hi": {
-    "TITLE": 'NotiKeep — हर सूचना सहेजें',
+    "TITLE": 'NotiKeep — सूचना इतिहास',
     "META_DESCRIPTION": 'तस्वीरों सहित सूचनाएँ सहेजें। YouTube सूचनाएँ किसी भी ब्राउज़र में खोलें। 30 दिन सभी सुविधाओं के साथ मुफ़्त। कोई विज्ञापन नहीं, सारा डेटा डिवाइस पर।',
-    "OG_TITLE": 'NotiKeep — हर सूचना सहेजें',
+    "OG_TITLE": 'NotiKeep — सूचना इतिहास',
     "OG_DESCRIPTION": 'तस्वीरों सहित सूचनाएँ सहेजें। YouTube सूचनाएँ किसी भी ब्राउज़र में। 30 दिन मुफ़्त। कोई विज्ञापन नहीं, डेटा डिवाइस पर।',
     "HERO_H1_HTML": '<span class="accent">NotiKeep</span> के साथ सहेजें',
     "HERO_TAGLINE": 'तस्वीरें, कोड, संदेश — जब तक चाहें सहेजे रखें।',
