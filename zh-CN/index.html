@@ -137,6 +137,8 @@ li{margin:.45rem 0}
 }
 
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.pv-wrap{position:relative;padding-top:56.25%;margin:1.25rem 0 .5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+.pv-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
 .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
@@ -220,6 +222,11 @@ details:has(summary:empty){display:none}
   <span class="trial-note"></span>
 </header>
 
+<h2>实际效果</h2>
+<div class="pv-wrap">
+  <iframe src="https://www.youtube-nocookie.com/embed/3k6F-uqT1XU" title="实际效果 — NotiKeep" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 <h2>这种事,你也遇到过吧?</h2>
 <div class="pain-points">
 <ul>
@@ -279,6 +286,7 @@ details:has(summary:empty){display:none}
 
 <h2>你能获得</h2>
 <div class="feature-grid">
+  <div class="feature"><span class="icon">💬</span><strong>对话视图</strong><p>即时通讯应用按发送者分组显示为对话，照片直接显示在对话中。</p></div>
   <div class="feature"><span class="icon">📷</span><strong>图片时间线</strong><p>按日期浏览通知中出现过的所有图片。</p></div>
   <div class="feature"><span class="icon">🌐</span><strong>YouTube 任意浏览器</strong><p>在你选择的浏览器中打开 YouTube 通知。</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>智能噪音过滤</strong><p>进度条、前台服务、系统通知 — 自动丢弃。</p></div>

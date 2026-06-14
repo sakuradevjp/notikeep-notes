@@ -137,6 +137,8 @@ li{margin:.45rem 0}
 }
 
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.pv-wrap{position:relative;padding-top:56.25%;margin:1.25rem 0 .5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+.pv-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
 .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
@@ -220,6 +222,11 @@ details:has(summary:empty){display:none}
   <span class="trial-note"></span>
 </header>
 
+<h2>動きを見る</h2>
+<div class="pv-wrap">
+  <iframe src="https://www.youtube-nocookie.com/embed/8VBWdZEfWdo" title="動きを見る — NotiKeep" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 <h2>こんなことありませんか？</h2>
 <div class="pain-points">
 <ul>
@@ -279,6 +286,7 @@ details:has(summary:empty){display:none}
 
 <h2>できること</h2>
 <div class="feature-grid">
+  <div class="feature"><span class="icon">💬</span><strong>会話ビュー</strong><p>メッセージアプリを送信者別のチャット表示で。写真も会話の中にそのまま。</p></div>
   <div class="feature"><span class="icon">📷</span><strong>Image Timeline</strong><p>通知に届いた写真を日付ごとに振り返り。</p></div>
   <div class="feature"><span class="icon">🌐</span><strong>YouTubeを好きなブラウザで</strong><p>YouTube通知を任意のブラウザで開く。</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>スマートノイズフィルタ</strong><p>進捗バー、常駐通知、システム通知は自動で除外。</p></div>

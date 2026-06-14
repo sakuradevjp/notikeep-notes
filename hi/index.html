@@ -137,6 +137,8 @@ li{margin:.45rem 0}
 }
 
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.pv-wrap{position:relative;padding-top:56.25%;margin:1.25rem 0 .5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+.pv-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
 .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
@@ -220,6 +222,11 @@ details:has(summary:empty){display:none}
   <span class="trial-note"></span>
 </header>
 
+<h2>इसे काम करते देखें</h2>
+<div class="pv-wrap">
+  <iframe src="https://www.youtube-nocookie.com/embed/3k6F-uqT1XU" title="इसे काम करते देखें — NotiKeep" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 <h2>क्या आपके साथ भी होता है?</h2>
 <div class="pain-points">
 <ul>
@@ -279,6 +286,7 @@ details:has(summary:empty){display:none}
 
 <h2>आपको क्या मिलता है</h2>
 <div class="feature-grid">
+  <div class="feature"><span class="icon">💬</span><strong>बातचीत व्यू</strong><p>मैसेजिंग ऐप्स भेजने वाले के अनुसार चैट के रूप में दिखती हैं, फ़ोटो बातचीत के अंदर ही।</p></div>
   <div class="feature"><span class="icon">📷</span><strong>इमेज टाइमलाइन</strong><p>नोटिफ़िकेशन में आई हर तस्वीर को तारीख़ के अनुसार ब्राउज़ करें।</p></div>
   <div class="feature"><span class="icon">🌐</span><strong>किसी भी ब्राउज़र में YouTube</strong><p>अपनी पसंद के ब्राउज़र में YouTube नोटिफ़िकेशन खोलें।</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>स्मार्ट शोर फ़िल्टर</strong><p>प्रगति बार, अग्रभूमि सेवाएँ, सिस्टम पिंग — स्वतः छोड़ दिए जाते हैं।</p></div>

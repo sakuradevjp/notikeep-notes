@@ -137,6 +137,8 @@ li{margin:.45rem 0}
 }
 
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.pv-wrap{position:relative;padding-top:56.25%;margin:1.25rem 0 .5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+.pv-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
 .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
@@ -220,6 +222,11 @@ details:has(summary:empty){display:none}
   <span class="trial-note"></span>
 </header>
 
+<h2>실제 작동 모습</h2>
+<div class="pv-wrap">
+  <iframe src="https://www.youtube-nocookie.com/embed/3k6F-uqT1XU" title="실제 작동 모습 — NotiKeep" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 <h2>이런 일, 있으셨죠?</h2>
 <div class="pain-points">
 <ul>
@@ -279,6 +286,7 @@ details:has(summary:empty){display:none}
 
 <h2>사용 가능한 기능</h2>
 <div class="feature-grid">
+  <div class="feature"><span class="icon">💬</span><strong>대화 보기</strong><p>메시지 앱을 보낸 사람별 대화로. 사진도 대화 안에 그대로.</p></div>
   <div class="feature"><span class="icon">📷</span><strong>Image Timeline</strong><p>알림에 포함된 사진을 날짜별로 둘러보기.</p></div>
   <div class="feature"><span class="icon">🌐</span><strong>YouTube를 원하는 브라우저에서</strong><p>YouTube 알림을 원하는 브라우저에서 열기.</p></div>
   <div class="feature"><span class="icon">🔇</span><strong>스마트 노이즈 필터</strong><p>진행 표시줄, 포그라운드 서비스, 시스템 알림 — 자동 제거.</p></div>
