@@ -139,6 +139,12 @@ li{margin:.45rem 0}
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
 .pv-wrap{position:relative;padding-top:56.25%;margin:1.25rem 0 .5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
 .pv-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pv-wrap-vert{display:none}
+@media (max-width:720px){
+  .pv-wrap{display:none}
+  .pv-wrap-vert{display:block;width:100%;max-width:300px;aspect-ratio:9/16;margin:1.25rem auto .5rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+  .pv-wrap-vert iframe{width:100%;height:100%;border:0;display:block}
+}
 .feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.4rem 1.25rem;transition:transform .15s,box-shadow .15s}
 .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .feature .icon{font-size:2rem;margin-bottom:.5rem;display:block;line-height:1}
@@ -225,6 +231,9 @@ details:has(summary:empty){display:none}
 <h2>See it in action</h2>
 <div class="pv-wrap">
   <iframe src="https://www.youtube-nocookie.com/embed/YmGIVUZAdXI" title="See it in action — NotiKeep" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="pv-wrap-vert">
+  <iframe src="https://www.youtube-nocookie.com/embed/ldFYShRffHs" title="See it in action — NotiKeep" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <h2>Sound familiar?</h2>
