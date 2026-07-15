@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Play에서 받기</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep가 이제 NagiKeep입니다">
+  <span class="badge">새로운 소식</span>
+  <h2 class="rh">NotiKeep가 이제 <span class="accent">NagiKeep</span>입니다</h2>
+  <p class="lead">익숙한 그 알림 키퍼 — 이제 부드러운 집중 앱 차단 기능까지 함께 담았습니다. 같은 앱, 같은 데이터: 지금까지 저장한 모든 것이 있던 그대로 남아 있습니다.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/ko/">NagiKeep 만나보기 →</a>
+</section>
+
+<h2>NotiKeep 받은편지함을 홈으로 쓰고 싶으신가요?</h2>
+<p>새로 설치하면 기본적으로 NagiKeep의 <strong>집중 화면</strong>이 열립니다. 대신 <strong>NotiKeep 알림 받은편지함</strong>을 홈 화면으로 만들려면 두 번만 탭하면 됩니다.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>앱을 열고 ⚙ 톱니바퀴를 탭하세요</h3>
+  <img src="../assets/ko/switch-home.png" alt="툴바 오른쪽 위에 설정 톱니바퀴가 강조 표시된 NagiKeep 집중 화면">
+  <p>앱을 실행하면 NagiKeep 집중 화면이 나타납니다. 오른쪽 위의 <strong>톱니바퀴</strong>를 탭해 설정을 여세요.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>"받은편지함에서 시작"을 선택하세요</h3>
+  <img src="../assets/ko/switch-settings.png" alt="표시 섹션 아래에 '받은편지함에서 시작' 항목이 강조 표시된 집중 설정">
+  <p><strong>표시</strong> 섹션에서 <strong>받은편지함에서 시작</strong>을 누르세요.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>이제 끝입니다 — 앱을 열 때마다 곧바로 NotiKeep 받은편지함이 나타납니다. 집중 기능은 원할 때 받은편지함 메뉴에서 한 번만 탭하면 됩니다.</p>
 
 <h2>실제 작동 모습</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>이 앱이 NagiKeep와 같은 앱인가요?</summary><p>네. NotiKeep이 <strong>NagiKeep</strong>으로 새롭게 출시되었습니다 — 똑같은 알림 키퍼에 부드러운 집중 앱 차단 기능이 더해졌습니다. 같은 패키지(<code>jp.sakuradev.notikeep</code>), 같은 데이터: 지금까지 저장한 모든 것이 있던 그대로 남아 있으며, 알림 키퍼는 어디로도 사라지지 않습니다.</p></details>
+<details><summary>앱이 집중 화면으로 열립니다 — 알림 받은편지함을 홈 화면으로 만들려면 어떻게 하나요?</summary><p>새로 설치하면 기본적으로 NagiKeep의 집중 화면이 열립니다. 대신 NotiKeep 받은편지함으로 바로 열리게 하려면: 오른쪽 위의 <strong>⚙ 톱니바퀴</strong>를 누르고 → <strong>표시</strong> 섹션에서 <strong>받은편지함에서 시작</strong>을 누르세요. 완료 — 이제 실행할 때마다 받은편지함이 열리며, 집중 기능은 받은편지함 메뉴에서 한 번만 누르면 바로 이용할 수 있습니다.</p></details>
 <details><summary>설치하기 전의 알림도 볼 수 있나요?</summary><p><strong>볼 수 없습니다.</strong> NotiKeep은 설치 후 알림 접근 권한이 부여된 이후에 도착한 알림만 저장할 수 있습니다.</p></details>
 <details><summary>지원하는 Android 버전은?</summary><p>Android 9.0 이상을 지원합니다.</p></details>
 <details><summary>저장 용량은 얼마나 사용하나요?</summary><p>텍스트 알림은 매우 작아서 몇 MB로 몇 달치를 저장할 수 있습니다. 용량을 차지하는 것은 이미지로, 저장된 사진은 약 20–80 KB입니다. 월 1,000건의 이미지가 있는 알림을 받는 헤비 유저도 약 30–80 MB 정도입니다. 저장 공간이 걱정된다면 보관 기간을 줄이세요.</p></details>

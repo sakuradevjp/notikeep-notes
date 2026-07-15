@@ -199,6 +199,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -215,6 +228,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ {{CTA_GET}}</a>
   <span class="trial-note">{{TRIAL_NOTE}}</span>
 </header>
+
+<section class="relaunch" aria-label="{{RELAUNCH_ARIA}}">
+  <span class="badge">{{RELAUNCH_BADGE}}</span>
+  <h2 class="rh">{{RELAUNCH_TITLE_HTML}}</h2>
+  <p class="lead">{{RELAUNCH_LEAD}}</p>
+  <a class="cta ghost" href="{{NAGIKEEP_URL}}">{{RELAUNCH_CTA}}</a>
+</section>
+
+<h2>{{SWITCH_H2}}</h2>
+<p>{{SWITCH_INTRO_HTML}}</p>
+
+<div class="step">
+  <h3><span class="num">1</span>{{SWITCH_S1_TITLE}}</h3>
+  <img src="{{ASSET_BASE}}switch-home.png" alt="{{SWITCH_S1_IMG_ALT}}">
+  <p>{{SWITCH_S1_BODY_HTML}}</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>{{SWITCH_S2_TITLE}}</h3>
+  <img src="{{ASSET_BASE}}switch-settings.png" alt="{{SWITCH_S2_IMG_ALT}}">
+  <p>{{SWITCH_S2_BODY_HTML}}</p>
+</div>
+
+<p class="switch-done">{{SWITCH_DONE_HTML}}</p>
 
 <h2>{{PV_HEADING}}</h2>
 <div class="pv-wrap">
@@ -345,6 +382,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>{{H2_FAQ}}</h2>
+<details><summary>{{FAQ_NAGI_Q}}</summary><p>{{FAQ_NAGI_A_HTML}}</p></details>
+<details><summary>{{FAQ_HOME_Q}}</summary><p>{{FAQ_HOME_A_HTML}}</p></details>
 <details><summary>{{FAQ1_Q}}</summary><p>{{FAQ1_A}}</p></details>
 <details><summary>{{FAQ2_Q}}</summary><p>{{FAQ2_A}}</p></details>
 <details><summary>{{FAQ3_Q}}</summary><p>{{FAQ3_A}}</p></details>

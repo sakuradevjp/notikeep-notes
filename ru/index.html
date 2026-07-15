@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Получить NotiKeep в Google Play</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep теперь NagiKeep">
+  <span class="badge">Что нового</span>
+  <h2 class="rh">NotiKeep теперь <span class="accent">NagiKeep</span></h2>
+  <p class="lead">Тот самый хранитель уведомлений, который вы знаете, — теперь со встроенным мягким блокировщиком приложений для концентрации. То же приложение, те же данные: всё, что вы сохранили, остаётся ровно на своих местах.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/ru/">Познакомьтесь с NagiKeep →</a>
+</section>
+
+<h2>Хотите, чтобы домашним экраном были входящие NotiKeep?</h2>
+<p>Новые установки по умолчанию открываются на <strong>экране концентрации</strong> NagiKeep. Чтобы вместо этого домашним экраном стали <strong>входящие уведомления NotiKeep</strong>, достаточно двух касаний.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Откройте приложение и нажмите на шестерёнку ⚙</h3>
+  <img src="../assets/ru/switch-home.png" alt="Экран концентрации NagiKeep с выделенной шестерёнкой настроек в правом верхнем углу панели инструментов">
+  <p>Запустите приложение — вы попадёте на экран концентрации NagiKeep. Нажмите на <strong>шестерёнку</strong> в правом верхнем углу, чтобы открыть Настройки.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Выберите «Начинать со входящих»</h3>
+  <img src="../assets/ru/switch-settings.png" alt="Настройки концентрации с выделенной строкой «Начинать со входящих» в разделе «Отображение»">
+  <p>В разделе <strong>Отображение</strong> нажмите <strong>Начинать со входящих</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>Готово — теперь приложение каждый раз открывается сразу на ваших входящих NotiKeep. А концентрация всегда в одном касании через меню входящих, когда она вам нужна.</p>
 
 <h2>Посмотрите в действии</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>Часто задаваемые вопросы</h2>
+<details><summary>Это то же приложение, что и NagiKeep?</summary><p>Да. NotiKeep вышел заново под именем <strong>NagiKeep</strong> — тот же хранитель уведомлений, к которому теперь добавлен мягкий блокировщик приложений для концентрации. Тот же пакет (<code>jp.sakuradev.notikeep</code>), те же данные: всё, что вы сохранили, остаётся ровно на своих местах, а хранитель уведомлений никуда не денется.</p></details>
+<details><summary>Приложение открывается на экране концентрации — как сделать домашним экраном мои входящие уведомления?</summary><p>Новые установки по умолчанию открываются на экране концентрации NagiKeep. Чтобы вместо этого сразу открывались входящие NotiKeep: нажмите <strong>⚙ шестерёнку</strong> (сверху справа) → в разделе <strong>Отображение</strong> нажмите <strong>Начинать со входящих</strong>. Готово — теперь при каждом запуске открываются ваши входящие, а концентрация остаётся в одном касании в меню входящих.</p></details>
 <details><summary>Видит ли NotiKeep уведомления, полученные до его установки?</summary><p><strong>Нет.</strong> NotiKeep сохраняет только уведомления, пришедшие после установки и предоставления доступа к уведомлениям.</p></details>
 <details><summary>Какие версии Android поддерживаются?</summary><p>Android 9.0 и новее.</p></details>
 <details><summary>Сколько места занимает NotiKeep?</summary><p>Текстовые уведомления крошечные — нескольких МБ хватает на месяцы. Место занимают изображения: каждое сохранённое фото около 20–80 КБ. Активный пользователь с 1 000 уведомлений с фото в месяц использует ~30–80 МБ. Если беспокоит — сократите срок хранения.</p></details>

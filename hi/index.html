@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Play पर NotiKeep पाएं</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep अब NagiKeep है">
+  <span class="badge">नया क्या है</span>
+  <h2 class="rh">NotiKeep अब <span class="accent">NagiKeep</span> है</h2>
+  <p class="lead">वही नोटिफ़िकेशन कीपर जिसे आप जानते हैं — अब एक कोमल फ़ोकस ऐप-ब्लॉकर के साथ। वही ऐप, वही डेटा: आपने जो कुछ भी सहेजा है, वह ठीक वहीं रहता है जहाँ था।</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/hi/">NagiKeep से मिलिए →</a>
+</section>
+
+<h2>अपने होम के तौर पर NotiKeep इनबॉक्स पसंद करते हैं?</h2>
+<p>नई इंस्टॉल डिफ़ॉल्ट रूप से NagiKeep की <strong>फोकस स्क्रीन</strong> पर खुलती हैं। इसके बजाय <strong>NotiKeep नोटिफिकेशन इनबॉक्स</strong> को अपनी होम स्क्रीन बनाने में सिर्फ़ दो टैप लगते हैं।</p>
+
+<div class="step">
+  <h3><span class="num">1</span>ऐप खोलें और ⚙ गियर पर टैप करें</h3>
+  <img src="../assets/hi/switch-home.png" alt="NagiKeep फोकस स्क्रीन, जिसमें टूलबार के ऊपर-दाएँ कोने में सेटिंग्स गियर हाइलाइट किया गया है">
+  <p>ऐप लॉन्च करें — आप NagiKeep फोकस स्क्रीन पर पहुँचेंगे। सेटिंग्स खोलने के लिए ऊपर-दाएँ कोने में <strong>गियर</strong> पर टैप करें।</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>"इनबॉक्स से शुरू करें" चुनें</h3>
+  <img src="../assets/hi/switch-settings.png" alt="फोकस सेटिंग्स, जिसमें दिखावट सेक्शन के अंतर्गत 'इनबॉक्स से शुरू करें' पंक्ति हाइलाइट की गई है">
+  <p><strong>दिखावट</strong> सेक्शन के अंतर्गत, <strong>इनबॉक्स से शुरू करें</strong> पर टैप करें।</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>बस इतना ही — अब ऐप हर बार सीधे आपके NotiKeep इनबॉक्स पर ही खुलता है। जब भी चाहें, फोकस इनबॉक्स मेन्यू से बस एक टैप की दूरी पर रहता है।</p>
 
 <h2>इसे काम करते देखें</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>क्या यह NagiKeep वाला वही ऐप है?</summary><p>हाँ। NotiKeep को <strong>NagiKeep</strong> के रूप में फिर से लॉन्च किया गया है — वही नोटिफ़िकेशन कीपर, अब एक कोमल फ़ोकस ऐप-ब्लॉकर के साथ। वही पैकेज (<code>jp.sakuradev.notikeep</code>), वही डेटा: आपने जो कुछ भी सहेजा है वह ठीक वहीं रहता है जहाँ था, और नोटिफ़िकेशन कीपर कहीं नहीं जा रहा।</p></details>
+<details><summary>ऐप एक फोकस स्क्रीन पर खुलता है — मैं अपने नोटिफिकेशन इनबॉक्स को होम स्क्रीन कैसे बनाऊँ?</summary><p>नए इंस्टॉल डिफ़ॉल्ट रूप से NagiKeep की फ़ोकस स्क्रीन पर खुलते हैं। इसके बजाय सीधे NotiKeep इनबॉक्स खोलने के लिए: <strong>⚙ गियर</strong> (ऊपर-दाएँ) पर टैप करें → <strong>दिखावट</strong> सेक्शन के अंतर्गत, <strong>इनबॉक्स से शुरू करें</strong> पर टैप करें। हो गया — अब हर बार खोलने पर आपका इनबॉक्स खुलता है, और फ़ोकस इनबॉक्स मेनू में एक टैप की दूरी पर रहता है।</p></details>
 <details><summary>क्या NotiKeep इंस्टॉल करने से पहले की सूचनाएँ देख सकता है?</summary><p><strong>नहीं।</strong> NotiKeep सिर्फ़ वही सूचनाएँ सहेजता है जो इंस्टॉल और सूचना एक्सेस मिलने के बाद आती हैं।</p></details>
 <details><summary>कौन से Android संस्करण समर्थित हैं?</summary><p>Android 9.0 और बाद के।</p></details>
 <details><summary>NotiKeep कितनी जगह लेता है?</summary><p>टेक्स्ट सूचनाएँ बहुत छोटी होती हैं — कुछ MB महीनों के लिए काफ़ी। जगह तस्वीरों से जाती है: हर सहेजी तस्वीर लगभग 20–80 KB। महीने में 1,000 छवि-सहित सूचनाओं वाला भारी उपयोगकर्ता ~30–80 MB इस्तेमाल करता है। चिंता हो तो रिटेंशन अवधि घटाएँ।</p></details>

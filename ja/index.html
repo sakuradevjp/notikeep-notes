@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Google Playで手に入れる</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep は NagiKeep になりました">
+  <span class="badge">お知らせ</span>
+  <h2 class="rh">NotiKeep は <span class="accent">NagiKeep</span> になりました</h2>
+  <p class="lead">これまでの通知保存はそのままに、アプリをそっと遠ざける集中ブロッカーが加わりました。同じアプリなので、これまでに保存した通知はすべてそのまま残っています。</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/ja/">NagiKeep を見る →</a>
+</section>
+
+<h2>これまで通り、受信箱をホームにしたいですか？</h2>
+<p>新しくインストールすると、最初は NagiKeep の<strong>集中画面</strong>が開きます。<strong>NotiKeep の受信箱</strong>をホームにするには、2タップです。</p>
+
+<div class="step">
+  <h3><span class="num">1</span>アプリを開いて ⚙ 歯車をタップ</h3>
+  <img src="../assets/ja/switch-home.png" alt="右上の設定歯車を強調した NagiKeep の集中画面">
+  <p>アプリを起動すると、最初は NagiKeep の集中画面が開きます。右上の<strong>歯車</strong>（設定）をタップします。</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>「受信箱から始める」を選ぶ</h3>
+  <img src="../assets/ja/switch-settings.png" alt="「表示」の中で「受信箱から始める」を強調した集中設定画面">
+  <p>「<strong>表示</strong>」の中の「<strong>受信箱から始める</strong>」をタップします。</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>これで、次からは毎回 NotiKeep の受信箱で開きます。集中も、受信箱からいつでも1タップで始められます。</p>
 
 <h2>動きを見る</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>これは NagiKeep と同じアプリですか？</summary><p>はい。NotiKeep は <strong>NagiKeep</strong> として生まれ変わりました。これまでの通知保存はそのままに、アプリをそっと遠ざける集中ブロッカーが加わっただけです。パッケージ（<code>jp.sakuradev.notikeep</code>）もデータも同じで、保存した通知はすべてそのまま残っています。通知の保存機能がなくなることはありません。</p></details>
+<details><summary>アプリが集中画面で開きます。通知の受信箱をホームにするには？</summary><p>新しくインストールすると、最初は NagiKeep の集中画面が開きます。NotiKeep の受信箱で開くようにするには、<strong>⚙ 歯車</strong>（右上）をタップ → 「<strong>表示</strong>」の中の「<strong>受信箱から始める</strong>」をタップします。これで次からは毎回受信箱で開き、集中も受信箱からいつでも1タップで始められます。</p></details>
 <details><summary>インストール前の通知も見られますか？</summary><p><strong>見られません。</strong> NotiKeepはインストール後＋通知アクセス許可後に届いた通知だけを保存します。</p></details>
 <details><summary>対応Androidバージョンは？</summary><p>Android 9.0以降に対応しています。</p></details>
 <details><summary>ストレージはどのくらい使いますか？</summary><p>テキスト通知は非常に小さく、数MBで何ヶ月分も保存できます。容量を使うのは画像で、保存される写真は20〜80KB程度、月に画像付き通知が1000件来るヘビーユーザーで30〜80MBくらいです。ストレージ容量が気になる場合は、保存日時設定を短くすれば安心です。</p></details>

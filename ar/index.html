@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ احصل على NotiKeep من Google Play</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="‏NotiKeep أصبح الآن NagiKeep">
+  <span class="badge">ما الجديد</span>
+  <h2 class="rh">‏NotiKeep أصبح الآن <span class="accent">NagiKeep</span></h2>
+  <p class="lead">حافظ الإشعارات الذي تعرفه — والآن مع أداة لطيفة لحجب التطبيقات تساعدك على التركيز، مدمجة فيه. التطبيق نفسه والبيانات نفسها: كل ما حفظته يبقى تماماً كما هو في مكانه.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/ar/">تعرَّف على NagiKeep ←</a>
+</section>
+
+<h2>‏هل تفضّل أن يكون بريد NotiKeep الوارد شاشتك الرئيسية؟</h2>
+<p>‏التثبيتات الجديدة تفتح على <strong>شاشة التركيز</strong> في NagiKeep افتراضيًا. ولجعل <strong>بريد إشعارات NotiKeep الوارد</strong> شاشتك الرئيسية بدلًا من ذلك، يكفي نقرتان.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>افتح التطبيق وانقر على ترس الإعدادات ⚙</h3>
+  <img src="../assets/ar/switch-home.png" alt="شاشة التركيز في NagiKeep مع إبراز ترس الإعدادات في أعلى يمين شريط الأدوات">
+  <p>‏افتح التطبيق — ستصل إلى شاشة التركيز في NagiKeep. انقر على <strong>الترس</strong> في الأعلى إلى اليمين لفتح الإعدادات.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>اختر "البدء من البريد الوارد"</h3>
+  <img src="../assets/ar/switch-settings.png" alt="إعدادات التركيز مع إبراز صف 'البدء من البريد الوارد' ضمن قسم العرض">
+  <p>ضمن قسم <strong>العرض</strong>، اضغط على <strong>البدء من البريد الوارد</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>وهذا كل شيء — أصبح التطبيق الآن يفتح مباشرةً على بريد NotiKeep الوارد في كل مرة. ويبقى التركيز على بُعد نقرة واحدة من قائمة البريد الوارد متى أردته.</p>
 
 <h2>شاهده أثناء العمل</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>الأسئلة الشائعة</h2>
+<details><summary>‏هل هذا هو التطبيق نفسه NagiKeep؟</summary><p>نعم. أُعيد إطلاق NotiKeep باسم <strong>NagiKeep</strong> — إنه حافظ الإشعارات نفسه، مع إضافة أداة لطيفة لحجب التطبيقات تساعدك على التركيز. الحزمة نفسها (<code>jp.sakuradev.notikeep</code>) والبيانات نفسها: كل ما حفظته يبقى تماماً كما هو في مكانه، وحافظ الإشعارات باقٍ كما هو ولن يذهب إلى أي مكان.</p></details>
+<details><summary>التطبيق يفتح على شاشة تركيز — كيف أجعل بريد الإشعارات الوارد هو الشاشة الرئيسية؟</summary><p>التثبيتات الجديدة تفتح على شاشة التركيز في NagiKeep افتراضياً. ولفتح بريد NotiKeep الوارد مباشرةً بدلاً من ذلك: اضغط على <strong>⚙ الترس</strong> (أعلى اليمين) ← ضمن قسم <strong>العرض</strong>، اضغط على <strong>البدء من البريد الوارد</strong>. تم — الآن يفتح كل تشغيل بريدك الوارد، ويبقى التركيز على بُعد ضغطة واحدة في قائمة البريد الوارد.</p></details>
 <details><summary>هل يستطيع NotiKeep رؤية إشعارات وصلت قبل تثبيته؟</summary><p><strong>لا.</strong> لا يحفظ NotiKeep إلا الإشعارات التي تصل بعد التثبيت ومنح الوصول إلى الإشعارات.</p></details>
 <details><summary>ما إصدارات Android المدعومة؟</summary><p>Android 9.0 فما فوق.</p></details>
 <details><summary>كم من المساحة يستخدم NotiKeep؟</summary><p>إشعارات النص صغيرة جدًا — بضعة ميغابايت تغطي أشهرًا. ما يستهلك المساحة هو الصور: كل صورة محفوظة نحو 20–80 كيلوبايت. مستخدم كثيف بألف إشعار بصور شهريًا يستخدم ~30–80 ميغابايت. إن قلقت من المساحة، قصّر مدة الحفظ.</p></details>

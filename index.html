@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Get NotiKeep on Google Play</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep is now NagiKeep">
+  <span class="badge">What's new</span>
+  <h2 class="rh">NotiKeep is now <span class="accent">NagiKeep</span></h2>
+  <p class="lead">The notification keeper you know — now with a gentle focus app-blocker built in. Same app, same data: everything you've saved stays exactly where it is.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/">Meet NagiKeep →</a>
+</section>
+
+<h2>Prefer the NotiKeep inbox as your home?</h2>
+<p>New installs open to NagiKeep's <strong>focus screen</strong> by default. To make the <strong>NotiKeep notification inbox</strong> your home screen instead, it takes two taps.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Open the app and tap the ⚙ gear</h3>
+  <img src="assets/en/switch-home.png" alt="NagiKeep focus screen with the settings gear highlighted in the top-right of the toolbar">
+  <p>Launch the app — you'll land on the NagiKeep focus screen. Tap the <strong>gear</strong> in the top-right to open Settings.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Choose "Start on the inbox"</h3>
+  <img src="assets/en/switch-settings.png" alt="Focus settings with the 'Start on the inbox' row highlighted under the Display section">
+  <p>Under the <strong>Display</strong> section, tap <strong>Start on the inbox</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>That's it — the app now opens straight to your NotiKeep inbox, every time. Focus stays one tap away from the inbox menu whenever you want it.</p>
 
 <h2>See it in action</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>Is this the same app as NagiKeep?</summary><p>Yes. NotiKeep was relaunched as <strong>NagiKeep</strong> — the same notification keeper, now with a gentle focus app-blocker added. Same package (<code>jp.sakuradev.notikeep</code>), same data: everything you've saved stays exactly where it is, and the notification keeper isn't going anywhere.</p></details>
+<details><summary>The app opens to a focus screen — how do I make my notification inbox the home screen?</summary><p>New installs open to NagiKeep's focus screen by default. To open straight to the NotiKeep inbox instead: tap the <strong>⚙ gear</strong> (top-right) → under the <strong>Display</strong> section, tap <strong>Start on the inbox</strong>. Done — every launch now opens your inbox, and Focus stays one tap away in the inbox menu.</p></details>
 <details><summary>Can NotiKeep see notifications I received before I installed it?</summary><p><strong>No.</strong> NotiKeep only saves notifications that arrive after it's installed and Notification Access is granted.</p></details>
 <details><summary>Which Android versions are supported?</summary><p>Android 9.0 and newer.</p></details>
 <details><summary>How much storage does NotiKeep use?</summary><p>Text notifications are tiny — a few MB covers months. Storage is mostly images: each saved photo is around 20–80 KB. A heavy user with 1,000 image-bearing notifications a month uses ~30–80 MB. If you're concerned, shorten the retention period.</p></details>

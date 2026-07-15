@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Obtenir NotiKeep sur Google Play</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep devient NagiKeep">
+  <span class="badge">Nouveau</span>
+  <h2 class="rh">NotiKeep devient <span class="accent">NagiKeep</span></h2>
+  <p class="lead">Le gardien de notifications que vous connaissez, désormais avec un bloqueur d'applis tout en douceur pour se concentrer. La même appli, les mêmes données : tout ce que vous avez enregistré reste exactement là où il était.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/fr/">Découvrir NagiKeep →</a>
+</section>
+
+<h2>Vous préférez la boîte NotiKeep comme écran d'accueil ?</h2>
+<p>Les nouvelles installations ouvrent l'<strong>écran de concentration</strong> de NagiKeep par défaut. Pour définir la <strong>boîte de notifications NotiKeep</strong> comme écran d'accueil, il suffit de deux appuis.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Ouvrez l'appli et touchez la roue dentée ⚙</h3>
+  <img src="../assets/fr/switch-home.png" alt="Écran de concentration de NagiKeep avec la roue dentée des réglages mise en évidence en haut à droite">
+  <p>Ouvrez l'appli : vous arrivez sur l'écran de concentration de NagiKeep. Touchez la <strong>roue dentée</strong> en haut à droite pour ouvrir Paramètres.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Choisissez « Démarrer sur la boîte de réception »</h3>
+  <img src="../assets/fr/switch-settings.png" alt="Réglages de concentration avec l'option « Démarrer sur la boîte de réception » mise en évidence dans la section Affichage">
+  <p>Dans la section <strong>Affichage</strong>, touchez <strong>Démarrer sur la boîte de réception</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>C'est fait : l'appli s'ouvre désormais directement sur votre boîte NotiKeep, à chaque fois. La concentration reste à un appui depuis le menu de la boîte quand vous le souhaitez.</p>
 
 <h2>NotiKeep en action</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>Est-ce la même appli que NagiKeep ?</summary><p>Oui. NotiKeep a été relancée sous le nom de <strong>NagiKeep</strong> : le même gardien de notifications, désormais avec un bloqueur d'applis tout en douceur pour se concentrer. Le même paquet (<code>jp.sakuradev.notikeep</code>) et les mêmes données : tout ce que vous avez enregistré reste exactement là où il était, et le gardien de notifications ne disparaît pas.</p></details>
+<details><summary>L'appli s'ouvre sur un écran de concentration ; comment faire de ma boîte de notifications l'écran d'accueil ?</summary><p>Les nouvelles installations ouvrent l'écran de concentration de NagiKeep par défaut. Pour ouvrir directement la boîte NotiKeep : touchez la <strong>roue dentée ⚙</strong> (en haut à droite) → dans la section <strong>Affichage</strong>, touchez <strong>Démarrer sur la boîte de réception</strong>. C'est fait : l'appli ouvre désormais votre boîte, et la concentration reste à un appui dans le menu de la boîte.</p></details>
 <details><summary>NotiKeep peut-il voir les notifications reçues avant son installation ?</summary><p><strong>Non.</strong> NotiKeep n'enregistre que les notifications qui arrivent après l'installation et l'octroi de l'accès aux notifications.</p></details>
 <details><summary>Quelles versions d'Android sont prises en charge ?</summary><p>Android 9.0 et plus récent.</p></details>
 <details><summary>Combien d'espace utilise NotiKeep ?</summary><p>Les notifications texte sont minuscules — quelques Mo couvrent des mois. L'espace est pris par les images : chaque photo enregistrée pèse environ 20–80 Ko. Un usage intensif avec 1 000 notifications avec image par mois représente ~30–80 Mo. Si l'espace vous préoccupe, raccourcissez la durée de rétention.</p></details>

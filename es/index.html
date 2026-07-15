@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Conseguir NotiKeep en Google Play</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep ahora es NagiKeep">
+  <span class="badge">Novedad</span>
+  <h2 class="rh">NotiKeep ahora es <span class="accent">NagiKeep</span></h2>
+  <p class="lead">El guardián de notificaciones que ya conoces, ahora con un bloqueador de apps para concentrarte, integrado y sin agobios. La misma app, los mismos datos: todo lo que has guardado sigue exactamente donde estaba.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/es/">Conoce NagiKeep →</a>
+</section>
+
+<h2>¿Prefieres la bandeja de NotiKeep como pantalla de inicio?</h2>
+<p>Las instalaciones nuevas abren la <strong>pantalla de concentración</strong> de NagiKeep por defecto. Para que tu inicio sea la <strong>bandeja de notificaciones de NotiKeep</strong>, bastan dos toques.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Abre la app y toca el engranaje ⚙</h3>
+  <img src="../assets/es/switch-home.png" alt="Pantalla de concentración de NagiKeep con el engranaje de ajustes resaltado arriba a la derecha">
+  <p>Abre la app: llegarás a la pantalla de concentración de NagiKeep. Toca el <strong>engranaje</strong> arriba a la derecha para abrir Configuración.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Elige "Empezar en la bandeja de entrada"</h3>
+  <img src="../assets/es/switch-settings.png" alt="Ajustes de concentración con la opción 'Empezar en la bandeja de entrada' resaltada en la sección Pantalla">
+  <p>En la sección <strong>Pantalla</strong>, toca <strong>Empezar en la bandeja de entrada</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>Listo: la app ahora abre directamente tu bandeja de NotiKeep, siempre. La concentración queda a un toque desde el menú de la bandeja cuando la necesites.</p>
 
 <h2>Míralo en acción</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>¿Es la misma app que NagiKeep?</summary><p>Sí. NotiKeep se relanzó como <strong>NagiKeep</strong>: el mismo guardián de notificaciones, ahora con un bloqueador de apps para concentrarte, sin agobios. El mismo paquete (<code>jp.sakuradev.notikeep</code>) y los mismos datos: todo lo que has guardado sigue exactamente donde estaba, y el guardián de notificaciones no va a ninguna parte.</p></details>
+<details><summary>La app abre una pantalla de concentración; ¿cómo hago que mi bandeja de notificaciones sea el inicio?</summary><p>Las instalaciones nuevas abren la pantalla de concentración de NagiKeep por defecto. Para abrir directamente la bandeja de NotiKeep: toca el <strong>engranaje ⚙</strong> (arriba a la derecha) → en la sección <strong>Pantalla</strong>, toca <strong>Empezar en la bandeja de entrada</strong>. Listo: a partir de ahora abre tu bandeja, y la concentración queda a un toque en el menú de la bandeja.</p></details>
 <details><summary>¿Puede NotiKeep ver notificaciones recibidas antes de instalarlo?</summary><p><strong>No.</strong> NotiKeep solo guarda notificaciones que llegan después de instalarse y conceder el acceso a notificaciones.</p></details>
 <details><summary>¿Qué versiones de Android admite?</summary><p>Android 9.0 y posteriores.</p></details>
 <details><summary>¿Cuánto almacenamiento usa NotiKeep?</summary><p>Las notificaciones de texto son diminutas — unos pocos MB cubren meses. El espacio lo ocupan las imágenes: cada foto guardada pesa unos 20–80 KB. Un usuario intensivo con 1.000 notificaciones con imagen al mes usa ~30–80 MB. Si te preocupa, acorta el periodo de retención.</p></details>

@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ 在 Google Play 取得</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep 現在改名為 NagiKeep">
+  <span class="badge">最新消息</span>
+  <h2 class="rh">NotiKeep 現在是 <span class="accent">NagiKeep</span></h2>
+  <p class="lead">你熟悉的通知保存工具——現在內建了溫和的專注應用封鎖功能。同一個 App、同一份資料：你保存的一切都會原封不動地留在原處。</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/zh-TW/">認識 NagiKeep →</a>
+</section>
+
+<h2>想把 NotiKeep 收件匣當作首頁嗎？</h2>
+<p>新安裝的 App 預設會開啟 NagiKeep 的<strong>專注畫面</strong>。若想改成以 <strong>NotiKeep 通知收件匣</strong>作為你的首頁，只需兩下點擊。</p>
+
+<div class="step">
+  <h3><span class="num">1</span>開啟 App，點一下 ⚙ 齒輪</h3>
+  <img src="../assets/zh-TW/switch-home.png" alt="NagiKeep 專注畫面，工具列右上角的設定齒輪被反白標示">
+  <p>啟動 App——你會來到 NagiKeep 專注畫面。點一下右上角的<strong>齒輪</strong>以開啟 設定。</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>選擇「從收件匣開始」</h3>
+  <img src="../assets/zh-TW/switch-settings.png" alt="專注設定中，顯示 區段下的「從收件匣開始」這一列被反白標示">
+  <p>在 <strong>顯示</strong> 區塊底下，點一下 <strong>從收件匣開始</strong>。</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>就這樣——現在 App 每次都會直接開啟你的 NotiKeep 收件匣。想用專注功能時，從收件匣選單只要一下點擊就能進入。</p>
 
 <h2>實際效果</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>常見問題</h2>
+<details><summary>這和 NagiKeep 是同一個 App 嗎？</summary><p>是的。NotiKeep 已重新推出為 <strong>NagiKeep</strong>——還是同一個通知保存工具，現在多了溫和的專注應用封鎖功能。同一個套件（<code>jp.sakuradev.notikeep</code>）、同一份資料：你保存的一切都會原封不動地留在原處，通知保存功能也不會消失。</p></details>
+<details><summary>App 開啟後是專注畫面——我要怎麼把通知收件匣設為首頁？</summary><p>新安裝預設會開啟 NagiKeep 的專注畫面。若想改成直接開啟 NotiKeep 收件匣：點一下右上角的 <strong>⚙ 齒輪</strong> → 在 <strong>顯示</strong> 區塊底下，點一下 <strong>從收件匣開始</strong>。完成——之後每次啟動都會開啟你的收件匣，而專注功能在收件匣選單裡隨時一點即用。</p></details>
 <details><summary>安裝前的通知能看到嗎?</summary><p><strong>看不到。</strong>NotiKeep 只會儲存安裝後取得通知存取權限以後到達的通知。</p></details>
 <details><summary>支援哪些 Android 版本?</summary><p>Android 9.0 及以上。</p></details>
 <details><summary>NotiKeep 占用多少儲存?</summary><p>文字通知非常小,幾 MB 就能存好幾個月。占空間的主要是圖片,每張保存的照片約 20–80 KB。每月收到 1,000 則帶圖通知的重度使用者大約用 30–80 MB。擔心占用空間的話,可以縮短保存期限。</p></details>

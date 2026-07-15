@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ Baixar NotiKeep no Google Play</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="NotiKeep agora é NagiKeep">
+  <span class="badge">Novidade</span>
+  <h2 class="rh">NotiKeep agora é <span class="accent">NagiKeep</span></h2>
+  <p class="lead">O guardião de notificações que você conhece, agora com um bloqueador de apps para focar, integrado e sem radicalismo. O mesmo app, os mesmos dados: tudo o que você salvou continua exatamente onde estava.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/pt-BR/">Conheça o NagiKeep →</a>
+</section>
+
+<h2>Prefere a caixa do NotiKeep como tela inicial?</h2>
+<p>Novas instalações abrem a <strong>tela de foco</strong> do NagiKeep por padrão. Para deixar a <strong>caixa de notificações do NotiKeep</strong> como sua tela inicial, são dois toques.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Abra o app e toque na engrenagem ⚙</h3>
+  <img src="../assets/pt/switch-home.png" alt="Tela de foco do NagiKeep com a engrenagem de configurações destacada no canto superior direito">
+  <p>Abra o app: você chega à tela de foco do NagiKeep. Toque na <strong>engrenagem</strong> no canto superior direito para abrir Configurações.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Escolha "Começar pela caixa de entrada"</h3>
+  <img src="../assets/pt/switch-settings.png" alt="Configurações de foco com a opção 'Começar pela caixa de entrada' destacada na seção Exibição">
+  <p>Na seção <strong>Exibição</strong>, toque em <strong>Começar pela caixa de entrada</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>Pronto: o app agora abre direto na sua caixa do NotiKeep, sempre. O foco fica a um toque no menu da caixa quando você quiser.</p>
 
 <h2>Veja em ação</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>É o mesmo app que o NagiKeep?</summary><p>Sim. O NotiKeep foi relançado como <strong>NagiKeep</strong>: o mesmo guardião de notificações, agora com um bloqueador de apps para focar, sem radicalismo. O mesmo pacote (<code>jp.sakuradev.notikeep</code>) e os mesmos dados: tudo o que você salvou continua exatamente onde estava, e o guardião de notificações não vai a lugar nenhum.</p></details>
+<details><summary>O app abre uma tela de foco; como faço para a caixa de notificações ser a tela inicial?</summary><p>Novas instalações abrem a tela de foco do NagiKeep por padrão. Para abrir direto na caixa do NotiKeep: toque na <strong>engrenagem ⚙</strong> (canto superior direito) → na seção <strong>Exibição</strong>, toque em <strong>Começar pela caixa de entrada</strong>. Pronto: a partir de agora abre sua caixa, e o foco fica a um toque no menu da caixa.</p></details>
 <details><summary>O NotiKeep consegue ver notificações recebidas antes de instalá-lo?</summary><p><strong>Não.</strong> O NotiKeep só salva notificações que chegam após a instalação e a concessão do acesso às notificações.</p></details>
 <details><summary>Quais versões do Android são suportadas?</summary><p>Android 9.0 e superiores.</p></details>
 <details><summary>Quanto armazenamento o NotiKeep usa?</summary><p>Notificações de texto são minúsculas — alguns MB cobrem meses. O espaço fica com as imagens: cada foto salva tem cerca de 20–80 KB. Um usuário pesado com 1.000 notificações com imagem por mês usa ~30–80 MB. Se preocupar, encurte o período de retenção.</p></details>

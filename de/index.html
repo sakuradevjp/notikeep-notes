@@ -211,6 +211,19 @@ footer .disclosure:empty{display:none}
 .pain-points li:empty,.fit ul li:empty{display:none}
 .showcase figcaption:empty{display:none}
 details:has(summary:empty){display:none}
+
+/* NagiKeep relaunch bridge */
+.relaunch{background:linear-gradient(135deg,var(--accent-soft),var(--bg));border:1px solid var(--border);border-radius:20px;padding:1.75rem 1.75rem 2rem;margin:2.25rem 0}
+.relaunch .badge{display:inline-block;background:var(--accent);color:#fff;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.9rem}
+.relaunch h2.rh{margin:.2rem 0 .6rem;padding:0;font-size:clamp(1.5rem,3.6vw,2rem)}
+.relaunch h2.rh::before{display:none}
+[dir="rtl"] .relaunch h2.rh{padding:0}
+.relaunch .lead{color:var(--fg-soft);font-size:1.05rem;margin:0 0 1.4rem;max-width:600px}
+.cta.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;padding:.8rem 1.6rem;margin:0}
+.cta.ghost:hover{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(103,80,164,.3)}
+.switch-done{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.4rem;margin:1.5rem 0 0;color:var(--fg);font-size:1rem}
+.switch-done .yes{color:var(--accent);font-weight:800;margin-right:.35rem}
+[dir="rtl"] .switch-done .yes{margin-right:0;margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -227,6 +240,30 @@ details:has(summary:empty){display:none}
   <a class="cta" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">▶ NotiKeep auf Google Play holen</a>
   <span class="trial-note"></span>
 </header>
+
+<section class="relaunch" aria-label="Aus NotiKeep wird NagiKeep">
+  <span class="badge">Neu</span>
+  <h2 class="rh">Aus NotiKeep wird <span class="accent">NagiKeep</span></h2>
+  <p class="lead">Der Benachrichtigungs-Bewahrer, den du kennst – jetzt mit einem sanften Fokus-App-Blocker. Dieselbe App, dieselben Daten: Alles, was du gespeichert hast, bleibt genau dort, wo es war.</p>
+  <a class="cta ghost" href="https://sakuradevjp.github.io/nagikeep-notes/de/">NagiKeep entdecken →</a>
+</section>
+
+<h2>Lieber den NotiKeep-Posteingang als Startbildschirm?</h2>
+<p>Neue Installationen öffnen standardmäßig den <strong>Fokus-Bildschirm</strong> von NagiKeep. Damit stattdessen der <strong>NotiKeep-Benachrichtigungs-Posteingang</strong> dein Start ist, genügen zwei Tipps.</p>
+
+<div class="step">
+  <h3><span class="num">1</span>App öffnen und auf das Zahnrad ⚙ tippen</h3>
+  <img src="../assets/de/switch-home.png" alt="NagiKeep-Fokus-Bildschirm mit hervorgehobenem Einstellungen-Zahnrad oben rechts">
+  <p>Öffne die App – du landest auf dem Fokus-Bildschirm von NagiKeep. Tippe oben rechts auf das <strong>Zahnrad</strong>, um Einstellungen zu öffnen.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>„Mit dem Posteingang starten“ wählen</h3>
+  <img src="../assets/de/switch-settings.png" alt="Fokus-Einstellungen mit hervorgehobener Option „Mit dem Posteingang starten“ im Bereich Darstellung">
+  <p>Tippe im Bereich <strong>Darstellung</strong> auf <strong>Mit dem Posteingang starten</strong>.</p>
+</div>
+
+<p class="switch-done"><span class="yes">✓</span>Fertig: Die App öffnet jetzt jedes Mal direkt deinen NotiKeep-Posteingang. Der Fokus ist über das Posteingangs-Menü weiterhin nur einen Tipp entfernt.</p>
 
 <h2>So funktioniert's</h2>
 <div class="pv-wrap">
@@ -357,6 +394,8 @@ details:has(summary:empty){display:none}
 </div>
 
 <h2>FAQ</h2>
+<details><summary>Ist das dieselbe App wie NagiKeep?</summary><p>Ja. NotiKeep wurde als <strong>NagiKeep</strong> neu veröffentlicht – derselbe Benachrichtigungs-Bewahrer, jetzt mit einem sanften Fokus-App-Blocker. Dasselbe Paket (<code>jp.sakuradev.notikeep</code>) und dieselben Daten: Alles, was du gespeichert hast, bleibt genau dort, wo es war, und der Benachrichtigungs-Bewahrer bleibt erhalten.</p></details>
+<details><summary>Die App öffnet einen Fokus-Bildschirm – wie mache ich meinen Benachrichtigungs-Posteingang zum Startbildschirm?</summary><p>Neue Installationen öffnen standardmäßig den Fokus-Bildschirm von NagiKeep. Um direkt den NotiKeep-Posteingang zu öffnen: Tippe oben rechts auf das <strong>Zahnrad ⚙</strong> → im Bereich <strong>Darstellung</strong> auf <strong>Mit dem Posteingang starten</strong>. Fertig: Ab jetzt öffnet die App deinen Posteingang, und der Fokus bleibt über das Posteingangs-Menü einen Tipp entfernt.</p></details>
 <details><summary>Sieht NotiKeep auch Benachrichtigungen, die ich vor der Installation bekommen habe?</summary><p><strong>Nein.</strong> NotiKeep speichert nur Benachrichtigungen, die nach Installation und Erteilung des Zugriffs eintreffen.</p></details>
 <details><summary>Welche Android-Versionen werden unterstützt?</summary><p>Android 9.0 und neuer.</p></details>
 <details><summary>Wie viel Speicher braucht NotiKeep?</summary><p>Textbenachrichtigungen sind winzig — wenige MB decken Monate ab. Den Platz brauchen Bilder: jedes gespeicherte Foto ist etwa 20–80 KB. Ein Vielnutzer mit 1.000 Bildbenachrichtigungen pro Monat braucht ~30–80 MB. Wenn dich der Speicher stört, verkürze die Aufbewahrungszeit.</p></details>
